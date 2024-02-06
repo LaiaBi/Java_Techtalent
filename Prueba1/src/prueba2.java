@@ -1,13 +1,23 @@
 public class prueba2 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int a=10;
-		int b=20;
+		int n1=10;
+		int n2=20;
 		
-		System.out.println("+a+","+b+");
-		System.out.println("nSuma" (" +a+ "+" +b+ "));
-		System.out.println("nResta:" ("+a+"-"+b+"));
-		System.out.println("Multiplicación:" ("+a+"*"+b+"));
-		System.out.println("División" ("+a+"/"+b+");
+		//suma
+		int suma=n1+n2;
+		System.out.println(suma);
+		//resta
+		int resta=n1-n2;
+		System.out.println(resta);
+		//multiplicación
+		int multiplicacion=n1*n2;
+		System.out.println(multiplicacion);
+		//division
+		int dividision=n1/n2;
+		System.out.println(division);
+		//modulo
+		int modulo=n1%n2;
+		System.out.println(modulo);
 	}
 }
