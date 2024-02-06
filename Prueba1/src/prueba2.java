@@ -14,7 +14,7 @@ public class prueba2 {
 		int multiplicacion=n1*n2;
 		System.out.println(multiplicacion);
 		//division
-		int dividision=n1/n2;
+		int division=n1/n2;
 		System.out.println(division);
 		//modulo
 		int modulo=n1%n2;
