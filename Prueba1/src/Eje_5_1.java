@@ -15,16 +15,18 @@ public class Eje_5_1 {
 				System.out.println ("¿"+variableA+" es igual a "+variableB+"? ");
 				System.out.println (variableA==variableB); //¿variableA es igual 
 				//a variableB? resultado=false;
-		}
+		} 
 			if (variableA>variableB);{
 				System.out.println ("¿"+variableA+" es más grande a "+variableB+"? ");
 				System.out.println (variableA>variableB); //¿variableA es más grande 
 				//a variableB? resultado=false;
 		}
 			//Modificacciones
-				System.out.println("+ variableB +");
-				variableA=variableB;
-				System.out.println("+variableA+");
+			int temporal = variableA;
+				variableA = variableB;
+				variableB = temporal;
+				System.out.println("Después de alternar: variableA =", variableA, ""
+						+ ", variableB =", variableB);
 	}
 
 }
