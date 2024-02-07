@@ -27,5 +27,4 @@ public class Eje_5_1 {
 				System.out.println("Después de alternar: variableA = " + variableA + ", "
 						+ "variableB = " + variableB);
 	}
-
 }
