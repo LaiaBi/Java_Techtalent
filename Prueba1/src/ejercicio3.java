@@ -11,6 +11,7 @@ public class ejercicio3 {
 		N=30;
 		M=40;
 		
+		
 		System.out.println("X" + X);
 		System.out.println("Y" + Y);
 		System.out.println("N" + N);
