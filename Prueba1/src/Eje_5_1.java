@@ -24,9 +24,8 @@ public class Eje_5_1 {
 			//Modificacciones
 			int temporal = variableA;
 				variableA = variableB;
-				variableB = temporal;
-				System.out.println("Después de alternar: variableA =", variableA, ""
-						+ ", variableB =", variableB);
+				System.out.println("Después de alternar: variableA = " + variableA + ", "
+						+ "variableB = " + variableB);
 	}
 
 }
