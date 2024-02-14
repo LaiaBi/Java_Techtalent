@@ -24,11 +24,11 @@ public class T6_1 {
                 area = calcularAreaCuadrado();
                 break;
             default:
-                System.out.println("Opción no válida");
+                System.out.println("Opción no válida.Elija:");
                 return;
         }
 
-        System.out.println("El área de la figura seleccionada es: " + area);
+        System.out.println("El área de la figura  es: " + area);
     }
     	 //Triangulo
     public static double calcularAreaTriangulo() {
