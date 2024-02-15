@@ -3,7 +3,7 @@ public static void main(String[] args) {
 
 	int cantRadoms = Integer.parseInt(JOptionPane
 			.showInputDialog("Introduce la cantidad de randoms: "));
-	int r1,r2;
+	int r1,r2;{
 	
 	while (cantRadoms>0) {
 		
