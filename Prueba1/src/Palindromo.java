@@ -5,14 +5,14 @@ public class Palindromo {
         Scanner scanner = new Scanner(System.in);
 
         // Leer la cadena de texto 
-        System.out.println("Ingrese una cadena para verificar si es un palíndromo:");
+        System.out.println("Ingrese posible palíndromo:");
         String input = scanner.nextLine();
 
         // Verificar si la cadena es un palíndromo
         if (esPalindromo(input)) {
-            System.out.println("La cadena es un palíndromo.");
+            System.out.println("¡Guau! es un palíndromo.");
         } else {
-            System.out.println("La cadena NO es un palíndromo.");
+            System.out.println("Lastima... NO es un palíndromo.");
         }
 
         scanner.close();
