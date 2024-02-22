@@ -1,5 +1,4 @@
 package T6_MétodosyArrays;
-import java.nio.file.FileSystemNotFoundException;
 import java.util.Scanner;
 public class T6_5 {
 	public static void main(String[] args) {

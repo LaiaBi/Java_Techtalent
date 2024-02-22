@@ -9,7 +9,7 @@ public class T6_7 {
 		
 		Scanner sc1= new Scanner(System.in); 
 		System.out.println("Indica la moneda a la que deseas hacer el cambio: (Dolar, Yen o Libra)"); 
-		String moneda= sc1.nextLine(); 
+		String moneda= sc.nextLine(); 
 		
 		double qConvertida =conversor(euro,moneda); 
 		
