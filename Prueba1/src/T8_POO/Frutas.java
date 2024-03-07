@@ -36,7 +36,12 @@ public Frutas (String param1, sting param2, double param3) {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+Frutas manzana= new Frutas();
+Frutas platano= new Frutas("platano");
+Frutas arandano= new Frutas("arandanos","lila");
+Frutas albaricoque= new Frutas("albaricoque","naranja", 10.15);
+System.out.print("Mi primera manzana, tiene un color igual y con un precio);
+                            ]
 	}
 
 }
