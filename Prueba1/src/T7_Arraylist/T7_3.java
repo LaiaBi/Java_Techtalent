@@ -24,7 +24,7 @@ public class T7_3 {
 	        // Mostramos la información almacenada
 	        baseDeDatos.mostrarInformacion();
 	    }
-	}
+	
 
 	// Clase para manejar la base de datos de artículos
 	class BaseDeDatosArticulos {
@@ -80,7 +80,7 @@ public class T7_3 {
 
 		// Agregamos el nuevo artículo a la base de datos
 		baseDeDatos.agregarArticulo(nuevoArticulo);{
-
+		
 		// Mostramos un mensaje indicando que el artículo se ha agregado
 		JOptionPane.showMessageDialog(null, "Artículo agregado correctamente.");
 	}
@@ -177,4 +177,5 @@ class Articulo {
 	public double getPrecio() {
 		return precio;
 	}
+}
 }
