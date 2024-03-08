@@ -1,109 +1,76 @@
 package T7_Arraylist;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Iterator;
 
-//Creamos el primer objeto "Articulo"//
-class Articulos {
-	// Creamos los parametros que vamos a usar(importantes?)//
-	public String código;
-	public double precio;
-	public int cantidad;
-
-//usamos el constructor this para guardar/asignar info//
-	public Articulos(String código, double precio, int cantidad) {
-		this.código = código;
-		this.precio = precio;
-		this.cantidad = cantidad;
-	}
-
-//este método calcula el precio por cantidad del producto//
-	public double getPrecioTotal() {
-		return precio * cantidad;
-	}
-}
-
-//Aquí hemos creado el 2ndo objeto carrito//
-class Carrito {
-	// mediante un hashtable creamos el atributo producto que es una lista de
-	// objetos tipo producto//
-	// usando el arraylist, la lista se irá llenando a medida que el usuario añada
-	// productos//
-	private List<Articulos> productos = new ArrayList<>();
-
-//Aquí tenemos el método para añadir productos como parametros y los añadira a la lista//
-	public void agregarArticulos(Articulos articulos) {
-		productos.add(articulos);
-	}
-
-//Este metodo calculo el numero de los productos//
-	public int getNumeroArticulos() {
-		return productos.size();
-	}
-
-//Este método  calcula el precio bruto total, luego, recorre cada producto y//
-	// a de cada producto añade su precio al total//
-	public double getPrecioTotalBruto() {
-		double total = 0;
-		for (Articulos articulos : productos) {
-			total += articulos.getPrecioTotal();
-		}
-		// Aquí se devuelve el precio total//
-		return total;
-	}
-}
-
-//Aquí tenemos el 3ra objeto//
-class Cliente {
-	// escribimos los paramteros importantes para la operación//
-	public String identificador;
-	public double cantidadPagada;
-
-//se crea el constructor//
-	public Cliente(String identificador, double cantidadPagada) {
-		this.identificador = identificador;
-		this.cantidadPagada = cantidadPagada;
-	}
-
-//Después se crea el método de cambio, que depende del precio total//
-	public double getCambio(double precioTotal) {
-		return cantidadPagada - precioTotal;
-	}
-
-//creado por error en el main//
-	public String getCantidadPagada() {
-
-		return null;
-	}
-}
 
 public class T7_2 {
+
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scanner = new Scanner(System.in);
 
-		Articulos manzanas = new Articulos("Huevos", 2.5, 3);
-		Articulos leche = new Articulos("Harina", 1.0, 2);
+		System.out.print("Ingrese la cantidad de productos: ");
+		int cantidadProductos = scanner.nextInt();
+		
+		
+Map<String, Double> PrecioProducto = new HashMap<>();
+		
+		
+		
+		for (int i = 1; i <= cantidadProductos; i++) {
+			System.out.print("Ingrese el nombre del producto " + i + ": ");
+			String nombreProducto = scanner.next();
 
-		// Aquí se añaden los productos al carrito//
-		Carrito carrito = new Carrito();
-		carrito.agregarArticulos(manzanas);
-		carrito.agregarArticulos(leche);
+			
+		System.out.print("Ingrese precio producto: ");
+		double precioProductoBruto = scanner.nextDouble();
+		
+		System.out.print("Es producto de primera necesidad: ");
+		String necesidadIVA =  scanner.next();
+		
+		necesidadIVA = necesidadIVA.toLowerCase();
+		double precioProductoNeto;
+		
+		if ( necesidadIVA.equals("si")) {
+			precioProductoNeto = (precioProductoBruto*0.04)+precioProductoBruto;
+            System.out.println("el IVA sera del 4%: "  + precioProductoBruto*0.04 +
+            		"\nEl precio neto es de: " + precioProductoNeto);
+            
+        } else {
+        	precioProductoNeto = (precioProductoBruto*0.21)+precioProductoBruto;
+            System.out.println("El IVA sera del 21%: " + precioProductoBruto*0.21 +
+            		"\nEl precio neto es de: " + precioProductoNeto);
+        }
+            PrecioProducto.put(nombreProducto, precioProductoNeto);
+		}
+            
+		
+		
+		double sumaCompra = 0;
+        	for (double m : PrecioProducto.values()) {
+				sumaCompra += m;
+			}
 
-		// En este bloque calculamos totalbruto, luego con el IVA, después demostramos
-		// el total//
-		double precioTotalBruto = carrito.getPrecioTotalBruto();
-		double iva = precioTotalBruto * 0.21;
-		double precioTotalConIVA = precioTotalBruto + iva;
+			double totalCompra = sumaCompra;
 
-		// Creamos al cliente y calculamos su cambio//
-		Cliente cliente = new Cliente("Juan", 10.0);
-		double cambio = cliente.getCambio(precioTotalConIVA);
-
-		// Finalmente, mostramos la información en la factura//
-		System.out.println("IVA aplicado (21%): " + iva);
-		System.out.println("Precio total bruto: " + precioTotalBruto);
-		System.out.println("Precio total con IVA: " + precioTotalConIVA);
-		System.out.println("Número de artículos comprados: " + carrito.getNumeroArticulos());
-		System.out.println("Cantidad pagada: " + cliente.getCantidadPagada());
-		System.out.println("Cambio a devolver al cliente: " + cambio);
-	}
+				
+				System.out.println( "El precio total de la compra sera de: "+ totalCompra);
+				
+				System.out.print("El pago del cliente sera ");
+				double pagoCliente =  scanner.nextDouble();
+//				
+				double cambioCliente = pagoCliente - totalCompra;
+				System.out.println("El cliente pago " + pagoCliente + " y el cambio sera de " + cambioCliente);
+			
+			}
 }
+
+	
+		
+		
+		
+		
+		
