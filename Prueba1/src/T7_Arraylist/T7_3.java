@@ -9,6 +9,64 @@ import javax.swing.*;
 public class T7_3 {
 
 	public static void main(String[] args) {
+		////10 ARTICULOS////
+	        // Creamos una instancia de la clase que maneja la base de datos
+	        BaseDeDatosArticulos baseDeDatos = new BaseDeDatosArticulos();
+
+	        // Creamos diez artículos de ejemplo
+	        for (int i = 1; i <= 10; i++) {
+	            String nombre = JOptionPane.showInputDialog("Ingrese el nombre del artículo " + i + ":");
+	            double precio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el precio del artículo " + i + ":"));
+	            Articulo articulo = new Articulo(nombre, precio);
+	            baseDeDatos.agregarArticulo(articulo);
+	        }
+
+	        // Mostramos la información almacenada
+	        baseDeDatos.mostrarInformacion();
+	    }
+	}
+
+	// Clase para manejar la base de datos de artículos
+	class BaseDeDatosArticulos {
+	    private java.util.List<Articulo> listaArticulos = new java.util.ArrayList<>();
+
+	    // Método para agregar un nuevo artículo a la base de datos
+	    public void agregarArticulo(Articulo articulo) {
+	        listaArticulos.add(articulo);
+	    }
+
+	    // Método para mostrar la información almacenada
+	    public void mostrarInformacion() {
+	        if (listaArticulos.isEmpty()) {
+	            JOptionPane.showMessageDialog(null, "La base de datos está vacía.");
+	        } else {
+	            StringBuilder mensaje = new StringBuilder("Información almacenada:\n");
+	            for (Articulo articulo : listaArticulos) {
+	                mensaje.append("Nombre: ").append(articulo.getNombre()).append(", Precio: ").append(articulo.getPrecio()).append("\n");
+	            }
+	            JOptionPane.showMessageDialog(null, mensaje.toString());
+	        }
+	    }
+	}
+
+	// Clase para representar un artículo
+	class Articulo {
+	    private String Producto;
+	    private double cobro;
+
+	    public Articulo(String nombre, double precio) {
+	        this.nombre = nombre;
+	        this.precio = precio;
+	    }
+
+	    // Getters y setters
+	    public String getNombre() {
+	        return nombre;
+	    }
+
+	    public double getPrecio() {
+	        return precio;
+	    }
 		//// AÑADIR ARTICULOS CON INTERFAZ///
 		// Creamos una instancia de la clase que maneja la base de datos
 		BaseDeDatosArticulos baseDeDatos = new BaseDeDatosArticulos();
@@ -21,12 +79,11 @@ public class T7_3 {
 		Articulo nuevoArticulo = new Articulo(nombre, precio);
 
 		// Agregamos el nuevo artículo a la base de datos
-		baseDeDatos.agregarArticulo(nuevoArticulo);
+		baseDeDatos.agregarArticulo(nuevoArticulo);{
 
 		// Mostramos un mensaje indicando que el artículo se ha agregado
 		JOptionPane.showMessageDialog(null, "Artículo agregado correctamente.");
 	}
-}
 
 // Clase para representar un artículo
 class Articulo {
@@ -58,7 +115,7 @@ class BaseDeDatosArticulos {
 	public void agregarArticulo(Articulo articulo) {
 		listaArticulos.add(articulo);
 	}
-///INFORMACIÓN DEL ALMACEN///
+////INFORMACIÓN DEL ALMACEN////
 	// Creamos una instancia de la clase que maneja la base de datos
     BaseDeDatosArticulos baseDeDatos = new BaseDeDatosArticulos();
 
