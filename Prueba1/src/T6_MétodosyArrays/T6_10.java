@@ -2,30 +2,66 @@ package T6_MétodosyArrays;
 
 public class T6_10 {
 
-	public static void main(String[] args) {
-		import random
+	import java.util.Random;
+	import java.util.Scanner;
 
-		def es_primo(numero):
-		    if numero < 2:
-		        return False
-		    for i in range(2, int(numero**0.5) + 1):
-		        if numero % i == 0:
-		            return False
-		    return True
+		public static void main(String[] args) {
+			Scanner sc = new Scanner(System.in);
 
-		def generar_primos(tamano):
-		    primos = [random.choice([2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]) for _ in range(tamano)]
-		    return primos
+			System.out.println("Introduce el tamaño del array:");
+			int tamaño = sc.nextInt();
 
-		if __name__ == "__main__":
-		    try:
-		        tamano_array = int(input("Ingrese el tamaño del array de números primos: "))
-		        numeros_primos = generar_primos(tamano_array)
+			int[] array = generarNumerosPrimos(tamaño);
 
-		        print(f"\nNúmeros primos generados: {numeros_primos}")
+			System.out.println("El array generado con números primos es:");
+			mostrarArray(array);
 
-		        mayor_primo = max(numeros_primos)
-		        print(f"\nEl número primo más grande es: {mayor_primo}")
+			int maximo = encontrarMaximo(array);
+			System.out.println("El número primo máximo en el array es: " + maximo);
+		}
 
-		    except ValueError:
-		        print("Por favor, ingrese un valor válido para el tamaño del array.")
+		public static int[] generarNumerosPrimos(int tamaño) {
+			int[] array = new int[tamaño];
+			Random rand = new Random();
+
+			int contador = 0;
+			while (contador < tamaño) {
+				int num = rand.nextInt(1000) + 1; 
+				if (esPrimo(num)) {
+					array[contador] = num;
+					contador++;
+				}
+			}
+
+			return array;
+		}
+
+		public static boolean esPrimo(int num) {
+			if (num <= 1) {
+				return false;
+			}
+			for (int i = 2; i <= Math.sqrt(num); i++) {
+				if (num % i == 0) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		public static void mostrarArray(int[] array) {
+			for (int i = 0; i < array.length; i++) {
+				System.out.print(array[i] + " ");
+			}
+			System.out.println();
+		}
+
+		public static int encontrarMaximo(int[] array) {
+			int maximo = Integer.MIN_VALUE;
+			for (int i = 0; i < array.length; i++) {
+				if (array[i] > maximo) {
+					maximo = array[i];
+				}
+			}
+			return maximo;
+		}
+	}
