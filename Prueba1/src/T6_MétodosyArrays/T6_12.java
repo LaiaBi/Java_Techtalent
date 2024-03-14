@@ -1,17 +1,64 @@
 package T6_MétodosyArrays;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class T6_12 {
-	function filtrarDigitos(arr, numero) {
-	    let nuevoArray = arr.filter(x => x.toString().endsWith(numero.toString()));
-	    return nuevoArray;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("introduce numero ");
+		int tamany = sc.nextInt();
+		int[] array1 = new int[tamany];
+
+		llenarArray(array1, 1, 300);
+//		mostrarArray(array1);		
+		System.out.println("introduce un digito ");
+		int digito = sc.nextInt();
+
+		while (digito < 0 || digito > 9) {
+			System.out.println(" numero invalido, debe de ser un digito ");
+			digito = sc.nextInt();
+		}
+
+		int[] conDigito = conDigito(array1, digito);
+
+		System.out.println("" + digito);
+		mostrarArray(conDigito(array1, digito));
 	}
 
-	// Ejemplo de uso
-	let tamanio = 10;
-	let miArray = [123, 456, 789, 321, 654, 987, 111, 222, 333, 444];
-	let numeroIndicado = 4;
+	public static void llenarArray(int[] array, int min, int max) {
+		Random rand = new Random();
+		for (int i = 0; i < array.length; i++) {
+			array[i] = rand.nextInt(max - min + 1) + min;
+		}
+	}
 
-	let resultado = filtrarDigitos(miArray, numeroIndicado);
-	console.log(resultado);
+	public static void mostrarArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+	}
 
+	public static int[] conDigito(int[] array, int digito) {
+		int contador = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] % 10 == digito) {
+				contador++;
+			}
+		}
+
+		int[] conDigito = new int[contador];
+		contador = 0;
+
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] % 10 == digito) {
+				conDigito[contador] = array[i];
+				contador++;
+			}
+		}
+
+		return conDigito;
+	}
 }
