@@ -104,12 +104,7 @@ public class MainApp {
 		System.out.println("IVA del producto:");
 		double iva = sc.nextDouble();
 
-		HashMap<String, Object> producto = new HashMap<String, Object>();
-		producto.put("precio", precio);
-		producto.put("cantidad", cantidad);
-		producto.put("iva", iva);
-
-		baseDeDatos.put(nombre, producto);
+		baseDeDatos.add(new Producto(precio,iva,cantidad,nombre));
 
 	}
 
@@ -251,69 +246,18 @@ public class MainApp {
 	}
 
 	// Base de datos inicial
-	public static void rellenarbaseDeDatos(HashMap<String, HashMap> baseDeDatos) {
-		HashMap<String, Object> elemento = new HashMap<String, Object>();
-		elemento.put("precio", "0.50");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.10);
-		baseDeDatos.put("pan", elemento);
+public static void rellenarbaseDeDatos(ArrayList<Producto> baseDeDatos) {
 		
-		//BASEDEDATOS.ADD(NEW PRODUCTO(0.50,0.10,10,"PAN"));
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "1.50");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.21);
-		baseDeDatos.put("manzana", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "2.50");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.21);
-		baseDeDatos.put("pera", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "3.25");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.21);
-		baseDeDatos.put("pasta", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "4.50");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.21);
-		baseDeDatos.put("pizza", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "3.20");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.21);
-		baseDeDatos.put("canelones", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "0.50");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.04);
-		baseDeDatos.put("agua", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "1.00");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.04);
-		baseDeDatos.put("leche", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "0.90");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.21);
-		baseDeDatos.put("pila", elemento);
-
-		elemento = new HashMap<String, Object>();
-		elemento.put("precio", "1.40");
-		elemento.put("cantidad", 10);
-		elemento.put("IVA", 0.21);
-		baseDeDatos.put("queso", elemento);
-
+		baseDeDatos.add(new Producto(0.50,0.10,10,"PAN"));
+		baseDeDatos.add(new Producto(1.50,0.21,10,"MANZANA"));
+		baseDeDatos.add(new Producto(2.50,0.21,10,"PERA"));
+		baseDeDatos.add(new Producto(3.25,0.21,10,"PASTA"));
+		baseDeDatos.add(new Producto(4.50,0.21,10,"PIZZA"));
+		baseDeDatos.add(new Producto(3.20,0.21,10,"CANELONES"));
+		baseDeDatos.add(new Producto(0.50,0.04,10,"AGUA"));
+		baseDeDatos.add(new Producto(1.00,0.04,10,"LECHE"));
+		baseDeDatos.add(new Producto(0.90,0.21,10,"PILA"));
+		baseDeDatos.add(new Producto(1.40,0.21,10,"QUESO"));
 	}
 
 }
