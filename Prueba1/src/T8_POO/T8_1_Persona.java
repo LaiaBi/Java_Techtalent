@@ -36,4 +36,54 @@ public class T8_1_Persona {
 		this.peso = peso;
 		this.altura = altura;
 	}
+	// Getters y setters
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public char getGenero() {
+		return genero;
+	}
+
+	public void setGenero(char genero) {
+		this.genero = genero;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
+
+	public double getPeso() {
+		return peso;
+	}
+
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+
+	public double getAltura() {
+		return altura;
+	}
+
+	public void setAltura(double altura) {
+		this.altura = altura;
+	}
+
 }

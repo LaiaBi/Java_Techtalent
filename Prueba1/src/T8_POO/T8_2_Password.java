@@ -35,4 +35,22 @@ public class T8_2_Password {
 		}
 		return sb.toString();
 	}
+	// Getters y setters
+
+	public String getContraseña() {
+		return contraseña;
+	}
+
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+	}
+
+	public int getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(int longitud) {
+		this.longitud = longitud;
+	}
+
 }
