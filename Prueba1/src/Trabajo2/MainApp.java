@@ -108,7 +108,7 @@ public class MainApp {
 
 	}
 
-	public static void comprobarProducto(HashMap<String, HashMap> baseDeDatos) {
+	public static void comprobarProducto(ArrayList<Producto> baseDeDatos) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Qué producto quieres comprobar?");
 		String producto = sc.nextLine();
