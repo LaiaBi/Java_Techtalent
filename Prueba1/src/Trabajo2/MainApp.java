@@ -92,7 +92,7 @@ public class MainApp {
 	}
 
 	// Métodos de gestión de stock
-	public static void addStock(HashMap<String, HashMap> baseDeDatos) {
+	public static void addStock(ArrayList<Producto>baseDeDatos ) {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Nombre del producto:");
