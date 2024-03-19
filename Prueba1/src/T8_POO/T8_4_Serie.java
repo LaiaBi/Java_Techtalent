@@ -4,23 +4,23 @@ public class T8_4_Serie {
 	// Atributos
 	private String Titulo;
 	private double NumTemporada;
-	private char entregado;
+	private boolean entregado;
 	private String genero;
 	private String creador;
 
 	// defecto
-	public T8_4_Serie() {
+	public T8_4_Serie( double numTemporada, boolean entregado) {
 		Titulo = "";
 		NumTemporada = 3;
-		this.entregado = 'false';
+		this.entregado = false;
 		this.genero = "";
 		this.creador = "";
-	}
+	}	
 	//Dos atributos
-	public T8_4_Serie(String titulo, String creador) {
+	public T8_4_Serie(String titulo, double numTemporada, boolean entregado, String creador) {
 		Titulo = titulo;
 		NumTemporada = 3;
-		this.entregado = 'false';
+		this.entregado = false;
 		this.genero = "";
 		this.creador = creador;
 	}
@@ -28,9 +28,8 @@ public class T8_4_Serie {
 	public T8_4_Serie(String titulo, double numTemporada, String genero, String creador) {
 		Titulo = titulo;
 		NumTemporada = numTemporada;
-		this.entregado = 'false';
+		this.entregado = entregado;
 		this.genero = genero;
 		this.creador = creador;
-	}
-	
+	}	
 }
