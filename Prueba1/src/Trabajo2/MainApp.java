@@ -39,7 +39,7 @@ public class MainApp {
 		}
 	}
 
-	public static void gestionarStock(HashMap<String, HashMap> baseDeDatos) {
+	public static void gestionarStock(ArrayList<Producto> baseDeDatos) {
 		Scanner sc = new Scanner(System.in);
 		int choose = 0;
 		while (choose != 4) {
@@ -65,7 +65,7 @@ public class MainApp {
 		}
 	}
 
-	public static void gestionarCarrito(HashMap<String, HashMap> baseDeDatos, HashMap<String, HashMap> carrito) {
+	public static void gestionarCarrito(ArrayList<Producto> baseDeDatos, ArrayList<Producto> carrito) {
 		Scanner sc = new Scanner(System.in);
 		int choose = 0;
 		while (choose != 3) {
@@ -113,11 +113,11 @@ public class MainApp {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Qué producto quieres comprobar?");
 		String producto = sc.nextLine();
-		boolean salir=false;
-		for (int i = 0; i < baseDeDatos.size()&&!salir; i++) {
+		boolean salir = false;
+		for (int i = 0; i < baseDeDatos.size() && !salir; i++) {
 			if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(producto)) {
 				System.out.println(baseDeDatos.get(i).toString());
-				salir=true;
+				salir = true;
 			}
 		}
 
@@ -130,7 +130,7 @@ public class MainApp {
 	}
 
 	// Métodos de gestión de Compra
-	public static void addProducto(HashMap<String, HashMap> baseDeDatos, HashMap<String, HashMap> carrito) {
+	public static void addProducto(ArrayList<Producto> baseDeDatos, ArrayList<Producto> carrito) {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Selecciona uno de los sigüientes productos:\n");
@@ -138,28 +138,34 @@ public class MainApp {
 		String producto = sc.nextLine();
 		System.out.println("¿Cuántas unidades quieres añadir al carrito?");
 		int cantidad = sc.nextInt();
-		int cantidadMax = Integer.parseInt(baseDeDatos.get(producto).get("cantidad").toString());
+		boolean salir = false;
+		int cantidadMax = 0;
+		double precio = 0;
+		double iva = 0.21;
+		for (int i = 0; i < baseDeDatos.size() && !salir; i++) {
+			if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(producto)) {
+				precio = baseDeDatos.get(i).getPrecio();
+				iva = baseDeDatos.get(i).getIva();
+				cantidadMax = baseDeDatos.get(i).getCantidad();
+				salir = true;
+			}
+		}
 		if (cantidad > cantidadMax) {
 			cantidad = cantidadMax;
 			System.out.println("No tenemos stock suficiente, solo puedes llevarte " + cantidad);
 		}
 
-		HashMap<String, Object> elemento = new HashMap<String, Object>();
-		elemento.put("cantidad", cantidad);
-		elemento.put("precio", baseDeDatos.get(producto).get("precio"));
-		elemento.put("IVA", baseDeDatos.get(producto).get("IVA"));
-		carrito.put(producto, elemento);
+		carrito.add(new Producto(precio, iva, cantidad, producto));
 
 	}
 
-	public static void mostrarCarrito(HashMap<String, HashMap> carrito) {
-		for (String i : carrito.keySet()) {
-			System.out.println(i + ": " + carrito.get(i));
+	public static void mostrarCarrito(ArrayList<Producto> carrito) {
+		for (Producto item : carrito) {
+			System.out.println("Producto" + item.toString());
 		}
-		System.out.println();
 	}
 
-	public static void confirmarCompra(HashMap<String, HashMap> carrito, HashMap<String, HashMap> baseDeDatos) {
+	public static void confirmarCompra(ArrayList<Producto> carrito, ArrayList<Producto> baseDeDatos) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Confirmas esta compra? (S/N)");
 		mostrarCarrito(carrito);
@@ -174,7 +180,7 @@ public class MainApp {
 	}
 
 	// Métodos de calcular la compra
-	public static void hacerCompra(HashMap<String, HashMap> carrito, HashMap<String, HashMap> baseDeDatos) {
+	public static void hacerCompra(ArrayList<Producto> carrito, ArrayList<Producto> baseDeDatos) {
 		Scanner sc = new Scanner(System.in);
 		double precio = totalConIVA(carrito), efectivo = 0, cambio = 0;
 		// calcular precio con iva y mostrarlo
@@ -195,7 +201,7 @@ public class MainApp {
 		carrito.clear();
 	}
 
-	private static double totalConIVA(HashMap<String, HashMap> carrito) {
+	private static double totalConIVA(ArrayList<Producto> carrito) {
 		double iva = 0.21;
 		double sumaTotalConIVA = 0, precio = 0;
 		int cantidad = 0;
@@ -211,7 +217,7 @@ public class MainApp {
 		return sumaTotalConIVA;
 	}
 
-	public static void actualizarStock(HashMap<String, HashMap> carrito, HashMap<String, HashMap> baseDeDatos) {
+	public static void actualizarStock(ArrayList<Producto> carrito, ArrayList<Producto> baseDeDatos) {
 		int cantidadCarrito = 0;
 		int cantidadStock = 0;
 		for (String i : carrito.keySet()) {
