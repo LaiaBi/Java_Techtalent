@@ -206,14 +206,13 @@ public class MainApp {
 		double sumaTotalConIVA = 0, precio = 0;
 		int cantidad = 0;
 
-		for (String i : carrito.keySet()) {
-//          System.out.println("key: " + i + " value: " + carrito.get(i));
-			precio = Double.parseDouble((carrito.get(i).get("precio").toString()));
-			iva = Double.parseDouble(carrito.get(i).get("IVA").toString());
-			cantidad = Integer.parseInt(carrito.get(i).get("cantidad").toString());
-
+		for (int i = 0; i < carrito.size(); i++) {
+			precio = carrito.get(i).getPrecio();
+			iva = carrito.get(i).getIva();
+			cantidad = carrito.get(i).getCantidad();
 			sumaTotalConIVA += (precio + (precio * iva)) * cantidad;
 		}
+
 		return sumaTotalConIVA;
 	}
 
