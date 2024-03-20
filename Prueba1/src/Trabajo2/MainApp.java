@@ -219,12 +219,24 @@ public class MainApp {
 	public static void actualizarStock(ArrayList<Producto> carrito, ArrayList<Producto> baseDeDatos) {
 		int cantidadCarrito = 0;
 		int cantidadStock = 0;
-		for (String i : carrito.keySet()) {
-			cantidadCarrito = Integer.parseInt(carrito.get(i).get("cantidad").toString());
-			cantidadStock = Integer.parseInt(baseDeDatos.get(i).get("cantidad").toString());
-			baseDeDatos.get(i).put("cantidad", cantidadStock - cantidadCarrito);
+		int cantidadActualizada = 0;
+		String nombre = "";
+		for (Producto item : carrito) {
+			nombre = item.getNombre();
+			cantidadCarrito = item.getCantidad();
+			boolean salir = false;
+			for (int i = 0; i < baseDeDatos.size() && !salir; i++) {
+				if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(nombre)) {
+					cantidadStock = baseDeDatos.get(i).getCantidad();
+					salir = true;
+					
+					cantidadActualizada = cantidadStock - cantidadCarrito;
+					baseDeDatos.get(i).setCantidad(cantidadActualizada);
+				}
+			}
 		}
 	}
+
 
 	public static double pagar(double precio, double efectivo) {
 		return efectivo - precio;
