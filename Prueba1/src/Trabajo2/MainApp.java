@@ -1,4 +1,5 @@
 package Trabajo2;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -8,13 +9,13 @@ public class MainApp {
 	public static void main(String[] args) {
 		ArrayList<Producto> baseDeDatos = new ArrayList<Producto>();
 		ArrayList<Producto> carrito = new ArrayList<Producto>();
-		
+
 		rellenarbaseDeDatos(baseDeDatos);
 		mostrarMenu(baseDeDatos, carrito);
 	}
 
 	// Menús de Gestión
-	public static void mostrarMenu(HashMap<String, HashMap> baseDeDatos, HashMap<String, HashMap> carrito) {
+	public static void mostrarMenu(ArrayList<Producto> baseDeDatos, ArrayList<Producto> carrito) {
 		Scanner sc = new Scanner(System.in);
 		int select = 0, choose = 0;
 		while (select != 3) {
@@ -92,7 +93,7 @@ public class MainApp {
 	}
 
 	// Métodos de gestión de stock
-	public static void addStock(ArrayList<Producto>baseDeDatos ) {
+	public static void addStock(ArrayList<Producto> baseDeDatos) {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Nombre del producto:");
@@ -104,7 +105,7 @@ public class MainApp {
 		System.out.println("IVA del producto:");
 		double iva = sc.nextDouble();
 
-		baseDeDatos.add(new Producto(precio,iva,cantidad,nombre));
+		baseDeDatos.add(new Producto(precio, iva, cantidad, nombre));
 
 	}
 
@@ -112,15 +113,20 @@ public class MainApp {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("¿Qué producto quieres comprobar?");
 		String producto = sc.nextLine();
-		System.out.println(baseDeDatos.get(producto) + "\n");
+		boolean salir=false;
+		for (int i = 0; i < baseDeDatos.size()&&!salir; i++) {
+			if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(producto)) {
+				System.out.println(baseDeDatos.get(i).toString());
+				salir=true;
+			}
+		}
 
 	}
 
-	public static void mostrarStock(HashMap<String, HashMap> baseDeDatos) {
-		for (String i : baseDeDatos.keySet()) {
-			System.out.println(i + ": " + baseDeDatos.get(i));
+	public static void mostrarStock(ArrayList<Producto> baseDeDatos) {
+		for (Producto item : baseDeDatos) {
+			System.out.println("Producto" + item.toString());
 		}
-		System.out.println();
 	}
 
 	// Métodos de gestión de Compra
@@ -246,18 +252,18 @@ public class MainApp {
 	}
 
 	// Base de datos inicial
-public static void rellenarbaseDeDatos(ArrayList<Producto> baseDeDatos) {
-		
-		baseDeDatos.add(new Producto(0.50,0.10,10,"PAN"));
-		baseDeDatos.add(new Producto(1.50,0.21,10,"MANZANA"));
-		baseDeDatos.add(new Producto(2.50,0.21,10,"PERA"));
-		baseDeDatos.add(new Producto(3.25,0.21,10,"PASTA"));
-		baseDeDatos.add(new Producto(4.50,0.21,10,"PIZZA"));
-		baseDeDatos.add(new Producto(3.20,0.21,10,"CANELONES"));
-		baseDeDatos.add(new Producto(0.50,0.04,10,"AGUA"));
-		baseDeDatos.add(new Producto(1.00,0.04,10,"LECHE"));
-		baseDeDatos.add(new Producto(0.90,0.21,10,"PILA"));
-		baseDeDatos.add(new Producto(1.40,0.21,10,"QUESO"));
+	public static void rellenarbaseDeDatos(ArrayList<Producto> baseDeDatos) {
+
+		baseDeDatos.add(new Producto(0.50, 0.10, 10, "PAN"));
+		baseDeDatos.add(new Producto(1.50, 0.21, 10, "MANZANA"));
+		baseDeDatos.add(new Producto(2.50, 0.21, 10, "PERA"));
+		baseDeDatos.add(new Producto(3.25, 0.21, 10, "PASTA"));
+		baseDeDatos.add(new Producto(4.50, 0.21, 10, "PIZZA"));
+		baseDeDatos.add(new Producto(3.20, 0.21, 10, "CANELONES"));
+		baseDeDatos.add(new Producto(0.50, 0.04, 10, "AGUA"));
+		baseDeDatos.add(new Producto(1.00, 0.04, 10, "LECHE"));
+		baseDeDatos.add(new Producto(0.90, 0.21, 10, "PILA"));
+		baseDeDatos.add(new Producto(1.40, 0.21, 10, "QUESO"));
 	}
 
 }
