@@ -97,15 +97,24 @@ public class MainApp {
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Nombre del producto:");
-		String nombre = sc.nextLine();
-		System.out.println("Precio del producto:");
-		double precio = sc.nextDouble();
-		System.out.println("Cantidad del producto:");
-		int cantidad = sc.nextInt();
-		System.out.println("IVA del producto:");
-		double iva = sc.nextDouble();
+		String nombre = sc.nextLine().toUpperCase();
+		boolean found = false;
+		for (int i = 0; i < baseDeDatos.size() && !found; i++) {
+			if (baseDeDatos.get(i).getNombre().equalsIgnoreCase(nombre)) {
+				System.out.println("El producto que quieres añadir ya está en la base de datos");
+				found = true;
+			}
+		}
 
-		baseDeDatos.add(new Producto(precio, iva, cantidad, nombre));
+		if (!found) {
+			System.out.println("Precio del producto:");
+			double precio = sc.nextDouble();
+			System.out.println("Cantidad del producto:");
+			int cantidad = sc.nextInt();
+			System.out.println("IVA del producto:");
+			double iva = sc.nextDouble();
+			baseDeDatos.add(new Producto(precio, iva, cantidad, nombre));
+		}
 
 	}
 
@@ -125,7 +134,7 @@ public class MainApp {
 
 	public static void mostrarStock(ArrayList<Producto> baseDeDatos) {
 		for (Producto item : baseDeDatos) {
-			System.out.println("Producto" + item.toString());
+			System.out.println(item.toString());
 		}
 	}
 
@@ -161,7 +170,7 @@ public class MainApp {
 
 	public static void mostrarCarrito(ArrayList<Producto> carrito) {
 		for (Producto item : carrito) {
-			System.out.println("Producto" + item.toString());
+			System.out.println(item.toString());
 		}
 	}
 
@@ -175,6 +184,9 @@ public class MainApp {
 			respuesta = sc.nextLine();
 			if (respuesta.equalsIgnoreCase("S")) {
 				hacerCompra(carrito, baseDeDatos);
+			} else {
+				System.out.println("Compra cancelada");
+				carrito.clear();
 			}
 		}
 	}
@@ -243,7 +255,7 @@ public class MainApp {
 
 	// Menús
 	public static void menu() {
-		System.out.println("---------SELECCIONA UNA OPCIÓN---------");
+		System.out.println("\n---------SELECCIONA UNA OPCIÓN---------");
 		System.out.println("1. Gestionar Stock");
 		System.out.println("2. Hacer Compra");
 		System.out.println("3. Salir");
@@ -251,7 +263,7 @@ public class MainApp {
 	}
 
 	public static void menuStock() {
-		System.out.println("---------SELECCIONA UNA OPCIÓN---------");
+		System.out.println("\n---------SELECCIONA UNA OPCIÓN---------");
 		System.out.println("	1. Listar Stock");
 		System.out.println("	2. Añadir Producto");
 		System.out.println("	3. Consultar Producto");
@@ -260,7 +272,7 @@ public class MainApp {
 	}
 
 	public static void menuCarrito() {
-		System.out.println("---------SELECCIONA UNA OPCIÓN---------");
+		System.out.println("\n---------SELECCIONA UNA OPCIÓN---------");
 		System.out.println("	1. Añadir producto");
 		System.out.println("	2. Comprobar carrito");
 		System.out.println("	3. Comprar");
