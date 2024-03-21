@@ -30,9 +30,15 @@ public class T9_1_Elecrtrodomestico1 {
 			} else {
 				this.color = color;
 			}
+			if (!color.equalsIgnoreCase("Blanco") && !color.equalsIgnoreCase("Negro") && !color.equalsIgnoreCase("Rojo")
+					&& !color.equalsIgnoreCase("Azul") && !color.equalsIgnoreCase("Gris")) {
+			} else {
+				this.color = color;
+			}
 			this.consumenergetico = consumenergetico;
 			this.peso = peso;
 		}
+		
 		//Getters y setters
 		public double getPreciobase() {
 			return preciobase;
