@@ -229,14 +229,13 @@ public class MainApp {
 				if ((baseDeDatos.get(i).getNombre()).equalsIgnoreCase(nombre)) {
 					cantidadStock = baseDeDatos.get(i).getCantidad();
 					salir = true;
-					
+
 					cantidadActualizada = cantidadStock - cantidadCarrito;
 					baseDeDatos.get(i).setCantidad(cantidadActualizada);
 				}
 			}
 		}
 	}
-
 
 	public static double pagar(double precio, double efectivo) {
 		return efectivo - precio;
