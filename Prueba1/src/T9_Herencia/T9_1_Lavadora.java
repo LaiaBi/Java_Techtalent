@@ -13,6 +13,6 @@ public class T9_1_Lavadora {
 		this.color = color;
 		this.consumenergetico = consumenergetico;
 		this.peso = peso;
-	} private"carga";
+	} 
 
 }

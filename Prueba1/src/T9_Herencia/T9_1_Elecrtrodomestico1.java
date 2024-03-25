@@ -4,7 +4,7 @@ public class T9_1_Elecrtrodomestico1 {
 	// Atributos
 		protected double preciobase;
 		protected String color;
-		protected char consumenergetico;
+		protected double consumenergetico;
 		protected double peso;
 		
 		//Por defecto
@@ -53,7 +53,7 @@ public class T9_1_Elecrtrodomestico1 {
 			this.color = color;
 		}
 		public char getConsumenergetico() {
-			return consumenergetico;
+			return (char) consumenergetico;
 		}
 		public void setConsumenergetico(char consumenergetico) {
 			this.consumenergetico = consumenergetico;
