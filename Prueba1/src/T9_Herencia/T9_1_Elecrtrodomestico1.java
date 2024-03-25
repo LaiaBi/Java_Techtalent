@@ -8,7 +8,7 @@ public class T9_1_Elecrtrodomestico1 {
 		protected double peso;
 		
 		//Por defecto
-		public T9_1_Elecrtrodomestico1(double preciobase, String color, char consumenergetico, double peso) {
+		public T9_1_Elecrtrodomestico1() {
 			this.preciobase = 100;
 			this.color = "Blanco";
 			this.consumenergetico = 'F';
@@ -16,7 +16,7 @@ public class T9_1_Elecrtrodomestico1 {
 			
 		}
 		//Precio y peso.Lo demas defecto
-		public void T9_1_Elecrtrodomestico(double preciobase, String color, char consumenergetico, double peso) {
+		public void T9_1_Elecrtrodomestico(double preciobase, double peso) {
 			this.preciobase = preciobase;
 			this.color = "Blanco";
 			this.consumenergetico = 'F';
