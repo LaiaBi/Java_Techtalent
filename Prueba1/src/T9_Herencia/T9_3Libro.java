@@ -3,7 +3,7 @@ package T9_Herencia;
 public class T9_3Libro {
 	// Atributos
 	protected String Titulo;
-	protected double isbn;
+	protected double ISBN;
 	protected double numeropaginas;
 	protected String autor;
 
@@ -17,11 +17,11 @@ public class T9_3Libro {
 	}
 
 	public double getIsbn() {
-		return isbn;
+		return ISBN;
 	}
 
-	public void setIsbn(double isbn) {
-		this.isbn = isbn;
+	public void setIsbn(double ISBN) {
+		this.ISBN = ISBN;
 	}
 
 	public double getNumeropaginas() {
@@ -40,11 +40,9 @@ public class T9_3Libro {
 		this.autor = autor;
 	}
 
-	// toString
 	@Override
 	public String toString() {
-		return "T9_3Libro [Titulo=" + Titulo + ", isbn=" + isbn + ", numeropaginas=" + numeropaginas + ", autor="
-				+ autor + "]";
+		return "El libro con ISBN " + ISBN + " creado por " + autor + " tiene " + numeropaginas + " páginas.";
 	}
 
 }
