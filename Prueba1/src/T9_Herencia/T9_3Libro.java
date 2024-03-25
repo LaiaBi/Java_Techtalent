@@ -40,10 +40,11 @@ public class T9_3Libro {
 		this.autor = autor;
 	}
 
+	// toString
 	@Override
 	public String toString() {
-		return "T9_3Libro [isbn=" + isbn + "]";
+		return "T9_3Libro [Titulo=" + Titulo + ", isbn=" + isbn + ", numeropaginas=" + numeropaginas + ", autor="
+				+ autor + "]";
 	}
-	
 
 }
