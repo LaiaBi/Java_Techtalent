@@ -1,6 +1,6 @@
 package T9_Herencia;
 
-public class T9_2Serie {
+public class T9_2Serie implements T9_2Entregable {
 	// Atributos
 	protected String Titulo;
 	protected double NumTemporada;
@@ -74,5 +74,31 @@ public class T9_2Serie {
 		return "T9_2Serie [Titulo=" + Titulo + ", NumTemporada=" + NumTemporada + ", entregado=" + entregado
 				+ ", genero=" + genero + ", creador=" + creador + "]";
 	}
+	//si esta enviado o no las temporadas
+	public void entregar() {
+		this.entregado = true;
+	}
 
+	public void devolver() {	
+		this.entregado = false;
+	}
+
+	public boolean isEntregado() {
+		return entregado;
+	}
+
+	//comparar temporadas
+	public boolean compareTo(Object a) {
+      if(a instanceof T9_2Serie) {
+    	  T9_2Serie otra_Serie= (T9_2Serie) a; 
+          return this.getNumTemporada() > otra_Serie.getNumTemporada();
+      }else {
+          if(a instanceof T9_2Videojuego) {
+        	  T9_2Videojuego otroJuego= (T9_2Videojuego)a; 
+             return false ; 
+          }else {
+              throw new IllegalArgumentException("No se puede comparar con lo desconocido");
+          }
+	}
+	}
 }
