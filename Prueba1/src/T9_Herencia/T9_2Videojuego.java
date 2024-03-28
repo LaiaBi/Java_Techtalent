@@ -1,6 +1,7 @@
 package T9_Herencia;
 
 public class T9_2Videojuego implements T9Ej2Entregable {
+	private boolean entrega_default= false;
 	// Atributos
 	protected String Titulo;
 	protected double HorasEstimadas;
