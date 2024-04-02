@@ -7,6 +7,10 @@ public class T9_3Libro {
 	protected double numeropaginas;
 	protected String autor;
 
+	public T9_3Libro(String string, String string2, String string3, int i) {
+		// TODO Auto-generated constructor stub
+	}
+
 	// Getters y setters de cada atributo
 	public String getTitulo() {
 		return Titulo;
