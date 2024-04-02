@@ -1,5 +1,5 @@
 package T9_Herencia;
 
-public class T9_6Cine {
+public class T9_6Sala {
 
 }
