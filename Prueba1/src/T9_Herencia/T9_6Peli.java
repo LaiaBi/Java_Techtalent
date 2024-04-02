@@ -3,20 +3,25 @@ package T9_Herencia;
 import java.util.Random;
 
 public class T9_6Peli {
-	protected String titulo;
-	protected int duración;
-	protected int minEdad;
-	protected String Director;
+	private String titulo;
+	private int duracion;
+	private int edadMinima;
+	private String director;
 
-	// Constructor
-	public T9_6Peli(String titulo, int duración, int minEdad, String director) {
-		this.titulo = titulo;
-		this.duración = duración;
-		this.minEdad = minEdad;
-		Director = director;
+	public T9_6Peli() {
+		this.titulo = "título";
+		this.duracion = 90;
+		this.edadMinima = 18;
+		this.director = "director";
 	}
 
-	// Getters y setters
+	public T9_6Peli(String titulo, int duracion, int edadMinima, String director) {
+		this.titulo = titulo;
+		this.duracion = duracion;
+		this.edadMinima = edadMinima;
+		this.director = director;
+	}
+
 	public String getTitulo() {
 		return titulo;
 	}
@@ -25,28 +30,34 @@ public class T9_6Peli {
 		this.titulo = titulo;
 	}
 
-	public int getDuración() {
-		return duración;
+	public int getDuracion() {
+		return duracion;
 	}
 
-	public void setDuración(int duración) {
-		this.duración = duración;
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
 	}
 
-	public int getMinEdad() {
-		return minEdad;
+	public int getEdadMinima() {
+		return edadMinima;
 	}
 
-	public void setMinEdad(int minEdad) {
-		this.minEdad = minEdad;
+	public void setEdadMinima(int edadMinima) {
+		this.edadMinima = edadMinima;
 	}
 
 	public String getDirector() {
-		return Director;
+		return director;
 	}
 
 	public void setDirector(String director) {
-		Director = director;
+		this.director = director;
+	}
+
+	@Override
+	public String toString() {
+		return "Pelicula [titulo=" + titulo + ", duracion=" + duracion + ", edadMinima=" + edadMinima + ", director=" + director
+				+ "]";
 	}
 
 }

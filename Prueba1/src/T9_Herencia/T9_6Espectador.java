@@ -3,18 +3,33 @@ package T9_Herencia;
 import java.util.Random;
 
 public class T9_6Espectador {
-	protected String nombre;
-	protected int edad;
-	protected int dinero;
+	private String nombre;
+	private int edad;
+	private double dinero;
 
-	// Constructor
-	public T9_6Espectador(String nombre, int edad, int dinero) {
+	public T9_6Espectador() {
+		generarEspectadorRandom();
+	}
+
+	public T9_6Espectador(String nombre, int edad, double dinero) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dinero = dinero;
 	}
+	
+	public void generarEspectadorRandom() {
+		Nombres[] nombres = Nombres.values();
+		int random = (int) (Math.random() * 40);
+		this.nombre = nombres[random].toString();
+		
+		random = (int) (Math.random() * 100);
+		this.edad = random;
+		
+		double r = Math.random() * 100;
+		this.dinero = r;
+		
+	}
 
-	//Getters y Setters
 	public String getNombre() {
 		return nombre;
 	}
@@ -31,12 +46,17 @@ public class T9_6Espectador {
 		this.edad = edad;
 	}
 
-	public int getDinero() {
+	public double getDinero() {
 		return dinero;
 	}
 
-	public void setDinero(int dinero) {
+	public void setDinero(double dinero) {
 		this.dinero = dinero;
+	}
+
+	@Override
+	public String toString() {
+		return "Espectador [nombre=" + nombre + ", edad=" + edad + ", dinero=" + dinero + "]";
 	}
 
 }
