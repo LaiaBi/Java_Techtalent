@@ -12,7 +12,7 @@ CREATE TABLE Directores (
     codigoPieza int,
     idProveedor CHAR(4),
     precio int,
-    PRIMARY KEY (codigoPieza),PRIMARY KEY (idProveedor),
+    PRIMARY KEY (codigoPieza,idProveedor),
     FOREIGN KEY (codigoPieza) REFERENCES piezas(codigo) ON DELETE CASCADE
       ON UPDATE CASCADE ,
       FOREIGN KEY (idProveedor) REFERENCES proveedores(id) ON DELETE CASCADE
