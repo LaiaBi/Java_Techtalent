@@ -2,21 +2,21 @@ CREATE DATABASE if not exists academiaIdiomas;
 USE academiaIdiomas;
 CREATE TABLE alumnos (
     DNI VARCHAR (10) NOT NULL,
-    nombre VARCHAR(80) NOT NULL,
-    apellido_1 VARCHAR (50)NOT NULL,
-    apellido_2 VARCHAR (50)
-    direccion VARCHAR (150)
-    fecha_nacimiento DATE NOT NULL,
-    sexo CHAR (1),
+    nombre VARCHAR(80) DEFAULT NULL,
+    apellido_1 VARCHAR (50)DEFAULT NULL,
+    apellido_2 VARCHAR (50)DEFAULT NULL,
+    direccion VARCHAR (150)DEFAULT NULL,
+    fecha_nacimiento DATE DEFAULT NULL,
+    sexo CHAR (1)DEFAULT NULL,
     PRIMARY KEY (DNI));
 CREATE TABLE cursos (
-    codigo INT NOT NULL,
-    nombre_curso VARCHAR(150) NOT NULL,
-    num_max_alumnos INT,
+    codigo INT DEFAULT NULL,
+    nombre_curso VARCHAR(150) DEFAULT NULL,
+    num_max_alumnos INT DEFAULT NULL,
     num_horas INT NOT NULL,
-    fecha_inicio DATETIME DEFAULT CURRENT_TIMESTAMP,
+    fecha_inicio DATETIME DEFAULT NULL,
     fecha_fin DATETIME DEFAULT NULL,
-    DNI_profesor VARCHAR (10) NOT NULL,
+    DNI_profesor VARCHAR (10) DEFAULT NULL,
     PRIMARY KEY (codigo));   
 	 KEY (DNI_profesor),
     FOREIGN KEY (DNI_profesor) REFERENCES profesores (DNI) ON DELETE CASCADE ON UPDATE CASCADE);
