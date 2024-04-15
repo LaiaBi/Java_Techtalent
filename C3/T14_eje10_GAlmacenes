@@ -1,0 +1,23 @@
+CREATE DATABASE if not exists GAlmacenes;
+USE GAlmacenes;
+CREATE TABLE cajeros (
+    codigo int,
+    nomApels VARCHAR(255),
+    PRIMARY KEY (codigo));
+CREATE TABLE productos (
+    codigo int,
+    nombre VARCHAR(100),
+    precio int,
+    PRIMARY KEY (codigo));
+CREATE TABLE maquinas_registradoras (
+    codigo int,
+    piso int,
+    PRIMARY KEY (codigo));
+CREATE TABLE venta (
+    cajero int,
+    proyecto CHAR(4),
+    PRIMARY KEY (cientifico,proyecto),
+    FOREIGN KEY (cientifico) REFERENCES cientificos(dni) ON DELETE CASCADE
+      ON UPDATE CASCADE ,
+      FOREIGN KEY (proyecto) REFERENCES proyecto(id) ON DELETE CASCADE
+      ON UPDATE CASCADE );
