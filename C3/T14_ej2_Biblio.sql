@@ -1,96 +1,77 @@
-CREATE DATABASE biblio;
-USE biblio;
+DROP DATABASE IF EXISTS Biblioteca;
+CREATE DATABASE Biblioteca;
+USE Biblioteca;
 
 CREATE TABLE editorial (
-    claveditorial SMALLINT NOT NULL,
-    nombre VARCHAR(60),
-    direccion VARCHAR(60),
-    telefono VARCHAR(15),
-    PRIMARY KEY (claveditorial));
+	clave_editorial SMALLINT NOT NULL,
+	nombre VARCHAR(60),
+	direccion VARCHAR(60),
+	telefono VARCHAR(15),
+	PRIMARY KEY (clave_editorial));
 
 CREATE TABLE tema (
-    clavetema SMALLINT NOT NULL,
-    nombre VARCHAR(40),
-    PRIMARY KEY (clavetema));
+	clave_tema SMALLINT NOT NULL,
+	nombre VARCHAR(40),
+	PRIMARY KEY (clave_tema));
 
 CREATE TABLE autor (
-    claveautor INT NOT NULL,
-    nombre VARCHAR(60),
-    PRIMARY KEY (claveautor));
-
+	clave_autor INT NOT NULL,
+	nombre VARCHAR(60),
+	PRIMARY KEY (clave_autor));
+    
 CREATE TABLE socio (
-    clavesocio INT NOT NULL,
-    nombre VARCHAR(60),
-    direccion VARCHAR(60),
-    telefono VARCHAR(15),
-    categoria CHAR,
-    PRIMARY KEY (clavesocio));
+	clave_socio INT NOT NULL,
+	nombre VARCHAR(60),
+	direccion VARCHAR(60),
+	telefono VARCHAR(15),
+	categoria CHAR,
+	PRIMARY KEY (clave_socio));   
 
 CREATE TABLE libro (
-        clavelibro INT NOT NULL, 
-        titulo VARCHAR(60), 
-        idioma VARCHAR(15), 
-        formato VARCHAR(15),    
-        claveditorial SMALLINT, 
-    PRIMARY KEY (clavelibro), 
-    KEY (claveditorial),
-    FOREIGN KEY (claveditorial) 
-    REFERENCES editorial (claveditorial) 
-    ON DELETE SET NULL
-    ON UPDATE CASCADE);
-
+	clave_libro INT NOT NULL, 
+	titulo VARCHAR(60), 
+	idioma VARCHAR(15), 
+	formato VARCHAR(15),    
+	clave_editorial SMALLINT, 
+	PRIMARY KEY (clave_libro), 
+	KEY (clave_editorial),
+	FOREIGN KEY (clave_editorial) REFERENCES editorial (clave_editorial) ON DELETE SET NULL ON UPDATE CASCADE);
+	
+CREATE TABLE escrito_por (
+	clave_libro INT(11) DEFAULT NULL,
+	clave_autor INT(11) DEFAULT NULL,
+	KEY clave_libro (clave_libro),
+	KEY clave_autor (clave_autor),
+	FOREIGN KEY (clave_libro) REFERENCES libro (clave_libro) ON DELETE CASCADE ON UPDATE CASCADE,	
+	FOREIGN KEY (clave_autor) REFERENCES autor (clave_autor) ON DELETE CASCADE ON UPDATE CASCADE);	
+	
+CREATE TABLE trata_sobre (
+	clave_libro INT(11) DEFAULT NULL,
+	clave_tema SMALLINT(11) DEFAULT NULL,
+	KEY clave_libro (clave_libro),
+	KEY clave_tema (clave_tema),
+	FOREIGN KEY (clave_libro) REFERENCES libro (clave_libro) ON DELETE CASCADE ON UPDATE CASCADE,	
+	FOREIGN KEY (clave_tema) REFERENCES tema (clave_tema) ON DELETE CASCADE ON UPDATE CASCADE);
+	
 CREATE TABLE ejemplar (
-        clavejemplar INT NOT NULL, 
-        clavelibro INT NOT NULL,
-        numerorden SMALLINT NOT NULL,
-        edicion SMALLINT, 
-        ubicacion VARCHAR(15),
-        categoria CHAR, 
-    PRIMARY KEY (clavejemplar), 
-    KEY (clavelibro),
-    FOREIGN KEY (clavelibro) 
-    REFERENCES libro (clavelibro) 
-    ON DELETE CASCADE
-    ON UPDATE CASCADE);
-
-CREATE TABLE escritopor (
-      clavelibro INT NOT NULL,
-      claveautor INT NOT NULL,
-      FOREIGN KEY (clavelibro)
-      REFERENCES libro (clavelibro)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE,
-      FOREIGN KEY (claveautor)
-      REFERENCES autor (claveautor)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE);
-
-CREATE TABLE tratasobre (
-      clavelibro INT,
-      clavetema SMALLINT NOT NULL,
-      FOREIGN KEY (clavelibro)
-      REFERENCES libro (clavelibro)
-      ON DELETE SET NULL
-      ON UPDATE CASCADE,
-      FOREIGN KEY (clavetema)
-      REFERENCES tema (clavetema)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE);
-
+	clave_ejemplar INT(11) NOT NULL,
+	clave_libro INT(11) DEFAULT NULL,
+	numero_orden SMALLINT(6) NOT NULL,
+	edicion SMALLINT(6) DEFAULT NULL,
+	ubicacion VARCHAR(15) DEFAULT NULL,
+	categoria CHAR(1) DEFAULT NULL,
+	PRIMARY KEY (clave_ejemplar),
+	KEY clave_libro (clave_libro),
+	FOREIGN KEY (clave_libro) REFERENCES libro (clave_libro) ON DELETE CASCADE ON UPDATE CASCADE);		
+		
 CREATE TABLE prestamo (
-      clavesocio INT,
-      clavejemplar INT,
-      numerorden SMALLINT,
-      fechaprestamo DATE NOT NULL,
-      fechadevolucion DATE DEFAULT NULL,
-      notas BLOB,
-      KEY (clavesocio),
-      FOREIGN KEY (clavesocio) 
-      REFERENCES socio (clavesocio)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE,
-      KEY (clavejemplar),
-      FOREIGN KEY (clavejemplar) 
-      REFERENCES ejemplar (clavejemplar)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE);
+	clave_socio INT(11),
+	clave_ejemplar INT(11),
+	numero_orden SMALLINT(6),
+	fecha_prestamo DATE NOT NULL,
+	fecha_devolucion DATE DEFAULT NULL,
+	notas BLOB,
+	KEY clave_socio (clave_socio),
+	KEY clave_ejemplar (clave_ejemplar),
+	FOREIGN KEY (clave_socio) REFERENCES socio (clave_socio) ON DELETE SET NULL ON UPDATE CASCADE,
+	FOREIGN KEY (clave_ejemplar) REFERENCES ejemplar (clave_ejemplar) ON DELETE SET NULL ON UPDATE CASCADE);
