@@ -1,12 +1,14 @@
 CREATE DATABASE Tienda_Informatica;
 USE Tienda_Informatica;
 CREATE TABLE fabricantes (
-    claveditorial SMALLINT NOT NULL,
+    PRIMARY KEY (codigo)),
     codigo int identity,
     nombre VARCHAR(100);
     PRIMARY KEY (claveditorial));
 CREATE TABLE articulos (
+    PRIMARY KEY (codigo)),
     codigo int identity,
     nombre VARCHAR(100),
     precio int,
+    FOREIGN KEY (fabricante)),
     fabricante int;
