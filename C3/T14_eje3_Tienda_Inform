@@ -1,14 +1,15 @@
-CREATE DATABASE Tienda_Informatica;
+CREATE DATABASE if not exists Tienda_Informatica;
 USE Tienda_Informatica;
 CREATE TABLE fabricantes (
-    PRIMARY KEY (codigo)),
-    codigo int identity,
-    nombre VARCHAR(100);
-    PRIMARY KEY (claveditorial));
+    codigo int,
+    nombre VARCHAR(100),
+    PRIMARY KEY (codigo));
 CREATE TABLE articulos (
-    PRIMARY KEY (codigo)),
-    codigo int identity,
+    codigo int,
     nombre VARCHAR(100),
     precio int,
-    FOREIGN KEY (fabricante)),
-    fabricante int;
+	 fabricante INT,
+	 PRIMARY KEY (codigo),
+    FOREIGN KEY (fabricante) REFERENCES fabricantes(codigo) ON DELETE CASCADE
+      ON UPDATE CASCADE );
+    
