@@ -1,20 +1,23 @@
-CREATE DATABASE meteo;
-USE meteo;
+DROP DATABASE IF EXISTS Meteo;
+CREATE DATABASE Meteo;
+USE Meteo;
+
 CREATE TABLE estacion (
     id MEDIUMINT UNSIGNED NOT NULL,
-    lat VARCHAR(14) NOT NULL,
-    longitud VARCHAR(15) NOT NULL,
-    alt MEDIUMINT NOT NULL,
+    latitud VARCHAR(15) NOT NULL,
+    longitud VARCHAR (15) NOT NULL,
+    altitud MEDIUMINT NOT NULL,
     PRIMARY KEY (id));
 
 CREATE TABLE muestra (
-    idestacion MEDIUMINT UNSIGNED NOT NULL,
+    id_estacion MEDIUMINT UNSIGNED NOT NULL,
     fecha DATE NOT NULL,
-    tempmin TINYINT,
-    tempmax TINYINT,
-    precipita SMALLINT UNSIGNED,
-    hummin TINYINT UNSIGNED,
-    hummax TINYINT UNSIGNED,
-    velmin SMALLINT UNSIGNED,
-    velmax SMALLINT UNSIGNED,
-    KEY (idestacion), FOREIGN KEY (idestacion) REFERENCES estacion (id) ON DELETE NO ACTION ON UPDATE CASCADE);
+    temperatura_min TINYINT,
+    temperatura_max TINYINT,
+    precipitaciones SMALLINT UNSIGNED,
+    humedad_min TINYINT UNSIGNED,
+    humedad_max TINYINT UNSIGNED,
+    velocidad_min SMALLINT UNSIGNED,
+    velocidad_max SMALLINT UNSIGNED,
+    KEY (id_estacion),
+    FOREIGN KEY (id_estacion) REFERENCES estacion (id) ON DELETE CASCADE ON UPDATE CASCADE);
