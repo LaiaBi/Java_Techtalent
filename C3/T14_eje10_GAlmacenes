@@ -15,9 +15,12 @@ CREATE TABLE maquinas_registradoras (
     PRIMARY KEY (codigo));
 CREATE TABLE venta (
     cajero int,
-    proyecto CHAR(4),
-    PRIMARY KEY (cientifico,proyecto),
-    FOREIGN KEY (cientifico) REFERENCES cientificos(dni) ON DELETE CASCADE
+    maquina int,
+    producto int,
+    PRIMARY KEY (cajero,maquina,producto),
+    FOREIGN KEY (cajero) REFERENCES cajeros(codigo) ON DELETE CASCADE
       ON UPDATE CASCADE ,
-      FOREIGN KEY (proyecto) REFERENCES proyecto(id) ON DELETE CASCADE
+      FOREIGN KEY (maquina) REFERENCES maquinas_registradoras(codigo) ON DELETE CASCADE
+      ON UPDATE CASCADE ,
+      FOREIGN KEY (producto) REFERENCES productos(codigo) ON DELETE CASCADE
       ON UPDATE CASCADE );
