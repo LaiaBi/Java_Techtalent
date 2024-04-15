@@ -1,0 +1,28 @@
+CREATE DATABASE if not exists Investigadores;
+USE Investigadores;
+CREATE TABLE facultad (
+    codigo int,
+    nombre VARCHAR(100),
+    PRIMARY KEY (codigo));
+CREATE TABLE Investigadores (
+    dni VARCHAR(8),
+    nomApels VARCHAR(255),
+    facultad int,
+    PRIMARY KEY (dni),
+    FOREIGN KEY (facultad);
+CREATE TABLE equipos (
+    numSerie CHAR(4),
+    nombre VARCHAR(100),
+    facultad int,
+    PRIMARY KEY (numSerie)
+    FOREIGN KEY (facultad));
+CREATE TABLE reserva (
+    dni VARCHAR(8),
+    numSerie CHAR(4),
+    comienzo datetime,
+    fin datetime,
+    PRIMARY KEY (dni,numSerie),
+    FOREIGN KEY (dni) REFERENCES Investigadores(dni) ON DELETE CASCADE
+      ON UPDATE CASCADE ,
+      FOREIGN KEY (numSerie) REFERENCES equipos(numSerie) ON DELETE CASCADE
+      ON UPDATE CASCADE ;
