@@ -2,7 +2,7 @@ CREATE DATABASE if not exists Directores;
 USE Directores;
 CREATE TABLE despachos (
     Numero int,
-    capacoidad int,
+    capacidad int,
     PRIMARY KEY (Numero));
 CREATE TABLE Directores (
     dni VARCHAR(8),

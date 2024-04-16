@@ -1,14 +1,32 @@
 --ejercicio 7 unid. 14
 -- 10 TUPLAS
-INSERT INTO despachos (capacidad) VALUES 
-(2), (8), (10), (6), (4), (12), (5), (11), (23), (4), (11);
-INSERT INTO directores (DNI, Nombre, DNIJefe, despacho) VALUES 
-    ('3333', 'Garcia', NULL, '2'),
-    ('2345', 'Esteve', NULL, '4'),
-    ('12345645', 'Dani', NULL, '5'),
-    ('657', 'Juan', NULL, '10'),
-    ('12376745', 'Pedro', NULL, '9'),
-    ('878787', 'Pepe', NULL, '9'),
-    ('444', 'Mar', NULL, '7'),
-    ('777', 'Marcos', NULL, '6'),
-    ('999', 'Marquitos', NULL, '8');
+INSERT INTO piezas (codigo, Nombre) VALUES 
+    ('3333', 'Peón'),
+    ('2345', 'Torre'),
+    ('12345645', 'Caballo'),
+    ('657', 'Alfil'),
+    ('12376745', 'Reina'),
+    ('878787', 'Rey'),
+    ('444', 'Dama'),
+    ('777', 'Treza'),
+    ('999', 'Centro');
+INSERT INTO proveedores (id, nombre) VALUES 
+    ('3333', 'Garcia'),
+    ('2345', 'Esteve'),
+    ('12345645', 'Dani'),
+    ('657', 'Juan'),
+    ('12376745', 'Pedro'),
+    ('878787', 'Pepe'),
+    ('444', 'Mar'),
+    ('777', 'Marcos'),
+    ('999', 'Marquitos');
+INSERT INTO suministra (codigoPieza,idProveedor,precio) VALUES 
+    ('3333', '645','4€'),
+    ('2345', '32','23€'),
+    ('12345645', '563','3€'),
+    ('657', '364','10€'),
+    ('12376745', '585','9€'),
+    ('878787', '36','13€'),
+    ('444', '356''6€'),,
+    ('777', '235','5€'),
+    ('999', '85','11€');
