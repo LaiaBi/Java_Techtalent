@@ -1,5 +1,5 @@
-CREATE DATABASE if not exists Directores;
-USE Directores;
+CREATE DATABASE if not exists Desp_Director;
+USE Desp_Director;
 CREATE TABLE despachos (
     Numero int,
     capacidad int,
