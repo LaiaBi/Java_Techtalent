@@ -21,3 +21,5 @@ ALTER TABLE despachos CHANGE num num INT(11) NOT NULL AUTO_INCREMENT;
 -- 10 TUPLAS
 INSERT INTO despachos (capacidad) VALUES 
 (2), (8), (10), (6), (4), (12), (5), (11), (23), (4), (11);
+INSERT INTO dni (Directores) VALUES 
+(873285), (823235), (10332), (634), (42352), (122352), (523), (1531), (2583), (564), (161);
