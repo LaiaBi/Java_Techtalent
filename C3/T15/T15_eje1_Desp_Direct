@@ -1,0 +1,23 @@
+CREATE DATABASE if not exists Directores;
+USE Directores;
+CREATE TABLE despachos (
+    Numero int,
+    capacidad int,
+    PRIMARY KEY (Numero));
+CREATE TABLE Directores (
+    dni VARCHAR(9),
+    nombre VARCHAR(255),
+    dniJefe VARCHAR(9),
+    despacho int,
+    PRIMARY KEY (dni),
+    FOREIGN KEY (despacho) REFERENCES despachos(Numero) ON DELETE CASCADE
+      ON UPDATE CASCADE ,
+      FOREIGN KEY (dniJefe) REFERENCES Directores(dni) ON DELETE CASCADE
+      ON UPDATE CASCADE );
+
+-- Le añadimos AUTO_INCREMENT
+ALTER TABLE despachos CHANGE num num INT(11) NOT NULL AUTO_INCREMENT;
+
+-- 10 TUPLAS
+INSERT INTO despachos (capacidad) VALUES 
+(2), (8), (10), (6), (4), (12), (5), (11), (23), (4), (11);
