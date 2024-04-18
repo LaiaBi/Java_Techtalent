@@ -21,3 +21,25 @@ INSERT INTO productos (codigo, Nombre,precio) VALUES
     ('444', 'queso','2'),
     ('777', 'agua','0,79'),
     ('999', 'café','1,50');
+
+INSERT INTO maquinas_registraadoras (codigo, piso) VALUES 
+    ('3333', '2'),
+    ('2345', '1'),
+    ('12345645', '5'),
+    ('657', '4'),
+    ('12376745', '2'),
+    ('878787', '3'),
+    ('444', '6'),
+    ('777', '5'),
+    ('999', '1');
+
+INSERT INTO venta (cajero, maquina,producto) VALUES 
+    ('3333', 'Garcia'),
+    ('2345', 'Esteve'),
+    ('12345645', 'Dani'),
+    ('657', 'Juan'),
+    ('12376745', 'Pedro'),
+    ('878787', 'Pepe'),
+    ('444', 'Mar'),
+    ('777', 'Marcos'),
+    ('999', 'Marquitos');
