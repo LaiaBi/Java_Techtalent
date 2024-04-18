@@ -1,0 +1,23 @@
+--ejercicio 10 unid. 14
+-- 10 TUPLAS
+INSERT INTO cajeros (codigo, NomApels) VALUES 
+    ('3333', 'Garcia'),
+    ('2345', 'Esteve'),
+    ('12345645', 'Dani'),
+    ('657', 'Juan'),
+    ('12376745', 'Pedro'),
+    ('878787', 'Pepe'),
+    ('444', 'Mar'),
+    ('777', 'Marcos'),
+    ('999', 'Marquitos');
+
+INSERT INTO productos (codigo, Nombre,precio) VALUES 
+    ('3333', 'patatas','5'),
+    ('2345', 'fresas','3'),
+    ('12345645', 'tomates','2'),
+    ('657', 'jabón','1,35'),
+    ('12376745', 'papel','1'),
+    ('878787', 'pizza','4'),
+    ('444', 'queso','2'),
+    ('777', 'agua','0,79'),
+    ('999', 'café','1,50');
