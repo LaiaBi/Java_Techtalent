@@ -26,25 +26,25 @@ INSERT INTO investigadores (DNI, nomApels,facultad) VALUES
     ('999', 'Casandra',444);
 
 INSERT INTO equipos (num_serie, nombre,facultad) VALUES 
-    ('3', 'patatas',5),
-    ('23', 'fresas',10),
-    ('12', 'tomates',8),
-    ('65', 'jabón',6),
-    ('37', 'papel',1),
-    ('787', 'pizza',4),
-    ('444', 'queso',2),
-    ('777', 'agua',9),
-    ('745', 'galletas',3),
-    ('999', 'café',7);
+    ('3', 'patatas',12376745),
+    ('23', 'fresas',444),
+    ('12', 'tomates',777),
+    ('65', 'jabón',657),
+    ('37', 'papel',3333),
+    ('787', 'pizza',743),
+    ('444', 'queso',878787),
+    ('743', 'agua',999),
+    ('745', 'galletas',2345),
+    ('999', 'café',12345645);
 
 INSERT INTO reserva (DNI, num_serie,comienzo,fin) VALUES 
-    ('3333', '777',5),
-    ('2345', '3',3),
-    ('12345645', '745',2),
-    ('657',  '65',2),
-    ('12376745',  '444',1),
-    ('878787','999',4),
-    ('444','37',2),
-    ('777','12',1),
-    ('747', '787',1),
-    ('999', '23',1);
+    ('3333', '745',CURDATE(),CURDATE()+5),
+    ('2345', '3',CURDATE(),CURDATE()+3),
+    ('12345645', '743',CURDATE(),CURDATE()+2),
+    ('657',  '65',CURDATE(),CURDATE()+6),
+    ('12376745',  '444',CURDATE(),CURDATE()+7),
+    ('878787','999',CURDATE(),CURDATE()+2),
+    ('444','37',CURDATE(),CURDATE()+1),
+    ('743','12',CURDATE(),CURDATE()+9),
+    ('747', '787',CURDATE(),CURDATE()+10),
+    ('999', '23',CURDATE(),CURDATE()+4);
