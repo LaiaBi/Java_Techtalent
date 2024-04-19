@@ -11,7 +11,7 @@ INSERT INTO cientificos (DNI, NomApels) VALUES
     ('777', 'Marcos'),
     ('999', 'Marquitos');
 
-INSERT INTO proyecto (id, Nombre,Horas) VALUES 
+INSERT INTO proyecto (id, nombre,Horas) VALUES 
     ('3333', 'Monte','2'),
     ('2345', 'Estrellas','5'),
     ('12345645', 'Cascada','7'),
@@ -22,7 +22,7 @@ INSERT INTO proyecto (id, Nombre,Horas) VALUES
     ('777', 'Marcos','6'),
     ('999', 'Volar','10');
 
-INSERT INTO Asignado_a (cientifico,proyecto) VALUES 
+INSERT INTO asignado_A (cientifico,proyecto) VALUES 
     ('Garcia', 'Estrellas'),
     ('Esteve', 'Coche'),
     ('Dani', 'Mar'),
