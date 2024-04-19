@@ -1,23 +1,50 @@
 --ejercicio 11 unid. 14
 -- 10 TUPLAS
+USE investigadores
 INSERT INTO facultad (codigo, nombre) VALUES 
-    (3333, 'Jordi'),
-    (2345, 'Felipe'),
-    (12345645, 'Antonio'),
-    (657, 'Anna'),
+    (3333, 'Guepardo'),
+    (2345, 'Fun'),
+    (12345645, 'Future'),
+    (657, 'Antigua'),
     (12376745, 'Teresa'),
-    (878787, 'Adam'),
-    (444, 'Juan'),
-    (777, 'Sergio'),
-    (999, 'Casandra');
+    (878787, 'Andromeda'),
+    (444, 'Dragon'),
+    (743, 'Estela'),
+    (777, 'Agua'),
+    (999, 'Flor');
 
-INSERT INTO investigadores (DNI, nom_apels,facultad) VALUES 
-    ('3333', 'patatas',5),
-    ('2345', 'fresas',3),
-    ('12345645', 'tomates',2),
-    ('657', 'jabón',2),
-    ('12376745', 'papel',1),
-    ('878787', 'pizza',4),
+INSERT INTO investigadores (DNI, nomApels,facultad) VALUES 
+    ('3333', 'Jordi',999),
+    ('2345', 'Felipe',878787),
+    ('12345645', 'Antonio',3333),
+    ('657',  'Anna',2345),
+    ('12376745',  'Teresa',743),
+    ('878787','Adam',12345645),
+    ('444','Juan',777),
+    ('743','Sergio',12376745),
+    ('747', 'Tomas',657),
+    ('999', 'Casandra',444);
+
+INSERT INTO equipos (num_serie, nombre,facultad) VALUES 
+    ('3', 'patatas',5),
+    ('23', 'fresas',10),
+    ('12', 'tomates',8),
+    ('65', 'jabón',6),
+    ('37', 'papel',1),
+    ('787', 'pizza',4),
     ('444', 'queso',2),
-    ('777', 'agua',1),
-    ('999', 'café',1);
+    ('777', 'agua',9),
+    ('745', 'galletas',3),
+    ('999', 'café',7);
+
+INSERT INTO reserva (DNI, num_serie,comienzo,fin) VALUES 
+    ('3333', '777',5),
+    ('2345', '3',3),
+    ('12345645', '745',2),
+    ('657',  '65',2),
+    ('12376745',  '444',1),
+    ('878787','999',4),
+    ('444','37',2),
+    ('777','12',1),
+    ('747', '787',1),
+    ('999', '23',1);
