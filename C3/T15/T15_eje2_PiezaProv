@@ -10,6 +10,7 @@ INSERT INTO piezas (codigo, nombre) VALUES
     (878787, 'Rey'),
     (444, 'Dama'),
     (777, 'Treza'),
+    (676, 'Manzana'),
     (999, 'Centro');
 INSERT INTO proveedores (id, nombre) VALUES 
     (3333, 'Garcia'),
@@ -20,6 +21,7 @@ INSERT INTO proveedores (id, nombre) VALUES
     (878787, 'Pepe'),
     (444, 'Mar'),
     (777, 'Marcos'),
+    (676,'Teresa'),
     (999, 'Marquitos');
 INSERT INTO suministra (codigoPieza,idProveedor,precio) VALUES 
     (3333, 12376745,4),

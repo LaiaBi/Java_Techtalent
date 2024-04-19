@@ -30,4 +30,5 @@ INSERT INTO directores (DNI, Nombre, DNIJefe, despacho) VALUES
     ('878787', 'Pepe', NULL, '9'),
     ('444', 'Mar', NULL, '7'),
     ('777', 'Marcos', NULL, '6'),
+    ('676', 'Teresa', NULL, '6'),
     ('999', 'Marquitos', NULL, '8');
