@@ -1,0 +1,25 @@
+--ejercicio 3 unid. 14
+-- 10 TUPLAS
+INSERT INTO fabricantes (codigo, nombre) VALUES 
+    (3333, 'Garcia'),
+    (2345, 'Esteve'),
+    (12345645, 'Dani'),
+    (657, 'Juan'),
+    (12376745, 'Pedro'),
+    (878787, 'Pepe'),
+    (444, 'Mar'),
+    (777, 'Marcos'),
+    (676,'Teresa'),
+    (999, 'Marquitos');
+
+INSERT INTO articulos (codigo, nombre,precio) VALUES 
+    (3333, 'Altavoz',80€),
+    (2345, 'Raton',3),
+    (12345645, 'Bateria',2),
+    (657, 'Pen',2),
+    (12376745, 'Cargador',1),
+    (878787, 'Teclado',4),
+    (444, 'Funda',2),
+    (777, 'agua',1),
+    (676, 'aguacate',5),
+    (999, 'café',1);
