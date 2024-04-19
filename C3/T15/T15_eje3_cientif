@@ -1,6 +1,6 @@
 --ejercicio 9 unid. 14
 -- 10 TUPLAS
-INSERT INTO cientificos (DNI, NomApels) VALUES 
+INSERT INTO cientificos (dni, nomapels) VALUES 
     ('3333', 'Garcia'),
     ('2345', 'Esteve'),
     ('12345645', 'Dani'),
@@ -23,12 +23,12 @@ INSERT INTO proyecto (id, nombre,Horas) VALUES
     ('999', 'Volar','10');
 
 INSERT INTO asignado_A (cientifico,proyecto) VALUES 
-    ('Garcia', 'Estrellas'),
-    ('Esteve', 'Coche'),
-    ('Dani', 'Mar'),
-    ('Juan', 'Marcos'),
-    ('Pedro', 'Volar'),
-    ('Pepe', 'Bosque'),
-    ('Mar', 'Monte'),
-    ('Marcos', 'Galleta'),
-    ('Marquitos', 'Cascada');
+     ('3333', '2345'),
+    ('2345', '878787'),
+    ('12345645', '444'),
+    ('657', '777'),
+    ('12376745', '999'),
+    ('878787', '12376745'),
+    ('444', '3333'),
+    ('777', '657'),
+    ('999', '12345645');
