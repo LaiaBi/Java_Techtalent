@@ -10,9 +10,9 @@ INSERT INTO cajeros (codigo, nomApels) VALUES
     (878787, 'Pepe'),
     (444, 'Mar'),
     (777, 'Marcos'),
+    (345,'Tamara'),
     (999, 'Marquitos');
     
-
 INSERT INTO productos (codigo, nombre,precio) VALUES 
     (3333, 'patatas',5),
     (2345, 'fresas',3),
@@ -22,6 +22,7 @@ INSERT INTO productos (codigo, nombre,precio) VALUES
     (878787, 'pizza',4),
     (444, 'queso',2),
     (777, 'agua',1),
+    (676, 'aguacate',5),
     (999, 'café',1);
 
 INSERT INTO maquinas_registradoras (codigo, piso) VALUES 
@@ -33,6 +34,7 @@ INSERT INTO maquinas_registradoras (codigo, piso) VALUES
     (878787, 3),
     (444, 6),
     (777, 5),
+    (675,4),
     (999, 1);
 
 INSERT INTO venta (cajero, maquina,producto) VALUES 
@@ -44,4 +46,5 @@ INSERT INTO venta (cajero, maquina,producto) VALUES
     (878787, 999,657),
     (444, 12345645,444),
     (777, 878787,12376745),
+    (345,675,676),
     (999,3333,777);
