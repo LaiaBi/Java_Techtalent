@@ -1,0 +1,23 @@
+--ejercicio 11 unid. 14
+-- 10 TUPLAS
+INSERT INTO facultad (codigo, nombre) VALUES 
+    (3333, 'Jordi'),
+    (2345, 'Felipe'),
+    (12345645, 'Antonio'),
+    (657, 'Anna'),
+    (12376745, 'Teresa'),
+    (878787, 'Adam'),
+    (444, 'Juan'),
+    (777, 'Sergio'),
+    (999, 'Casandra');
+
+INSERT INTO investigadores (DNI, nom_apels,facultad) VALUES 
+    ('3333', 'patatas',5),
+    ('2345', 'fresas',3),
+    ('12345645', 'tomates',2),
+    ('657', 'jabón',2),
+    ('12376745', 'papel',1),
+    ('878787', 'pizza',4),
+    ('444', 'queso',2),
+    ('777', 'agua',1),
+    ('999', 'café',1);
