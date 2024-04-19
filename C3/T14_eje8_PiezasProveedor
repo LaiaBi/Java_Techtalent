@@ -8,7 +8,7 @@ CREATE TABLE proveedores (
     id char(4),
     nombre VARCHAR(100),
     PRIMARY KEY (id));
-CREATE TABLE Directores (
+CREATE TABLE suministra (
     codigoPieza int,
     idProveedor CHAR(4),
     precio int,
