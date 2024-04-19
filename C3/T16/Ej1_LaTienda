@@ -14,9 +14,9 @@ INSERT INTO fabricantes (codigo, nombre) VALUES
 
 INSERT INTO articulos (codigo, nombre,precio) VALUES 
     (3333, 'Altavoz',80€),
-    (2345, 'Raton',3),
-    (12345645, 'Bateria',2),
-    (657, 'Pen',2),
+    (2345, 'Cámara digital Canon',354€),
+    (12345645, 'Auriculares inalámbricos Sony',243€),
+    (657, 'Tablet Apple',599€),
     (12376745, 'Cargador',1),
     (878787, 'Teclado',4),
     (444, 'Funda',2),
