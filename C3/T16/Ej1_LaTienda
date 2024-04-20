@@ -92,3 +92,12 @@ GROUP BY articulos.fabricante
 SELECT nombre, precio
 FROM articulos
 WHERE precio <= 50;
+-- 1.16 (nombre y precio de articulos mas caros de cada proveedor (incluido su nombre))?
+SELECT fabricantes.nombre AS nombre_proveedor, articulos.nombre AS nombre_articulo, articulos.precio
+FROM articulos articulos
+JOIN fabricantes fabricantes ON articulos.id = fabricantes.id
+WHERE articulos.precio = (
+    SELECT MAX(precio)
+    FROM articulos
+    WHERE id.fabricantes = articulos.id);
+    
