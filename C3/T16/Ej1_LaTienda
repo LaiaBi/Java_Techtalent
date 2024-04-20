@@ -60,16 +60,35 @@ SELECT *
 FROM articulos
 WHERE precio >= 180
 ORDER BY precio DESC;
--- 1.10 (ver todo la info completa de los articulos)?
-SELECT codigo, nombre, precio, fabricante
-FROM articulos;
--- 1.11 (ver todo la info completa de los articulos)?
--- 1.12 (precio medio de los productos y solo mostrar el codigo del fabricante)
+-- 1.10 (ver todo la info completa de los articulos)
+SELECT articulos.codigo, articulos.nombre, precio, fabricante, fabricantes.nombre AS nombre_fabricante
+FROM articulos
+INNER JOIN fabricantes ON fabricante = fabricantes.codigo;
+-- 1.11 (ver todo la info completa de los articulos)
+SELECT articulos.nombre, precio, fabricantes.nombre AS nombre_fabricante
+FROM articulos
+INNER JOIN fabricantes ON fabricante = fabricantes.codigo;
+-- 1.12 (precio medio de los productos y solo mostrar el codigo del fabricante)?
 SELECT codigo, AVG(precio) AS precio_medio
 FROM articulos
 GROUP BY codigo;
 -- 1.13(precio medio de cada producto del fabricante(mostrando el nom. del mismo))
-SELECT f.nombre AS nombre_fabricante, AVG(a.precio) AS precio_medio
-FROM articulos a
-JOIN fabricantes f ON a.id_fabricante = f.id
-GROUP BY f.nombre;
+SELECT fabricante, fabricantes.nombre, SUM(precio)/COUNT(precio) AS precio_medio
+FROM articulos
+INNER JOIN fabricantes ON fabricante = fabricantes.codigo
+GROUP BY fabricante
+-- 1.14(nombre de los fabricantes con productos medios de mayor o igual a 150€)
+SELECT articulos.fabricante, fabricantes.nombre, SUM(articulos.precio)/COUNT(articulos.precio) AS precio_medio
+FROM fabricantes
+INNER JOIN articulos ON articulos.fabricante = fabricantes.codigo
+WHERE (
+	SELECT SUM(precio)/COUNT(precio)
+	FROM articulos
+	WHERE fabricante = fabricantes.codigo
+	GROUP BY fabricante
+) >= 80
+GROUP BY articulos.fabricante
+-- 1.15 (nombre y precio de articulos baratos)
+SELECT nombre, precio
+FROM articulos
+WHERE precio <= 50;
