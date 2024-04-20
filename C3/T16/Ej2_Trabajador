@@ -1,0 +1,27 @@
+--ejercicio 4 unid. 14
+-- 10 TUPLAS
+USE empleados
+INSERT INTO departamentos (codigo, nombre,presupuesto) VALUES 
+    (3333, 'Ventas',500),
+    (2345, 'Marqueting',300),
+    (12345645, 'Finanzas',700),
+    (657, 'Recursos Humanos',400),
+    (12376745, 'Produccion',600),
+    (878787, 'Invest. & Desarrollo',800),
+    (444, 'Tecnologia',900),
+    (777, 'Logistica',450),
+    (676,'Legal',350),
+    (999, 'Atencion al Cliente',250);
+
+INSERT INTO empleados (dni, nombre,apellidos,departamento) VALUES 
+    ('3333', 'María','García',999),
+    ('2345', 'Alejandro','Martinez',878787),
+    ('12345645', 'Laura','Rodriguez',657),
+    ('657', 'Carlos', 'Lopez',444),
+    ('12376745', 'Andrea','Hernandez',12345645),
+    ('878787', 'Javier', 'Perez',777),
+    ('444', 'Ana', 'Sanchez',12376745),
+    ('777', 'David','Gomez',444),
+    ('676','Paula','Fernandez',2345),
+    ('999', 'Sergio', 'Ruiz',676);
+
