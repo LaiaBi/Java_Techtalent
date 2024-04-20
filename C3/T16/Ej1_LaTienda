@@ -1,5 +1,6 @@
 --ejercicio 3 unid. 14
 -- 10 TUPLAS
+USE tienda_informatica
 INSERT INTO fabricantes (codigo, nombre) VALUES 
     (3333, 'Garcia'),
     (2345, 'Esteve'),
@@ -12,14 +13,14 @@ INSERT INTO fabricantes (codigo, nombre) VALUES
     (676,'Teresa'),
     (999, 'Marquitos');
 
-INSERT INTO articulos (codigo, nombre,precio) VALUES 
-    (3333, 'Altavoz',80€),
-    (2345, 'Cámara digital Canon',354€),
-    (12345645, 'Auriculares inalámbricos Sony',243€),
-    (657, 'Tablet Apple',599€),
-    (12376745, 'Cargador',1),
-    (878787, 'Teclado',4),
-    (444, 'Funda',2),
-    (777, 'agua',1),
-    (676, 'aguacate',5),
-    (999, 'café',1);
+INSERT INTO articulos (codigo, nombre,precio,fabricante) VALUES 
+    (3333, 'Altavoz',80,999),
+    (2345, 'Cámara digital Canon',354,676),
+    (12345645, 'Auriculares inalámbricos Sony',243,777),
+    (657, 'Tablet Apple',599,2345),
+    (12376745, 'Impresora multifunción',249,3333),
+    (878787, 'Reloj inteligente',399,444),
+    (444, 'Altavoz inteligente',49,12345645),
+    (777, 'Consola de videojuegos Xbox',499,657),
+    (676, 'Smart TV',1119,12376745),
+    (999, 'Laptop HP Pavilion 15.6"',800,878787);
