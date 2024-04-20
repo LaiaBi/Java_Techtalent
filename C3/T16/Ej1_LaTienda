@@ -43,7 +43,10 @@ FROM articulos;
 -- 1.6(Precio medio de productos)
 SELECT AVG(precio) AS precio_medio
 FROM articulos;
--- 1.7(precio medio cuyo codigo fabricante sea 2)
+-- 1.7(precio medio cuyo codigo fabricante sea 2, al no tener (NULL))
+SELECT AVG(precio) AS precio_medio
+FROM articulos
+WHERE codigo = 2;
 -- 1.8(num. articulos igual o mayor a 180€)
 SELECT nombre,precio >= 180
 FROM articulos;
