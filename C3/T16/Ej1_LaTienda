@@ -25,6 +25,7 @@ INSERT INTO articulos (codigo, nombre,precio,fabricante) VALUES
     (676, 'Smart TV',1119,12376745),
     (999, 'Laptop HP Pavilion 15.6"',800,878787);
 
+-- USE tienda_informatica --
 -- 1.1 (La única cosa que da error es que la columna nombre sale doble,es decir que al mostrar la columna sale doblada)
 SELECT nombre,nombre
 FROM articulos;
