@@ -36,3 +36,8 @@ FROM empleados;
 SELECT *
 FROM empleados
 WHERE apellidos = 'Lopez';
+-- 2.4(solo la info de la persona con apellidos 'Lopez' y 'Perez')
+SELECT *
+FROM empleados
+WHERE apellidos = 'Lopez' OR apellidos= 'Perez';
+-- 2.5()
