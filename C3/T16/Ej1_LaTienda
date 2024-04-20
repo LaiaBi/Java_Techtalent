@@ -60,3 +60,11 @@ SELECT *
 FROM articulos
 WHERE precio >= 180
 ORDER BY precio DESC;
+-- 1.10 (ver todo la info completa de los articulos)?
+SELECT codigo, nombre, precio, fabricante
+FROM articulos;
+-- 1.11 (ver todo la info completa de los articulos)?
+-- 1.12 (precio medio de los productos y solo mostrar el codigo del fabricante)
+SELECT codigo_fabricante, AVG(precio) AS precio_medio
+FROM articulos
+GROUP BY codigo_fabricante;
