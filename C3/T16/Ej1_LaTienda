@@ -38,9 +38,11 @@ FROM articulos;
 SELECT * FROM articulos
 WHERE precio BETWEEN 60 AND 120;
 -- 1.5(en pesetas ( € *166,386))
-SELECT nombre,precio *166.386 
+SELECT nombre,precio *166.386 AS precio_pesetas 
 FROM articulos;
 -- 1.6(Precio medio de productos)
+SELECT AVG(precio) AS precio_medio
+FROM articulos;
 -- 1.7(precio medio cuyo codigo fabricante sea 2)
 -- 1.8(num. articulos igual o mayor a 180€)
 SELECT nombre,precio >= 180
