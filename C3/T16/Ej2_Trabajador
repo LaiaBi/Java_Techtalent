@@ -25,3 +25,14 @@ INSERT INTO empleados (dni, nombre,apellidos,departamento) VALUES
     ('676','Paula','Fernandez',2345),
     ('999', 'Sergio', 'Ruiz',676);
 
+-- USE empleados --
+-- 2.1 (solo apellidos empleados)
+SELECT apellidos
+FROM empleados;
+--2.2(solo apellidos sin que se repitan,en mi caso no se repiten)
+SELECT DISTINCT apellidos
+FROM empleados;
+--2.3(solo la info de la persona apellidada 'Lopez')
+SELECT *
+FROM empleados
+WHERE apellidos = 'Lopez';
