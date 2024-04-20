@@ -28,4 +28,7 @@ INSERT INTO articulos (codigo, nombre,precio,fabricante) VALUES
 -- 1.1 (La única cosa que da error es que la columna nombre sale doble,es decir que al mostrar la columna sale doblada)
 SELECT nombre,nombre
 FROM articulos;
--- 1.2 (...)
+-- 1.2 (Seleccionar nombre del producto y el precio)
+SELECT nombre,precio
+FROM articulos;
+-- 1.3 ()
