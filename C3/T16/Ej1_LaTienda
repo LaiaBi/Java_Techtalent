@@ -100,4 +100,17 @@ WHERE articulos.precio = (
     SELECT MAX(precio)
     FROM articulos
     WHERE id.fabricantes = articulos.id);
-    
+-- 1.17(Nuevo producto)
+INSERT INTO articulos (codigo, nombre,precio,fabricante) VALUES
+    (910,'Altavoces',70,657);
+-- 1.18(Cambiar articulo 8 a 'Impresora Laser')
+UPDATE articulos
+SET nombre = 'Impresora Laser'
+WHERE codigo = 3333;
+-- 1.19(descuento del 10% en todos los productos)?
+UPDATE articulos
+SET precio = precio * 0.9;
+-- 1.20 (descuento de 10€ a productos mayores o igual a 120€)
+UPDATE articulos
+SET precio = precio - 10
+WHERE precio >= 120;
