@@ -37,3 +37,11 @@ FROM articulos;
 -- 1.4 (entre 60 y 120, las dos incluidas, al no tener las cualidades que indica no se incluye en la lista)
 SELECT * FROM articulos
 WHERE precio BETWEEN 60 AND 120;
+-- 1.5(en pesetas ( € *166,386))
+SELECT nombre,precio *166.386 
+FROM articulos;
+-- 1.6(Precio medio de productos)
+-- 1.7(precio medio cuyo codigo fabricante sea 2)
+-- 1.8(num. articulos igual o mayor a 180€)
+SELECT nombre,precio >= 180
+FROM articulos;
