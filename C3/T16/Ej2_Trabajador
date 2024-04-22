@@ -62,14 +62,24 @@ GROUP BY departamento;
 -- 2.10 (listado de empleados,cada uno de sus datos y departamento)
 SELECT *, departamento
 FROM empleados;
--- 2.11 (listado de empleados, cada uno de sus datos y presupuesto de su departamento)
+-- 2.11 (listado de empleados, cada uno de sus datos y presupuesto de su departamento)?
 SELECT e.*, d.presupuesto AS presupuesto_departamento
 FROM empleados e
 JOIN departamentos d ON e.departamento = d.id;
 -- 2.12(nom. y apellidos de trabajadores en departamentos de presupuesto mayor a 60.000€)
-
+SELECT empleados.nombre, empleados.apellidos
+FROM empleados
+JOIN departamentos ON empleados.departamento = departamentos.codigo
+WHERE departamentos.presupuesto > 60000;
 -- 2.13(datos de departamentos cuyo precio sea superior a la media)
-
+SELECT *
+FROM departamentos
+WHERE presupuesto > (SELECT AVG(presupuesto) FROM departamentos);
 -- 2.14(NOMBRES de los departamentos que tienen mas de dos empleados)
+SELECT d.nombre
+FROM departamentos d
+JOIN empleados e ON d.id = e.departamento
+GROUP BY d.nombre
+HAVING COUNT(*) > 2;
 
 --2.15(Añadir'CALIDAD', 40.000 y cod.11. Empleado:Esther Vazquez, dni: 89267109)
