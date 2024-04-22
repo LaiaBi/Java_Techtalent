@@ -100,5 +100,13 @@ DELETE
 FROM empleados
 WHERE departamento = 4
 -- 2.19 ?(despedir empleados que trabajen en un lugar de presup. superior a 60.000€)?
-
--- 2.20 ?(despedir todos)?
+DELETE FROM empleados
+WHERE departamento IN 
+(
+    SELECT codigo
+    FROM departamentos
+    WHERE presupuesto >= 18000
+);
+-- 2.20 ?(despedir todos)
+DELETE
+FROM empleados 
