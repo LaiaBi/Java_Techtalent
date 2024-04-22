@@ -27,13 +27,18 @@ INSERT INTO cajas (numreferencia, contenido,valor,almacen) VALUES
 
 --USE almacenes--
 -- 3.1 (todos los almacenes)
-
+SELECT *
+FROM almacenes;
 -- 3.2 (todas las caajas valor superior de 150€)
-
+SELECT *
+FROM cajas
+WHERE valor > 150;
 -- 3.3 (tipos de contenido de cajas)
-
+SELECT DISTINCT contenido
+FROM cajas;
 -- 3.4 (valor medio de todas las cajas)
-
+SELECT AVG(valor) AS valor_medio
+FROM cajas;
 -- 3.5 (valor medio de las cajas de cada almacen)
 
 -- 3.6 (codigos de almacenes de valor de caja superior a 150€)
