@@ -82,7 +82,9 @@ WHERE id IN (
     SELECT departamento
     FROM empleados
     GROUP BY departamento
-    HAVING COUNT(*) > 2
-);
-
+    HAVING COUNT(*) > 2);
 --2.15(Añadir'CALIDAD', 40.000 y cod.11. Empleado:Esther Vazquez, dni: 89267109)
+INSERT INTO departamentos (codigo, nombre,presupuesto) VALUES 
+    (11, 'CALIDAD',40.000);
+INSERT INTO empleados (dni, nombre,apellidos,departamento) VALUES 
+    ('89267109', 'Esther','Vazquez',676);
