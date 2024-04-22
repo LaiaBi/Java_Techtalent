@@ -40,4 +40,7 @@ WHERE apellidos = 'Lopez';
 SELECT *
 FROM empleados
 WHERE apellidos = 'Lopez' OR apellidos= 'Perez';
--- 2.5()
+-- 2.5(info de empleados que trabajan en el pert. 14)
+SELECT *
+FROM empleados
+WHERE departamento = 14;
