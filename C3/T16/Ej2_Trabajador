@@ -76,10 +76,13 @@ SELECT *
 FROM departamentos
 WHERE presupuesto > (SELECT AVG(presupuesto) FROM departamentos);
 -- 2.14(NOMBRES de los departamentos que tienen mas de dos empleados)
-SELECT d.nombre
-FROM departamentos d
-JOIN empleados e ON d.id = e.departamento
-GROUP BY d.nombre
-HAVING COUNT(*) > 2;
+SELECT nombre
+FROM departamentos
+WHERE id IN (
+    SELECT departamento
+    FROM empleados
+    GROUP BY departamento
+    HAVING COUNT(*) > 2
+);
 
 --2.15(Añadir'CALIDAD', 40.000 y cod.11. Empleado:Esther Vazquez, dni: 89267109)
