@@ -44,3 +44,14 @@ WHERE apellidos = 'Lopez' OR apellidos= 'Perez';
 SELECT *
 FROM empleados
 WHERE departamento = 14;
+-- 2.6(info de empleados que trabajan en el pert. 37 y 77)
+SELECT *
+FROM empleados
+WHERE departamento IN (37, 77);
+-- 2.7(datos de empleados que empiezen por 'P')
+SELECT *
+FROM personas
+WHERE apellido LIKE 'P%';
+--2.8 (presupuestod e todos los departamentos)
+SELECT SUM(presupuesto) AS presupuesto_total
+FROM departamentos;
