@@ -1,0 +1,39 @@
+--ejercicio 5 unid. 14
+-- 10 TUPLAS
+USE almacenes
+INSERT INTO almacenes (codigo, lugar,capacidad) VALUES 
+    (3333, 'Murcia',500),
+    (2345, 'Andorra',300),
+    (12345645, 'Tarragona',700),
+    (657, 'Sevilla',400),
+    (12376745, 'Vinaroz',600),
+    (878787, 'Madrid',800),
+    (444, 'Tortosa',900),
+    (777, 'Bilbao',450),
+    (676,'Salou',350),
+    (999, 'Barcelona',250);
+
+INSERT INTO cajas (numreferencia, contenido,valor,almacen) VALUES 
+    ('3333', 'Ventas',500,444),
+    ('2345', 'Marqueting',300,999),
+    ('12345645', 'Finanzas',700,878787),
+    ('657', 'Recursos Humanos',400,657),
+    ('12376745', 'Produccion',600,676),
+    ('878787', 'Invest. & Desarrollo',800,3333),
+    ('444', 'Tecnologia',900,2345),
+    ('777', 'Logistica',450,12376745),
+    ('676','Legal',350,12345645),
+    ('999', 'Atencion al Cliente',250,777);
+
+--USE almacenes--
+-- 3.1 (todos los almacenes)
+
+-- 3.2 (todas las caajas valor superior de 150€)
+
+-- 3.3 (tipos de contenido de cajas)
+
+-- 3.4 (valor medio de todas las cajas)
+
+-- 3.5 (valor medio de las cajas de cada almacen)
+
+-- 3.6 (codigos de almacenes de valor de caja superior a 150€)
