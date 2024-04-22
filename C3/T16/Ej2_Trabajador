@@ -55,3 +55,21 @@ WHERE apellido LIKE 'P%';
 --2.8 (presupuestod e todos los departamentos)
 SELECT SUM(presupuesto) AS presupuesto_total
 FROM departamentos;
+-- 2.9 (num. empleados de cada departamaento)
+SELECT departamento, COUNT(*) AS numero_empleados
+FROM empleados
+GROUP BY departamento;
+-- 2.10 (listado de empleados,cada uno de sus datos y departamento)
+SELECT *, departamento
+FROM empleados;
+-- 2.11 (listado de empleados, cada uno de sus datos y presupuesto de su departamento)
+SELECT e.*, d.presupuesto AS presupuesto_departamento
+FROM empleados e
+JOIN departamentos d ON e.departamento = d.id;
+-- 2.12(nom. y apellidos de trabajadores en departamentos de presupuesto mayor a 60.000€)
+
+-- 2.13(datos de departamentos cuyo precio sea superior a la media)
+
+-- 2.14(NOMBRES de los departamentos que tienen mas de dos empleados)
+
+--2.15(Añadir'CALIDAD', 40.000 y cod.11. Empleado:Esther Vazquez, dni: 89267109)
