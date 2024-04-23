@@ -44,9 +44,25 @@ SELECT s.codigo AS codigo_sala,
        p.clasifEdad AS clasificacion_edad_pelicula
 FROM salas s
 LEFT JOIN peliculas p ON s.pelicula = p.codigo;
-
 -- 4.6 (info de todas las pelis y si se proyecta en alguna sala e info de ella)
+SELECT p.codigo AS codigo_pelicula, 
+       p.nombre AS nombre_pelicula, 
+       p.clasifEdad AS clasificacion_edad_pelicula,
+       s.codigo AS codigo_sala, 
+       s.nombre AS nombre_sala
+FROM peliculas p
+LEFT JOIN salas s ON p.codigo = s.pelicula;
 -- 4.7 (nombres de peli que no se proyecta en ninguna sala)
+SELECT p.nombre AS nombre_pelicula
+FROM peliculas p
+LEFT JOIN salas s ON p.codigo = s.pelicula
+WHERE s.pelicula IS NULL;
 -- 4.8 (NUEVA peli 'Uno, Dos, Tres', mayores de 7)
+INSERT INTO peliculas (codigo, nombre, clasifEdad) VALUES 
+    (1234, 'Uno, Dos, Tres', '7');
 -- 4.9 (todas las no calificadas han sido alificadas 'no reco-mendables para menores de 13 años')
+UPDATE peliculas
+SET clasifEdad = 'no recomendables para menores de 13 años'
+WHERE clasifEdad IS NULL;
 -- 4.10 (eliminar todas las salas)
+DELETE FROM salas;
