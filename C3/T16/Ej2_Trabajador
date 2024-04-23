@@ -62,7 +62,7 @@ GROUP BY departamento;
 -- 2.10 (listado de empleados,cada uno de sus datos y departamento)
 SELECT *, departamento
 FROM empleados;
--- 2.11? (listado de empleados, cada uno de sus datos y presupuesto de su departamento)?
+-- 2.11 (listado de empleados, cada uno de sus datos y presupuesto de su departamento)
 SELECT empleados.*, departamentos.presupuesto AS presupuesto_departamento
 FROM empleados empleados
 JOIN departamentos departamentos ON empleados.departamento = departamentos.codigo;
@@ -99,7 +99,7 @@ WHERE departamento = 9
 DELETE
 FROM empleados
 WHERE departamento = 4
--- 2.19 ?(despedir empleados que trabajen en un lugar de presup. superior a 60.000€)?
+-- 2.19 (despedir empleados que trabajen en un lugar de presup. superior a 60.000€)
 DELETE FROM empleados
 WHERE departamento IN 
 (
@@ -107,6 +107,6 @@ WHERE departamento IN
     FROM departamentos
     WHERE presupuesto >= 18000
 );
--- 2.20 ?(despedir todos)
+-- 2.20 (despedir todos)
 DELETE
 FROM empleados 
