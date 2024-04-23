@@ -39,11 +39,11 @@ FROM cajas;
 -- 3.4 (valor medio de todas las cajas)
 SELECT AVG(valor) AS valor_medio
 FROM cajas;
--- 3.5???? (valor medio de las cajas de cada almacen)?????
-SELECT almacen_id, AVG(valor) AS valor_medio
-FROM cajas
-GROUP BY almacen_id;
-
+-- 3.5 (valor medio de las cajas de cada almacen)
+SELECT a.codigo AS codigo_almacen, a.lugar, AVG(c.valor) AS valor_medio_cajas
+FROM almacenes a
+LEFT JOIN cajas c ON a.codigo = c.almacen
+GROUP BY a.codigo, a.lugar;
 -- 3.6 ????(codigos de almacenes de valor de caja superior a 150€)????
 SELECT DISTINCT almacen_id
 FROM cajas
