@@ -25,4 +25,28 @@ INSERT INTO salas (codigo, nombre, pelicula) VALUES
     (676, '1', 12376745),
     (999, '5', 444);
 
--- 4.1()
+-- 4.1 (mostrar nom. todas las pelis)
+SELECT * FROM peliculas;
+-- 4.2 (distintas calificaciones de edad)
+SELECT DISTINCT clasifEdad FROM peliculas;
+-- 4.3 (todas pelis no calificadas)
+SELECT * FROM peliculas
+WHERE clasifEdad IS NULL;
+-- 4.4 (todas las salas que no proyectan ninguna peli)
+SELECT s.*
+FROM salas s
+LEFT JOIN peliculas p ON s.codigo = pelicula
+WHERE pelicula IS NULL;
+-- 4.5 (info. de todas las salas, la peli e info de la peli)
+SELECT s.codigo AS codigo_sala, 
+       s.nombre AS nombre_sala, 
+       p.nombre AS nombre_pelicula, 
+       p.clasifEdad AS clasificacion_edad_pelicula
+FROM salas s
+LEFT JOIN peliculas p ON s.pelicula = p.codigo;
+
+-- 4.6 (info de todas las pelis y si se proyecta en alguna sala e info de ella)
+-- 4.7 (nombres de peli que no se proyecta en ninguna sala)
+-- 4.8 (NUEVA peli 'Uno, Dos, Tres', mayores de 7)
+-- 4.9 (todas las no calificadas han sido alificadas 'no reco-mendables para menores de 13 años')
+-- 4.10 (eliminar todas las salas)
