@@ -1,0 +1,28 @@
+--ejercicio 6 unid. 14
+-- 10 TUPLAS
+USE PeliSala;
+INSERT INTO peliculas (codigo, nombre, clasifEdad) VALUES 
+    (3333, 'Toy Story', 'AP'),
+    (2345, 'Jurassic Park', '12'),
+    (12345645, 'The Lord of the Rings: The Fellowship of the Ring', '13'),
+    (657, 'The Dark Knight', '14'),
+    (12376745, 'Inception', '14'),
+    (878787, 'The Shawshank Redemption', '16'),
+    (444, 'Pulp Fiction', '16'),
+    (777, 'Fight Club', '18'),
+    (676, 'The Godfather', '18'),
+    (999, 'Schindler''s', '18');
+
+INSERT INTO salas (codigo, nombre, pelicula) VALUES 
+    (3333, '1', 999),
+    (2345, '8', 676),
+    (12345645, '5',777),
+    (657, '3', 878787),
+    (12376745, '3', 657),
+    (878787, '6', 3333),
+    (444, '4', 12345645),
+    (777, '2', 2345),
+    (676, '1', 12376745),
+    (999, '5', 444);
+
+-- 4.1()

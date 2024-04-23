@@ -69,6 +69,18 @@ WHERE almacenes.lugar = 'Bilbao';
 -- 3.11 (NUEVO almacen en Barcelona con capacidad de 3)
 INSERT INTO almacenes (codigo, lugar,capacidad) VALUES 
     (545, 'Barcelona',3);
--- 3.12 (NUEVA caja, num. refer. 'H5RT', de 'Papel', valor 200 situada en alm.2)
+-- 3.12?? (NUEVA caja, num. refer. 'H5RT', de 'Papel', valor 200 situada en alm.2)??
 INSERT INTO cajas (numreferencia, contenido,valor,almacen) VALUES 
     ('H5RT', 'Papel',200,2);
+-- 3.13 (rebajar el valor de las cajas a un 15%)
+UPDATE cajas
+SET valor = valor * 0.85; -- Multiplicar por 0.85 para reducir en un 15%
+-- 3.14 (rebajar 20% el valor de las cajas con valor superior al medio total)
+UPDATE cajas
+SET valor = valor * 0.8 -- Multiplicar por 0.8 para reducir en un 20%
+WHERE valor > (
+    SELECT AVG(valor) FROM cajas
+);
+-- 3.15 (eliminar todas cajas inferiores a 100€)
+
+-- 3.16 (vaciar el contenido de almacenes que estan saturados)
