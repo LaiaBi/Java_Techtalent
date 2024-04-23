@@ -82,5 +82,6 @@ WHERE valor > (
     SELECT AVG(valor) FROM cajas
 );
 -- 3.15 (eliminar todas cajas inferiores a 100€)
-
+DELETE FROM cajas
+WHERE valor < 100;
 -- 3.16 (vaciar el contenido de almacenes que estan saturados)
