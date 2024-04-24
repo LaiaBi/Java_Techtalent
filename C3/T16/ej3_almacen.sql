@@ -44,18 +44,25 @@ SELECT a.codigo AS codigo_almacen, a.lugar, AVG(c.valor) AS valor_medio_cajas
 FROM almacenes a
 LEFT JOIN cajas c ON a.codigo = c.almacen
 GROUP BY a.codigo, a.lugar;
--- 3.6 ????(codigos de almacenes de valor de caja superior a 150€)????
-SELECT DISTINCT almacen_id
+-- 3.6 (codigos de almacenes de valor de caja superior a 150€)
+SELECT almacen, AVG (valor)
 FROM cajas
-WHERE valor > 150;
--- 3.7 (num.referencia de cada caja con el nombre de la ciudad)-???
+GROUP BY almacen
+HAVING AVG (valor) > 150;
+-- 3.7 (num.referencia de cada caja con el nombre de la ciudad)
 SELECT cajas.numreferencia, almacenes.lugar
 FROM cajas cajas
 JOIN almacenes almacenes ON cajas.numreferencia = almacenes.codigo;
 -- 3.8???? (num.cajas que hay en el almacen)???
-SELECT almacen_id, COUNT(*) AS numero_de_cajas
+-- NO tiene en cuenta los almacenes VACIOS --
+SELECT almacen,COUNT(*)
 FROM cajas
-GROUP BY almacen_id;
+GROUP BY almacen;
+-- TIENE en cuenta los almacenes VACIOS --
+SELECT codigo,COUNT(numreferencia)
+FROM almacenes LEFT JOIN caajas
+ON almacenes.codigo = cajas.almacen
+GROUP BY codigo;
 -- 3.9 (codig. almacenes saturados(superior a su capacidad))????
 SELECT almacen_codigo
 FROM cajas
