@@ -53,26 +53,38 @@ HAVING AVG (valor) > 150;
 SELECT cajas.numreferencia, almacenes.lugar
 FROM cajas cajas
 JOIN almacenes almacenes ON cajas.numreferencia = almacenes.codigo;
--- 3.8???? (num.cajas que hay en el almacen)???
+-- 3.8 (num.cajas que hay en el almacen)
 -- NO tiene en cuenta los almacenes VACIOS --
 SELECT almacen,COUNT(*)
 FROM cajas
 GROUP BY almacen;
 -- TIENE en cuenta los almacenes VACIOS --
 SELECT codigo,COUNT(numreferencia)
-FROM almacenes LEFT JOIN caajas
+FROM almacenes LEFT JOIN cajas
 ON almacenes.codigo = cajas.almacen
-GROUP BY codigo;
--- 3.9 (codig. almacenes saturados(superior a su capacidad))????
-SELECT almacen_codigo
-FROM cajas
-GROUP BY almacen_codigo
-HAVING COUNT(*) > (SELECT capacidad FROM almacenes WHERE numreferencia = almacen_codigo);
+WHERE lugar ='Bilbao';
+-- 3.9 (codig. almacenes saturados(superior a su capacidad))
+SELECT codigo
+FROM almacenes
+WHERE capacidad<(
+    SELECT COUNT(*)
+    FROM cajas
+    WHERE almacen = codigo
+);
 -- 3.10 (num. referencia de las cajas de 'Bilbao')???? (cajas.almacenes_codigo)
-SELECT cajas.numreferencia
-FROM cajas
+-- SIN SUBCONSULTA --
+SELECT numreferencia
+FROM almacenes LEFT JOIN cajas
 JOIN almacenes ON cajas.almacenes_codigo = almacenes.codigo
 WHERE almacenes.lugar = 'Bilbao';
+-- CON SUBCONSULTA --
+SELECT numreferencia
+FROM cajas
+WHERE almacen IN(
+    SELECT codigo
+    FROM almacenes
+    WHERE lugar = 'Bilbao'
+);
 -- 3.11 (NUEVO almacen en Barcelona con capacidad de 3)
 INSERT INTO almacenes (codigo, lugar,capacidad) VALUES 
     (545, 'Barcelona',3);
