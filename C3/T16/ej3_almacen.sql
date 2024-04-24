@@ -100,7 +100,16 @@ SET valor = valor * 0.8 -- Multiplicar por 0.8 para reducir en un 20%
 WHERE valor > (
     SELECT AVG(valor) FROM cajas
 );
--- 3.15 (eliminar todas cajas inferiores a 100€)
+-- 3.15 (eliminar todas cajas inferiores a 100€)???
 DELETE FROM cajas
 WHERE valor < 100;
--- 3.16 (vaciar el contenido de almacenes que estan saturados)
+-- 3.16 (vaciar el contenido de almacenes que estan saturados)??
+DELETE FROM cajas WHERE almacen IN(
+    SELECT codigo
+    FROM almacenes
+    WHERE capacidad<(
+        SELECT COUNT (*)
+        FROM cajas
+        WHERE almacen = codigo
+    )
+);
