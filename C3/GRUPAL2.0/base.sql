@@ -81,12 +81,12 @@ INSERT INTO proveedores (nombre) VALUES
 ('Microsoft Corporation');
 
 -- Datos para la tabla productos
-INSERT INTO productos (nombre, precio, IVA, id_proveedor) VALUES
-('Samsung Galaxy S21', 999.99, 0.21, 1),
-('iPhone 13', 1099.00, 0.21, 2),
-('PlayStation 5', 499.99, 0.21, 3),
-('LG OLED TV', 1599.00, 0.21, 4),
-('Microsoft Surface Laptop 4', 1299.99, 0.21, 5);
+INSERT INTO productos (id_producto, nombre, precio, IVA, id_proveedor) VALUES
+('001', 'Samsung Galaxy S21', 999.99, 0.21, 1),
+('002', 'iPhone 13', 1099.00, 0.21, 2),
+('003', 'PlayStation 5', 499.99, 0.21, 3),
+('004', 'LG OLED TV', 1599.00, 0.21, 4),
+('005', 'Microsoft Surface Laptop 4', 1299.99, 0.21, 5);
 
 -- Datos para la tabla inventario
 INSERT INTO inventario (id_proveedor, cantidad, id_producto) VALUES
