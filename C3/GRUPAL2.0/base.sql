@@ -27,3 +27,17 @@ CREATE TABLE clientes (
     apellidos VARCHAR (80),
     e_mail VARCHAR(150),
 );
+
+CREATE TABLE inventario(
+    id_producto CHAR(5), 
+    FOREIGN KEY (id_proveedor)
+    REFERENCES proveedores (id_proveedor)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+    cantidad INT NOT NULL, 
+    id_producto INT, 
+    FOREIGN KEY (id_producto)
+    REFERENCES productos (id_producto)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+);
