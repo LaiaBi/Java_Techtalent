@@ -88,7 +88,7 @@ WHERE almacen IN(
 -- 3.11 (NUEVO almacen en Barcelona con capacidad de 3)
 INSERT INTO almacenes (codigo, lugar,capacidad) VALUES 
     (545, 'Barcelona',3);
--- 3.12?? (NUEVA caja, num. refer. 'H5RT', de 'Papel', valor 200 situada en alm.2)??
+-- 3.12 (NUEVA caja, num. refer. 'H5RT', de 'Papel', valor 200 situada en alm.2)(BIEN ESCRITO)
 INSERT INTO cajas (numreferencia, contenido,valor,almacen) VALUES 
     ('H5RT', 'Papel',200,2);
 -- 3.13 (rebajar el valor de las cajas a un 15%)
