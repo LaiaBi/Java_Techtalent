@@ -1,0 +1,51 @@
+use GAlmacenes;
+db.cajeros.insertMany([
+    { "codigo": 3333, "nomApels": "Garcia" },
+    { "codigo": 2345, "nomApels": "Esteve" },
+    { "codigo": 12345645, "nomApels": "Dani" },
+    { "codigo": 657, "nomApels": "Juan" },
+    { "codigo": 12376745, "nomApels": "Pedro" },
+    { "codigo": 878787, "nomApels": "Pepe" },
+    { "codigo": 444, "nomApels": "Mar" },
+    { "codigo": 777, "nomApels": "Marcos" },
+    { "codigo": 345, "nomApels": "Tamara" },
+    { "codigo": 999, "nomApels": "Marquitos" }
+  ]);
+db.productos.insertMany([
+    { "codigo": 3333, "nombre": "patatas", "precio": 5 },
+    { "codigo": 2345, "nombre": "fresas", "precio": 3 },
+    { "codigo": 12345645, "nombre": "tomates", "precio": 2 },
+    { "codigo": 657, "nombre": "jabón", "precio": 2 },
+    { "codigo": 12376745, "nombre": "papel", "precio": 1 },
+    { "codigo": 878787, "nombre": "pizza", "precio": 4 },
+    { "codigo": 444, "nombre": "queso", "precio": 2 },
+    { "codigo": 777, "nombre": "agua", "precio": 1 },
+    { "codigo": 676, "nombre": "aguacate", "precio": 5 },
+    { "codigo": 999, "nombre": "café", "precio": 1 }
+  ]);
+db.maquinas_registradoras.insertMany([
+    { "codigo": 3333, "piso": 2 },
+    { "codigo": 2345, "piso": 1 },
+    { "codigo": 12345645, "piso": 5 },
+    { "codigo": 657, "piso": 4 },
+    { "codigo": 12376745, "piso": 2 },
+    { "codigo": 878787, "piso": 3 },
+    { "codigo": 444, "piso": 6 },
+    { "codigo": 777, "piso": 5 },
+    { "codigo": 675, "piso": 4 },
+    { "codigo": 999, "piso": 1 }
+  ]);
+db.venta.insertMany([
+    { "cajero": 3333, "maquina": 657, "producto": 999 },
+    { "cajero": 2345, "maquina": 3333, "producto": 12345645 },
+    { "cajero": 12345645, "maquina": 777, "producto": 3333 },
+    { "cajero": 657, "maquina": 444, "producto": 2345 },
+    { "cajero": 12376745, "maquina": 2345, "producto": 878787 },
+    { "cajero": 878787, "maquina": 999, "producto": 657 },
+    { "cajero": 444, "maquina": 12345645, "producto": 444 },
+    { "cajero": 777, "maquina": 878787, "producto": 12376745 },
+    { "cajero": 345, "maquina": 675, "producto": 676 },
+    { "cajero": 999, "maquina": 3333, "producto": 777 }
+  ]);
+  
+  
