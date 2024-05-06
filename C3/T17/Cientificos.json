@@ -1,0 +1,38 @@
+use cientificos;
+db.cientificos.insertMany([
+    { "dni": "3333", "nomapels": "Garcia" },
+    { "dni": "2345", "nomapels": "Esteve" },
+    { "dni": "12345645", "nomapels": "Dani" },
+    { "dni": "657", "nomapels": "Juan" },
+    { "dni": "12376745", "nomapels": "Pedro" },
+    { "dni": "878787", "nomapels": "Pepe" },
+    { "dni": "444", "nomapels": "Mar" },
+    { "dni": "777", "nomapels": "Marcos" },
+    { "dni": "676", "nomapels": "Teresa" },
+    { "dni": "999", "nomapels": "Marquitos" }
+  ]);
+db.proyecto.insertMany([
+    { "id": "3333", "nombre": "Monte", "Horas": 2 },
+    { "id": "2345", "nombre": "Estrellas", "Horas": 5 },
+    { "id": "12345645", "nombre": "Cascada", "Horas": 7 },
+    { "id": "657", "nombre": "Galleta", "Horas": 3 },
+    { "id": "12376745", "nombre": "Bosque", "Horas": 1 },
+    { "id": "878787", "nombre": "Coche", "Horas": 9 },
+    { "id": "444", "nombre": "Mar", "Horas": 11 },
+    { "id": "777", "nombre": "Marcos", "Horas": 6 },
+    { "id": "676", "nombre": "Flores", "Horas": 8 },
+    { "id": "999", "nombre": "Volar", "Horas": 10 }
+  ]);
+db.asignado_A.insertMany([
+    { "cientifico": "3333", "proyecto": "2345" },
+    { "cientifico": "2345", "proyecto": "878787" },
+    { "cientifico": "12345645", "proyecto": "444" },
+    { "cientifico": "657", "proyecto": "777" },
+    { "cientifico": "12376745", "proyecto": "999" },
+    { "cientifico": "878787", "proyecto": "12376745" },
+    { "cientifico": "444", "proyecto": "3333" },
+    { "cientifico": "777", "proyecto": "657" },
+    { "cientifico": "676", "proyecto": "676" },
+    { "cientifico": "999", "proyecto": "12345645" }
+  ]);
+   
