@@ -1,0 +1,27 @@
+use almacenes;
+db.createCollection("almacenes");
+db.almacenes.insertMany([
+    { "codigo": 3333, "lugar": "Murcia", "capacidad": 500 },
+    { "codigo": 2345, "lugar": "Andorra", "capacidad": 300 },
+    { "codigo": 12345645, "lugar": "Tarragona", "capacidad": 700 },
+    { "codigo": 657, "lugar": "Sevilla", "capacidad": 400 },
+    { "codigo": 12376745, "lugar": "Vinaroz", "capacidad": 600 },
+    { "codigo": 878787, "lugar": "Madrid", "capacidad": 800 },
+    { "codigo": 444, "lugar": "Tortosa", "capacidad": 900 },
+    { "codigo": 777, "lugar": "Bilbao", "capacidad": 450 },
+    { "codigo": 676, "lugar": "Salou", "capacidad": 350 },
+    { "codigo": 999, "lugar": "Barcelona", "capacidad": 250 }
+  ]);
+  db.cajas.insertMany([
+    { "numreferencia": "3333", "contenido": "Ventas", "valor": 500, "almacen": 444 },
+    { "numreferencia": "2345", "contenido": "Marqueting", "valor": 300, "almacen": 999 },
+    { "numreferencia": "12345645", "contenido": "Finanzas", "valor": 700, "almacen": 878787 },
+    { "numreferencia": "657", "contenido": "Recursos Humanos", "valor": 400, "almacen": 657 },
+    { "numreferencia": "12376745", "contenido": "Produccion", "valor": 600, "almacen": 676 },
+    { "numreferencia": "878787", "contenido": "Invest. & Desarrollo", "valor": 800, "almacen": 3333 },
+    { "numreferencia": "444", "contenido": "Tecnologia", "valor": 900, "almacen": 2345 },
+    { "numreferencia": "777", "contenido": "Logistica", "valor": 450, "almacen": 12376745 },
+    { "numreferencia": "676", "contenido": "Legal", "valor": 350, "almacen": 12345645 },
+    { "numreferencia": "999", "contenido": "Atencion al Cliente", "valor": 250, "almacen": 777 }
+  ]);
+    
