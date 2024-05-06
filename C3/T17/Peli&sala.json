@@ -1,0 +1,28 @@
+use peli&sala;
+db.createCollection("peli&sala");
+db.peliculas.insertMany([
+    { "codigo": 3333, "nombre": "Toy Story", "clasifEdad": "AP" },
+    { "codigo": 2345, "nombre": "Jurassic Park", "clasifEdad": "12" },
+    { "codigo": 12345645, "nombre": "The Lord of the Rings: The Fellowship of the Ring", "clasifEdad": "13" },
+    { "codigo": 657, "nombre": "The Dark Knight", "clasifEdad": "14" },
+    { "codigo": 12376745, "nombre": "Inception", "clasifEdad": "14" },
+    { "codigo": 878787, "nombre": "The Shawshank Redemption", "clasifEdad": "16" },
+    { "codigo": 444, "nombre": "Pulp Fiction", "clasifEdad": "16" },
+    { "codigo": 777, "nombre": "Fight Club", "clasifEdad": "18" },
+    { "codigo": 676, "nombre": "The Godfather", "clasifEdad": "18" },
+    { "codigo": 999, "nombre": "Schindler's", "clasifEdad": "18" }
+  ]);
+
+  db.salas.insertMany([
+    { "codigo": 3333, "nombre": "1", "pelicula": 999 },
+    { "codigo": 2345, "nombre": "8", "pelicula": 676 },
+    { "codigo": 12345645, "nombre": "5", "pelicula": 777 },
+    { "codigo": 657, "nombre": "3", "pelicula": 878787 },
+    { "codigo": 12376745, "nombre": "3", "pelicula": 657 },
+    { "codigo": 878787, "nombre": "6", "pelicula": 3333 },
+    { "codigo": 444, "nombre": "4", "pelicula": 12345645 },
+    { "codigo": 777, "nombre": "2", "pelicula": 2345 },
+    { "codigo": 676, "nombre": "1", "pelicula": 12376745 },
+    { "codigo": 999, "nombre": "5", "pelicula": 444 }
+  ]);
+  
