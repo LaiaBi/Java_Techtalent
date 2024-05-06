@@ -1,5 +1,4 @@
 use peli&sala;
-db.createCollection("peli&sala");
 db.peliculas.insertMany([
     { "codigo": 3333, "nombre": "Toy Story", "clasifEdad": "AP" },
     { "codigo": 2345, "nombre": "Jurassic Park", "clasifEdad": "12" },
