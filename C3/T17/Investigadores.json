@@ -1,0 +1,52 @@
+USE investigadores;
+db.facultad.insertMany([
+    { "codigo": 3333, "nombre": "Guepardo" },
+    { "codigo": 2345, "nombre": "Fun" },
+    { "codigo": 12345645, "nombre": "Future" },
+    { "codigo": 657, "nombre": "Antigua" },
+    { "codigo": 12376745, "nombre": "Teresa" },
+    { "codigo": 878787, "nombre": "Andromeda" },
+    { "codigo": 444, "nombre": "Dragon" },
+    { "codigo": 743, "nombre": "Estela" },
+    { "codigo": 777, "nombre": "Agua" },
+    { "codigo": 999, "nombre": "Flor" }
+  ]);
+
+db.investigadores.insertMany([
+    { "DNI": "3333", "nomApels": "Jordi", "facultad": 999 },
+    { "DNI": "2345", "nomApels": "Felipe", "facultad": 878787 },
+    { "DNI": "12345645", "nomApels": "Antonio", "facultad": 3333 },
+    { "DNI": "657", "nomApels": "Anna", "facultad": 2345 },
+    { "DNI": "12376745", "nomApels": "Teresa", "facultad": 743 },
+    { "DNI": "878787", "nomApels": "Adam", "facultad": 12345645 },
+    { "DNI": "444", "nomApels": "Juan", "facultad": 777 },
+    { "DNI": "743", "nomApels": "Sergio", "facultad": 12376745 },
+    { "DNI": "747", "nomApels": "Tomas", "facultad": 657 },
+    { "DNI": "999", "nomApels": "Casandra", "facultad": 444 }
+  ]);
+
+db.equipos.insertMany([
+    { "num_serie": "3", "nombre": "patatas", "facultad": 12376745 },
+    { "num_serie": "23", "nombre": "fresas", "facultad": 444 },
+    { "num_serie": "12", "nombre": "tomates", "facultad": 777 },
+    { "num_serie": "65", "nombre": "jabón", "facultad": 657 },
+    { "num_serie": "37", "nombre": "papel", "facultad": 3333 },
+    { "num_serie": "787", "nombre": "pizza", "facultad": 743 },
+    { "num_serie": "444", "nombre": "queso", "facultad": 878787 },
+    { "num_serie": "743", "nombre": "agua", "facultad": 999 },
+    { "num_serie": "745", "nombre": "galletas", "facultad": 2345 },
+    { "num_serie": "999", "nombre": "café", "facultad": 12345645 }
+  ]);
+db.reserva.insertMany([
+    { "DNI": "3333", "num_serie": "745", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 5 * 24 * 60 * 60 * 1000) },
+    { "DNI": "2345", "num_serie": "3", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000) },
+    { "DNI": "12345645", "num_serie": "743", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000) },
+    { "DNI": "657", "num_serie": "65", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000) },
+    { "DNI": "12376745", "num_serie": "444", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000) },
+    { "DNI": "878787", "num_serie": "999", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000) },
+    { "DNI": "444", "num_serie": "37", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000) },
+    { "DNI": "743", "num_serie": "12", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 9 * 24 * 60 * 60 * 1000) },
+    { "DNI": "747", "num_serie": "787", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 10 * 24 * 60 * 60 * 1000) },
+    { "DNI": "999", "num_serie": "23", "comienzo": new Date(), "fin": new Date(new Date().getTime() + 4 * 24 * 60 * 60 * 1000) }
+  ]);
+  
