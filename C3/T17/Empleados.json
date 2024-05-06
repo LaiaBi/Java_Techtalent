@@ -1,0 +1,50 @@
+INSERT INTO empleados (dni, nombre,apellidos,departamento) VALUES 
+('12345678A', 'Juan', 'Pérez García', 'Ventas'),
+('23456789B', 'María', 'Martínez López', 'Marketing'),
+('34567890C', 'Antonio', 'Rodríguez Hernández', 'Finanzas'),
+('45678901D', 'Laura', 'Sánchez Pérez', 'Recursos Humanos'),
+('56789012E', 'Carlos', 'Gómez Martín', 'Producción'),
+('67890123F', 'Ana', 'González Sánchez', 'Investigación y Desarrollo'),
+('78901234G', 'David', 'López Fernández', 'Tecnología de la Información'),
+('89012345H', 'Marta', 'Pérez Rodríguez', 'Logística'),
+('90123456I', 'Javier', 'Ruiz Martínez', 'Legal'),
+('01234567J', 'Sonia', 'Díaz Pérez', 'Atención al Cliente');
+// MQL
+db.empleados.insertMany([
+    { "dni": "12345678A", "nombre": "Juan", "apellidos": "Pérez García", "departamento": "Ventas" },
+    { "dni": "23456789B", "nombre": "María", "apellidos": "Martínez López", "departamento": "Marketing" },
+    { "dni": "34567890C", "nombre": "Antonio", "apellidos": "Rodríguez Hernández", "departamento": "Finanzas" },
+    { "dni": "45678901D", "nombre": "Laura", "apellidos": "Sánchez Pérez", "departamento": "Recursos Humanos" },
+    { "dni": "56789012E", "nombre": "Carlos", "apellidos": "Gómez Martín", "departamento": "Producción" },
+    { "dni": "67890123F", "nombre": "Ana", "apellidos": "González Sánchez", "departamento": "Investigación y Desarrollo" },
+    { "dni": "78901234G", "nombre": "David", "apellidos": "López Fernández", "departamento": "Tecnología de la Información" },
+    { "dni": "89012345H", "nombre": "Marta", "apellidos": "Pérez Rodríguez", "departamento": "Logística" },
+    { "dni": "90123456I", "nombre": "Javier", "apellidos": "Ruiz Martínez", "departamento": "Legal" },
+    { "dni": "01234567J", "nombre": "Sonia", "apellidos": "Díaz Pérez", "departamento": "Atención al Cliente" }
+  ]);
+//---
+INSERT INTO Departamentos (codigo, nombre,presupuesto) VALUES 
+('123456', 'Ventas',50000),
+('234567', 'Marketing',200000),
+('345678', 'Finanzas',100000),
+('456789', 'Recursos Humanos',80000),
+('567890','Producción',30000),
+('678901','Investigación y Desarrollo',150000),
+('789012','Tecnología de la Información',70000),
+('890123','Logística',500000),
+('901234','Legal',1200000),
+('012345','Atención al Cliente',90000);
+//MQL
+db.departamentos.insertMany([
+    { "codigo": "123456", "nombre": "Ventas", "presupuesto": 50000 },
+    { "codigo": "234567", "nombre": "Marketing", "presupuesto": 200000 },
+    { "codigo": "345678", "nombre": "Finanzas", "presupuesto": 100000 },
+    { "codigo": "456789", "nombre": "Recursos Humanos", "presupuesto": 80000 },
+    { "codigo": "567890", "nombre": "Producción", "presupuesto": 30000 },
+    { "codigo": "678901", "nombre": "Investigación y Desarrollo", "presupuesto": 150000 },
+    { "codigo": "789012", "nombre": "Tecnología de la Información", "presupuesto": 70000 },
+    { "codigo": "890123", "nombre": "Logística", "presupuesto": 500000 },
+    { "codigo": "901234", "nombre": "Legal", "presupuesto": 1200000 },
+    { "codigo": "012345", "nombre": "Atención al Cliente", "presupuesto": 90000 }
+  ]);
+  
