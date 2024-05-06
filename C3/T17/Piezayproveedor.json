@@ -1,1 +1,40 @@
-USE piezasyproveedor;
+USE piezasyproveedores;
+db.piezas.insertMany([
+    { "codigo": 3333, "nombre": "Monte" },
+    { "codigo": 2345, "nombre": "Torre" },
+    { "codigo": 12345645, "nombre": "Caballo" },
+    { "codigo": 657, "nombre": "Alfil" },
+    { "codigo": 12376745, "nombre": "Reina" },
+    { "codigo": 878787, "nombre": "Rey" },
+    { "codigo": 444, "nombre": "Dama" },
+    { "codigo": 777, "nombre": "Treza" },
+    { "codigo": 676, "nombre": "Manzana" },
+    { "codigo": 999, "nombre": "Centro" }
+  ]);
+
+db.proveedores.insertMany([
+    { "id": 3333, "nombre": "Garcia" },
+    { "id": 2345, "nombre": "Esteve" },
+    { "id": 12345645, "nombre": "Dani" },
+    { "id": 657, "nombre": "Juan" },
+    { "id": 12376745, "nombre": "Pedro" },
+    { "id": 878787, "nombre": "Pepe" },
+    { "id": 444, "nombre": "Mar" },
+    { "id": 777, "nombre": "Marcos" },
+    { "id": 676, "nombre": "Teresa" },
+    { "id": 999, "nombre": "Marquitos" }
+  ]);
+
+db.suministra.insertMany([
+    { "codigoPieza": 3333, "idProveedor": 12376745, "precio": 4 },
+    { "codigoPieza": 2345, "idProveedor": 878787, "precio": 23 },
+    { "codigoPieza": 12345645, "idProveedor": 444, "precio": 3 },
+    { "codigoPieza": 657, "idProveedor": 777, "precio": 10 },
+    { "codigoPieza": 12376745, "idProveedor": 657, "precio": 9 },
+    { "codigoPieza": 878787, "idProveedor": 12345645, "precio": 13 },
+    { "codigoPieza": 444, "idProveedor": 999, "precio": 6 },
+    { "codigoPieza": 777, "idProveedor": 3333, "precio": 5 },
+    { "codigoPieza": 676, "idProveedor": 676, "precio": 3 },
+    { "codigoPieza": 999, "idProveedor": 2345, "precio": 11 }
+  ]);
+  
