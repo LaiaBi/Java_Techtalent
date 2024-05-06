@@ -1,0 +1,27 @@
+ USE directores;
+db.directores.insertMany([
+    { "DNI": "3333", "Nombre": "Garcia", "DNIJefe": null, "despacho": "2" },
+    { "DNI": "2345", "Nombre": "Esteve", "DNIJefe": null, "despacho": "4" },
+    { "DNI": "12345645", "Nombre": "Dani", "DNIJefe": null, "despacho": "5" },
+    { "DNI": "657", "Nombre": "Juan", "DNIJefe": null, "despacho": "10" },
+    { "DNI": "12376745", "Nombre": "Pedro", "DNIJefe": null, "despacho": "9" },
+    { "DNI": "878787", "Nombre": "Pepe", "DNIJefe": null, "despacho": "9" },
+    { "DNI": "444", "Nombre": "Mar", "DNIJefe": null, "despacho": "7" },
+    { "DNI": "777", "Nombre": "Marcos", "DNIJefe": null, "despacho": "6" },
+    { "DNI": "676", "Nombre": "Teresa", "DNIJefe": null, "despacho": "6" },
+    { "DNI": "999", "Nombre": "Marquitos", "DNIJefe": null, "despacho": "8" }
+  ]);
+db.despachos.insertMany([
+    { "num": 2, "capacidad": 2 },
+    { "num": 8, "capacidad": 8 },
+    { "num": 10, "capacidad": 10 },
+    { "num": 6, "capacidad": 6 },
+    { "num": 4, "capacidad": 4 },
+    { "num": 12, "capacidad": 12 },
+    { "num": 5, "capacidad": 5 },
+    { "num": 11, "capacidad": 11 },
+    { "num": 23, "capacidad": 23 },
+    { "num": 4, "capacidad": 4 },
+    { "num": 11, "capacidad": 11 }
+  ]);
+  
