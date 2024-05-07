@@ -8,13 +8,13 @@ package T19;
 	    
 	    public SaludoPersonalizado_01() {
 	        setTitle("CiberSaludo.exe");
-	        setSize(300, 200);
+	        setSize(400, 200);
 	        setLocationRelativeTo(null);
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        
 	        // Crear un panel
 	        JPanel panel = new JPanel();
-	        
+
 	        // Crear un campo de texto
 	        textField = new JTextField(20);
 	        panel.add(textField);
