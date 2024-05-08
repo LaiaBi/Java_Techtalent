@@ -48,20 +48,24 @@ public class ListaPelis extends JFrame {
         public void actionPerformed(ActionEvent e) {
     // Obtener el texto del campo de texto
         String nombre = textField.getText();
-    // Agrgegar en el JComboBok
-        memoria.getContentPane().add(Peli);
+        JOptionPane.showMessageDialog(ListaPelis.this, "¡Hola " + nombre + "!");
+        }
+    });
  
     panel.add(memoria);
     
     // Agregar el panel a la ventana
     add(panel);
-		}
+		
+    	}
      	 public static void main(String[] args) {
  	        // Crear una instancia de la ventana
  	        ListaPelis ventana = new ListaPelis();
  	        // Hacer visible la ventana
  	        ventana.setVisible(true); 
      
-        
-    }
-}
+     	 }
+    	}
+  
+
+
