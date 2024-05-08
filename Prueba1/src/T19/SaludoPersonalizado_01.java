@@ -34,7 +34,7 @@ package T19;
 	        
 	        // Crear un botón
 	        JButton botonSaludar = new JButton("Saludar");
-	        botonSaludar.setBounds(60,100,150,20);
+	        botonSaludar.setBounds(220,100,110,20);
 	        panel.add(botonSaludar);
 	        
 	        // Agregar ActionListener al botón
