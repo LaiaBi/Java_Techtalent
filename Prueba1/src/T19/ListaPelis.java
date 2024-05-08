@@ -26,14 +26,28 @@ public class ListaPelis extends JFrame {
      // Crear un campo de texto
         textField = new JTextField(20);    
      //Coord. texto
-        textField.setBounds(60,100,150,20);
+        textField.setBounds(60,100,159,20);
         panel.add(textField);
      
      // Crear un botón
         JButton botonOk = new JButton("OK");
-        botonOk.setBounds(100,200,110,20);
+        botonOk.setBounds(85,150,110,20);
         panel.add(botonOk);
-        
+    
+     // Insertar texto para la accion
+        JLabel memoria = new JLabel("Recuerdo:");
+     	memoria.setBounds(350,70,120,20);
+     	panel.add(memoria);
+      // Crear un menú seleccion
+     	JComboBox comboBox= new JComboBox<> ();
+     	comboBox.setBounds(200,90,120,60);
+     	comboBox.add(comboBox);
+    }
+     	 public static void main(String[] args) {
+ 	        // Crear una instancia de la ventana
+ 	        ListaPelis ventana = new ListaPelis();
+ 	        // Hacer visible la ventana
+ 	        ventana.setVisible(true); 
      
         
     }
