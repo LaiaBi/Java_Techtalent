@@ -10,17 +10,33 @@ package T19;
 	        setTitle("CiberSaludo.exe");
 	        setSize(400, 200);
 	        setLocationRelativeTo(null);
+	        setVisible(true);
 	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        
 	        // Crear un panel
 	        JPanel panel = new JPanel();
+	        panel.setLayout(null);
+	        setContentPane(panel);
+	        
+	        
+	        
+	        // Insertar texto para el nombre
+			JLabel etiqueta = new JLabel("¿Quien eres?");
+			etiqueta.setBounds(90,70,120,20);
+			panel.add(etiqueta);
 
 	        // Crear un campo de texto
 	        textField = new JTextField(20);
+	        
+	        //Coord. texto
+	        textField.setBounds(60,100,150,20);
 	        panel.add(textField);
 	        
 	        // Crear un botón
 	        JButton botonSaludar = new JButton("Saludar");
+	        botonSaludar.setBounds(60,100,150,20);
+	        panel.add(botonSaludar);
+	        
 	        // Agregar ActionListener al botón
 	        botonSaludar.addActionListener(new ActionListener() {
 	            public void actionPerformed(ActionEvent e) {
