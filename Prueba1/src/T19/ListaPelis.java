@@ -39,10 +39,23 @@ public class ListaPelis extends JFrame {
      	memoria.setBounds(350,70,120,20);
      	panel.add(memoria);
       // Crear un menú seleccion
-     	JComboBox comboBox= new JComboBox<> ();
-     	comboBox.setBounds(200,90,120,60);
-     	comboBox.add(comboBox);
-    }
+     	JComboBox Peli= new JComboBox<> ();
+     	Peli.setBounds(300,100,170,20);
+     	panel.add(Peli);
+
+    // Agregar ActionListener al botón
+    	botonOk.addActionListener(new ActionListener() {
+        public void actionPerformed(ActionEvent e) {
+    // Obtener el texto del campo de texto
+        String nombre = textField.getText();
+    // Agrgegar en el JComboBok
+        memoria.getContentPane().add(Peli);
+ 
+    panel.add(memoria);
+    
+    // Agregar el panel a la ventana
+    add(panel);
+		}
      	 public static void main(String[] args) {
  	        // Crear una instancia de la ventana
  	        ListaPelis ventana = new ListaPelis();
