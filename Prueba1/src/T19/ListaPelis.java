@@ -48,7 +48,7 @@ public class ListaPelis extends JFrame {
         public void actionPerformed(ActionEvent e) {
     // Obtener el texto del campo de texto
         String nombre = textField.getText();
-        JOptionPane.showMessageDialog(ListaPelis.this, "¡Hola " + nombre + "!");
+        Peli.addItem(nombre);
         }
     });
  
