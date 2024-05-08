@@ -1,66 +1,171 @@
 package T19;
-import javax.swing.ButtonGroup;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JTextField;
-import javax.swing.SwingUtilities;
-public class Preguntame extends JFrame{
-	
-		private JTextField textField;
-	    
-	    public Preguntame() {
-	        setTitle("Pregunta_me.exe");
-	        setSize(400, 200);
-	        setLocationRelativeTo(null);
-	        setVisible(true);
-	        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	        
-	     // Crear un panel
-	        JPanel panel = new JPanel();
-	        panel.setLayout(null);
-	        setContentPane(panel);
-	        
-	     // Insertar texto para la accion
-	        JLabel etiqueta = new JLabel("Elige un sistema operativo:");
-	     	etiqueta.setBounds(20,20,160,20);
-	     	panel.add(etiqueta);
-	    }
-	    // JRadioButton
-	    JFrame frame = new JFrame("RadioButton Example");
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
 
-        JPanel panel = new JPanel();
+public class Preguntame extends JFrame {
 
-        JRadioButton windowsButton = new JRadioButton("Windows");
-        JRadioButton linuxButton = new JRadioButton("Linux");
-        JRadioButton macButton = new JRadioButton("Mac");
+	private JPanel cp;
+	private String so;
+	private String[] especialidad;
+	private int horas;
 
-        // Creamos un grupo para asegurar que solo se pueda seleccionar una opción a la vez
-        ButtonGroup group = new ButtonGroup();
-        group.add(windowsButton);
-        group.add(linuxButton);
-        group.add(macButton);
+	public Preguntame() {
+		this.so = "";
+		this.especialidad = new String[3];
+		this.horas = 0;
 
-        panel.add(windowsButton);
-        panel.add(linuxButton);
-        panel.add(macButton);
+		setTitle("Preguntame");
+		setSize(235, 400);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setVisible(true);
 
-        frame.add(panel);
-        frame.pack();
-        frame.setVisible(true);
-    }
-	// Insertar texto para la accion
-		JLabel etiqueta = new JLabel("Especialidad:");
-		etiqueta.setBounds(100,20,160,20);
-		panel.add(etiqueta);
-	//
+		// Panel
+		cp = new JPanel();
+		cp.setLayout(null);
+		setContentPane(cp);
 
-      
-    public static void main(String[] args) {
-        // Crear una instancia de la ventana
-        Preguntame ventana = new Preguntame();
-        // Hacer visible la ventana
-        ventana.setVisible(true);
-    }
+		// Label
+		JLabel label1 = new JLabel("Sistema Operativo favorito");
+		label1.setBounds(35, 10, 155, 20);
+		cp.add(label1);
+
+		// RadioButtons
+		JRadioButton radioButton1 = new JRadioButton("Windows", false);
+		radioButton1.setBounds(30, 35, 109, 23);
+		cp.add(radioButton1);
+
+		JRadioButton radioButton2 = new JRadioButton("Linux", false);
+		radioButton2.setBounds(30, 60, 109, 23);
+		cp.add(radioButton2);
+
+		JRadioButton radioButton3 = new JRadioButton("Mac", false);
+		radioButton3.setBounds(30, 85, 109, 23);
+		cp.add(radioButton3);
+
+		ButtonGroup bgroup = new ButtonGroup();
+		bgroup.add(radioButton1);
+		bgroup.add(radioButton2);
+		bgroup.add(radioButton3);
+
+		// Label
+		JLabel label2 = new JLabel("Elije tu especialidad");
+		label2.setBounds(53, 120, 115, 20);
+		cp.add(label2);
+
+		// CheckBoxs
+		JCheckBox check1 = new JCheckBox("Programación", false);
+		check1.setBounds(30, 145, 110, 23);
+		cp.add(check1);
+
+		JCheckBox check2 = new JCheckBox("Diseño Gráfico", false);
+		check2.setBounds(30, 170, 110, 23);
+		cp.add(check2);
+
+		JCheckBox check3 = new JCheckBox("Administración", false);
+		check3.setBounds(30, 195, 110, 23);
+		cp.add(check3);
+
+		// Label
+		JLabel label3 = new JLabel("Horas dedicadas al pc");
+		label3.setBounds(45, 230, 135, 20);
+		cp.add(label3);
+
+		// Slider
+		JSlider sl = new JSlider(0, 10, 0);
+		sl.setBounds(30, 260, 100, 23);
+		cp.add(sl);
+
+		// Label
+		JLabel label4 = new JLabel(Integer.toString(sl.getValue()));
+		label4.setBounds(150, 260, 15, 20);
+		cp.add(label4);
+
+		// Change Listener
+		ChangeListener cl = new ChangeListener() {
+
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				label4.setText(Integer.toString(sl.getValue()));
+			}
+
+		};
+
+		sl.addChangeListener(cl);
+
+		// Button
+		JButton b = new JButton("Enviar");
+		b.setBounds(55, 310, 80, 20);
+		cp.add(b);
+
+		// Action Listener
+		ActionListener al = new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				boolean radioSelected = true;
+				if (radioButton1.isSelected()) {
+					so = radioButton1.getText();
+				} else if (radioButton2.isSelected()) {
+					so = radioButton2.getText();
+				} else if (radioButton3.isSelected()) {
+					so = radioButton3.getText();
+				} else {
+					radioSelected = false;
+				}
+				if (radioSelected) {
+					if (check1.isSelected()) {
+						especialidad[0] = check1.getText();
+					}
+					if (check2.isSelected()) {
+						especialidad[1] = check2.getText();
+					}
+					if (check3.isSelected()) {
+						especialidad[2] = check3.getText();
+					}
+
+					horas = sl.getValue();
+
+					String respuesta = "Sistema operativo favorito: " + so + "\nEspecialidad";
+
+					int countNulls = 0;
+					String especialidades = "";
+					for (int i = 0; i < especialidad.length; i++) {
+						if (especialidad[i] == null) {
+							countNulls++;
+						} else {
+							especialidades += especialidad[i] + " ";
+						}
+					}
+
+					if (countNulls == 3) {
+						respuesta += ": Ninguna";
+					} else if (countNulls <= 1) {
+						respuesta += "es: ";
+					} else {
+						respuesta += ": ";
+					}
+
+					respuesta += especialidades + "\nHoras dedicadas al pc: " + horas;
+
+					JOptionPane.showMessageDialog(null, respuesta);
+				} else {
+					JOptionPane.showMessageDialog(null, "Debes indicar tu sistema operativo favorito");
+				}
+
+			}
+
+		};
+
+		b.addActionListener(al);
+
+	}
+	public static void main(String[] args) {
+	        // Crear una instancia de la ventana
+	        Preguntame ventana = new Preguntame();
+	        // Hacer visible la ventana
+	        ventana.setVisible(true); 
+ 
+ 	 }
 }
