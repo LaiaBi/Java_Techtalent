@@ -12,6 +12,7 @@ public class Ejecutable05 {
         Password05[] contraseñas = new Password05[tamañoArray];
 
         for (int i = 0; i < tamañoArray; i++) {
+            System.out.println("Creando contraseña para la posición " + i + " del array.");
             contraseñas[i] = new Password05();
         }
 
@@ -24,3 +25,4 @@ public class Ejecutable05 {
         scanner.close();
     }
 }
+
