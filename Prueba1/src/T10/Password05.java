@@ -2,69 +2,63 @@ package T10;
 
 public class Password05 {
 	private int longitud;
-    private String contraseña;
+	private String pass;
 
-    // Constructor que establece la longitud por defecto en 8
-    public Password05() {
-        this.longitud = 8;
-        generarContraseña();
-    }
+	public Password05() {
+		this.longitud = 8;
+		this.pass = generarPassword(this.longitud);
+	}
 
-    // Constructor que permite establecer la longitud
-    public Password05(int longitud) {
-        this.longitud = longitud;
-        generarContraseña();
-    }
+	public Password05(int longitud) {
+		this.longitud = longitud;
+		this.pass = generarPassword(this.longitud);
+	}
 
-    // Método para generar la contraseña aleatoria
-    private void generarContraseña() {
-        // Definimos los caracteres que pueden formar parte de la contraseña
-        String caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+=-";
+	private static String generarPassword(int l) {
+		String pw = "";
+		for (int i = 0; i < l; i++) {
+			pw += (char) numRandom();
+		}
+		return pw;
+	}
 
-        // Creamos un StringBuilder para construir la contraseña
-        StringBuilder sb = new StringBuilder();
+	public boolean esFuerte() {
+		int countMayus = 0, countMinus = 0, countNums = 0;
+		for (int i = 0; i < pass.length(); i++) {
+			char c = pass.charAt(i);
+			int valorC = (int) c;
+			if (valorC >= 65 && valorC <= 90) {
+				countMayus++;
+			} else if (valorC >= 97 && valorC <= 122) {
+				countMinus++;
+			} else if (valorC >= 48 && valorC <= 57) {
+				countNums++;
+			}
+		}
 
-        // Generamos la contraseña aleatoria
-        for (int i = 0; i < longitud; i++) {
-            int index = (int) (Math.random() * caracteres.length());
-            sb.append(caracteres.charAt(index));
-        }
+		return (countMayus >= 2 && countMinus >= 1 && countNums >= 5);
+	}
 
-        // Asignamos la contraseña generada
-        contraseña = sb.toString();
-    }
+	// 48-122
+	private static int numRandom() {
+		int minValue = 48, maxValue = 122, n = 58;
+		// Si sale algo distinto a una letra o un numero vuelve a generar un caracter
+		while ((n >= 58 && n <= 64) || (n >= 91 && n <= 96)) {
+			n = (int) (minValue + (Math.random() * (maxValue + 1 - minValue)));
+		}
+		return n;
+	}
 
-    	// Método para verificar si la contraseña es fuerte
-    public boolean esFuerte() {
-        int mayusculas = 0;
-        int minusculas = 0;
-        int numeros = 0;
+	public int getLongitud() {
+		return longitud;
+	}
 
-        // Contar el número de mayúsculas, minúsculas y números en la contraseña
-        for (int i = 0; i < contraseña.length(); i++) {
-            char c = contraseña.charAt(i);
-            if (Character.isUpperCase(c)) {
-                mayusculas++;
-            } else if (Character.isLowerCase(c)) {
-                minusculas++;
-            } else if (Character.isDigit(c)) {
-                numeros++;
-            }
-        }
+	public void setLongitud(int longitud) {
+		this.longitud = longitud;
+	}
 
-        // Verificar si la contraseña es fuerte
-        return (mayusculas > 2 && minusculas > 1 && numeros > 5);
-    }
+	public String getPass() {
+		return pass;
+	}
 
-    // Métodos para acceder a la contraseña y la longitud
-    public String getContraseña() {
-        return contraseña;
-    }
-
-    public int getLongitud() {
-        return longitud;
-    }
-    public int setLongitud() {
-        return longitud;
-    }
 }
