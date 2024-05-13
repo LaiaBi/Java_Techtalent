@@ -42,7 +42,8 @@ public class Adivinanum01 {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Solo debes ingresar un número.");
-                scanner.next(); // Limpiar el buffer del scanner
+                scanner.next(); 
+            // Limpiar el buffer del scanner
                 this.intentos++;
             }
         }
