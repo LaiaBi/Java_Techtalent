@@ -9,13 +9,16 @@ public class TiendaInform01 {
 
 	public static void main(String[] args) {
 		Conexion c = new Conexion();
+		//ceacion de la tienda
 		String db = "`La Tienda de Informatica`";
+		//informacion de las tablas
 		String tabla1 = "articulos", tabla2 = "fabricantes";
 		String atributos1 = "(" + "  `codigo` int(11) NOT NULL AUTO_INCREMENT,"
 				+ "  `nombre` varchar(100) DEFAULT NULL," + "  `precio` int(11) DEFAULT NULL,"
 				+ "  `fabricante` int(11) DEFAULT NULL," + "  PRIMARY KEY (`codigo`),"
 				+ "  KEY `FK_articulos_fabricantes` (`fabricante`),"
-				+ "  CONSTRAINT `FK_articulos_fabricantes` FOREIGN KEY (`fabricante`) REFERENCES `fabricantes` (`codigo`) ON DELETE CASCADE ON UPDATE CASCADE"
+				+ "  CONSTRAINT `FK_articulos_fabricantes` FOREIGN KEY (`fabricante`) REFERENCES `fabricantes` "
+				+ "(`codigo`) ON DELETE CASCADE ON UPDATE CASCADE"
 				+ ")";
 		String atributos2 = "(" + "  `codigo` int(11) NOT NULL AUTO_INCREMENT,"
 				+ "  `nombre` varchar(100) DEFAULT NULL," + "  PRIMARY KEY (`codigo`)" + ") ";
@@ -26,6 +29,7 @@ public class TiendaInform01 {
 				+ "	(6, 'a6', 54, 6)," + "	(7, 'a7', 63, 7)," + "	(8, 'Impresora Laser', 72, 8),"
 				+ "	(9, 'a9', 81, 9)," + "	(10, 'a10', 90, 10)," + "	(11, 'a11', 170, 3),"
 				+ "	(12, 'Altavoz', 63, 2);";
+		//comandos adjuntos para ejecutarlo
 		c.createDB(db);
 
 		c.createTable(db, tabla2, atributos2);
