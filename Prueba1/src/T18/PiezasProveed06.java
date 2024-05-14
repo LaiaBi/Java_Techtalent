@@ -1,6 +1,6 @@
 package T18;
 import T18.Conexion;
-public class PiezasProveed05 {
+public class PiezasProveed06 {
 
 	public static void main(String[] args) {
 		Conexion c = new Conexion();
