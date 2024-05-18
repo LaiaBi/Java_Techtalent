@@ -51,3 +51,20 @@ public class Vol1 {
 		}
 	}
 }
+//pag.5 tema8
+public class Empleado{
+	private String nombre;
+	private String apellido;
+	private String edad;
+	private String salario;
+}
+//pag.6 tema8
+public boolean plus (double sueldoPlus) {
+	boolean aumento = false;
+	if (edad>40); {
+	salario+=sueldoPlus;
+	aumento=true;
+	}
+	return aumento;
+	}
+}
