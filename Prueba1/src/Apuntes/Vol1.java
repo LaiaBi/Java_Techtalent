@@ -1,5 +1,15 @@
 package Apuntes;
 public class Vol1 {
+//Tema5
+	import javax.swing.JOptionPane;
+	public class PruebaApp {
+
+	public static void main (String [] args) {
+	String nombre=JOptionPane.showInputDialog(“Introduce tu nombre”);
+	JOptionPane.showMessageDialog (null, “Bien,tu nombre es”+nombre);
+	}
+	}
+
 	import java.util.Enumeration;
 	import java.util.Iterator;
 
@@ -10,23 +20,35 @@ public class Vol1 {
 		num[i]= multiplo;
 		System.out.println(num[i]);
 	}
-	//ADD
+//Tema6
+	int num[] = new int [10];
+	int num[] = {1,2,3};
+	int num [ 0 ] = 1;
+	int num [ 1 ] = 2;
+	System.out.println(num [ 0 ]);
+	System.out.println(num [ 1 ]);
+	int num [] = new int [10];
+	for (int i=0, multiplo=5; i<num.length;i++, multiplo+=5) {
+		num[i]= multiplo;
+		System.out.println(num[i]);
+//Tema 7
+//ADD
 	lista.add(1);
 	lista.add(2);
 	lista.add(3);
 	System.out.println("ADD");
 	System.out.println(lista.toString());
-	//REMOVE
+//REMOVE
 	lista.remove(2);
 	System.out.println("REMOVE");
 	System.out.println(lista.toString());
-	//SIZE
+//SIZE
 	System.out.println("SIZE");
 	System.out.println(lista.size());
-	//GET
+//GET
 	System.out.println("GET");
 	System.out.println(lista.get(0));
-	//ITERATOR
+//ITERATOR
 	System.out.println("ITERATOR");
 	Iterator<Integer> it = lista.iterator ();
 	int num;
@@ -34,10 +56,10 @@ public class Vol1 {
 		num = it.next();
 		System.out.println(num);
 	}
-	//INDEXOF
+//INDEXOF
 	System.out.println("INDEXOF");
 	System.out.println(lista.indexOf(1));
-	//CLEAR
+//CLEAR
 	lista.clear();
 	System.out.println("CLEAR");
 	System.out.println(lista.toString());
@@ -51,14 +73,14 @@ public class Vol1 {
 		}
 	}
 }
-//pag.5 tema8
+//tema8
 public class Empleado{
 	private String nombre;
 	private String apellido;
 	private String edad;
 	private String salario;
 }
-//pag.6 tema8
+//pag.6
 public boolean plus (double sueldoPlus) {
 	boolean aumento = false;
 	if (edad>40); {

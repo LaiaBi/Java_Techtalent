@@ -43,3 +43,8 @@ while (enumeration.hasMoreElements()) {
 	System.out.println(""+"hastable valores: " + Enumeration.nextElement());
 }
 ---
+Enumeration<String> llaves = contenedor.Key();
+while (llaves.hasMoreElements()) {
+	System.out.println(""+"hastable llaves: " + llaves.nextElement());
+	}
+}
