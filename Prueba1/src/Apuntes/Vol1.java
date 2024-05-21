@@ -90,3 +90,22 @@ public boolean plus (double sueldoPlus) {
 	return aumento;
 	}
 }
+//pag.8 - 9
+public class Empleado {
+	this.nombre="";
+	this.apellido="";
+	this.edad=0;
+	this.salario=0;
+}
+public Empleado (String nombre, String apellido, int edad, double salario)
+this.nombre=nombre;
+this.apellido=apellido;
+this.edad=edad;
+this.salario=salario;
+//pag 11
+public class EmpleadoApp{
+	public static void main (String[]args) {
+		Empleado empleado1=new Empleado ("Fernando", "Ureña", 23 ,800);
+		System.out.println(empleado1.plus(30));
+	}
+}
