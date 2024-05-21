@@ -4,17 +4,10 @@ import javax.swing.*;
 import javax.swing.event.*;
 public class Base01 extends JFrame {
 	private static final String EXIT_ON_CLOSE = null;
-	private JPanel cp;
-	private String so;
-	private String[] especialidad;
-	private int horas;
+
 	private Object barraMenu;
 
 	public Base01 () {
-		this.so = "";
-		this.especialidad = new String[3];
-		this.horas = 0;
-
 		setTitle11("Proto_tipo");
 		setSize(235, 400);
 		setLocationRelativeTo1(null);
