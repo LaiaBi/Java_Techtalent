@@ -1,42 +1,32 @@
 package EjemploMAVEN;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JRadioButton;
-import javax.swing.JSlider;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-
-
-public class Base01 {
+public class Base01 extends JFrame {
+	private static final String EXIT_ON_CLOSE = null;
 	private JPanel cp;
 	private String so;
 	private String[] especialidad;
 	private int horas;
+	private Object barraMenu;
 
 	public Base01 () {
 		this.so = "";
 		this.especialidad = new String[3];
 		this.horas = 0;
 
-		setTitle("Proto_tipo");
+		setTitle11("Proto_tipo");
 		setSize(235, 400);
-		setLocationRelativeTo(null);
+		setLocationRelativeTo1(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setVisible(true);
+		setVisible1(true);
 		setJMenuBar(barraMenu);
 
 		// Panel
 		cp = new JPanel();
 		cp.setLayout(null);
-		setContentPane(cp);
+		setContentPane1(cp);
 
 		// Label
 		JLabel label1 = new JLabel("Sistema Operativo favorito");
@@ -61,17 +51,7 @@ public class Base01 {
 		bgroup.add(radioButton2);
 		bgroup.add(radioButton3);
 
-		// Change Listener
-		ChangeListener cl = new ChangeListener() {
-
-			@Override
-			public void stateChanged(ChangeEvent e) {
-				label4.setText(Integer.toString(sl.getValue()));
-			}
-
-		};
-
-		sl.addChangeListener(cl);
+		
 
 		// Button
 		JButton b = new JButton("Enviar");
@@ -93,18 +73,7 @@ public class Base01 {
 				} else {
 					radioSelected = false;
 				}
-				if (radioSelected) {
-					if (check1.isSelected()) {
-						especialidad[0] = check1.getText();
-					}
-					if (check2.isSelected()) {
-						especialidad[1] = check2.getText();
-					}
-					if (check3.isSelected()) {
-						especialidad[2] = check3.getText();
-					}
-
-					horas = sl.getValue();
+				
 
 					String respuesta = "Sistema operativo favorito: " + so + "\nEspecialidad";
 
@@ -129,23 +98,48 @@ public class Base01 {
 					respuesta += especialidades + "\nHoras dedicadas al pc: " + horas;
 
 					JOptionPane.showMessageDialog(null, respuesta);
-				} else {
-					JOptionPane.showMessageDialog(null, "Debes indicar tu sistema operativo favorito");
 				}
-
-			}
-
-		};
-
-		b.addActionListener(al);
-
+	private void setJMenuBar(Object barraMenu2) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void setDefaultCloseOperation(String exitOnClose) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void setContentPane(JPanel cp2) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void setLocationRelativeTo(Object object) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void setSize(int i, int j) {
+		// TODO Auto-generated method stub
+		
+	}
+	private void setTitle(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 	public static void main(String[] args) {
 	        // Crear una instancia de la ventana
-	        Preguntame ventana = new Preguntame();
+	        Base01 ventana = new Base01();
 	        // Hacer visible la ventana
 	        ventana.setVisible(true); 
  
- 	 }
+	}
+
+	}
+
+	protected void setVisible(boolean b) {
+		// TODO Auto-generated method stub
+		
+	}
 }
 
