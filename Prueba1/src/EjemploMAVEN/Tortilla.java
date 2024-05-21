@@ -11,7 +11,7 @@ public class Tortilla extends JFrame {
 
 	    public static void main(String[] args) {
 	        // Crear el marco principal
-	        JFrame frame = new JFrame("Recordar Botón Pulsado");
+	        JFrame frame = new JFrame("Tortilla.exe");
 	        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	        frame.setSize(400, 200);
 
