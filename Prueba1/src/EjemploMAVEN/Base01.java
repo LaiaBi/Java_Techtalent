@@ -31,6 +31,7 @@ public class Base01 {
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setVisible(true);
+		setJMenuBar(barraMenu);
 
 		// Panel
 		cp = new JPanel();
