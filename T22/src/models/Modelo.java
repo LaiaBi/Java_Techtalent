@@ -13,5 +13,11 @@ public static void setCantidad(Double cantidad) {
 	this.cantidad=cantidad;
 }
 public Double getResultado() {
+	return resultado;
+public void convertirDolarAEuro() {
+	resultado = cantidad * moneda;
+}
+public void convertirEuroADolar() {
+	resultado = cantidad * moneda;
 }
 }
