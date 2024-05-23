@@ -138,10 +138,6 @@ public class Geometry {
 		public String toString() {
 			return "Geometria [id=" + id + ", nom=" + nom + ", area=" + area + "]";
 		}
-		
-		
-		
-		
 	}
 
 
