@@ -109,3 +109,17 @@ public class EmpleadoApp{
 		System.out.println(empleado1.plus(30));
 	}
 }
+//pag. 12
+public Empleado() {
+	this.nombre="";
+	this.apellido="";
+	this.edad=0;
+	this.salario=0;
+}
+/**Constructor**/
+public Empleado(String nombre, String apellido, int edad, double salario) {
+	this.nombre="";
+	this.apellido="";
+	this.edad=0;
+	this.salario=0;
+}
