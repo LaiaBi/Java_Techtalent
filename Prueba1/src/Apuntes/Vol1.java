@@ -118,8 +118,8 @@ public Empleado() {
 }
 /**Constructor**/
 public Empleado(String nombre, String apellido, int edad, double salario) {
-	this.nombre="";
-	this.apellido="";
-	this.edad=0;
-	this.salario=0;
+	this.nombre=nombre;
+	this.apellido=apellido;
+	this.edad=edad;
+	this.salario=salario;
 }
