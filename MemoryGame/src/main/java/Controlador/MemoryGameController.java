@@ -8,6 +8,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class MemoryGameController {
 	private Board board;
@@ -54,25 +57,31 @@ public class MemoryGameController {
 				
 				if (!board.checkMatch(firstSelected, secondSelected)) {
                     view.setStatus("No match, try again.");
-                    try {
-                        // Pausa el hilo actual durante 2000 milisegundos (2 segundos)
-                        Thread.sleep(2000);
-                    } catch (InterruptedException ex) {
-                        // Maneja la excepción si el hilo es interrumpido mientras está durmiendo
-                        ex.printStackTrace();
-                    }
+                    Timer timer = new Timer(1000, new ActionListener() {
+
+						@Override
+						public void actionPerformed(ActionEvent e) {
+							view.resetButton(firstSelected);
+		                    view.resetButton(secondSelected);
+		                    firstSelected = -1;
+		                    secondSelected = -1;
+							
+						}
+                    	
+                    });
                     
-                    view.resetButton(firstSelected);
-                    view.resetButton(secondSelected);
+                    timer.setRepeats(false);
+    				timer.start();
+
                 } else {
                     view.setStatus("Match found!");
+                    firstSelected = -1;
+                    secondSelected = -1;
                 }
-                firstSelected = -1;
-                secondSelected = -1;
 
                 if (board.allMatched()) {
                 //    view.showVictoryPanel("");
-                	 System.out.println("Bien Jugado");
+                	 JOptionPane.showMessageDialog(null, "GG bro");
                 }
 				/*
 				Timer timer = new Timer(2000, new ActionListener() {
