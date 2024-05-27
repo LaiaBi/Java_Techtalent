@@ -44,6 +44,7 @@ public class MemoryGameController {
         @Override
         public void actionPerformed(ActionEvent e) {
             int index = Integer.parseInt(e.getActionCommand());
+            System.out.println(index);
             if (firstSelected == -1) {
                 firstSelected = index;
                 view.updateButton(index, board.getCardAt(index).getImagePath());
@@ -65,12 +66,15 @@ public class MemoryGameController {
                         secondSelected = -1;
 
                         if (board.allMatched()) {
-                            view.showVictoryPanel("");
+                        //    view.showVictoryPanel("");
+                        	 System.out.println("Bien Jugado");
                         }
                     }
                 });
                 timer.setRepeats(false);
                 timer.start();
+                firstSelected = -1;
+                secondSelected = -1;
             }
         }
     }

@@ -30,7 +30,7 @@ public class MemoryGameView extends JFrame {
     }
 
     public void showGamePanel(Board board) {
-        cardBackImage = ImageUtil.resizeImage("C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\Dorso.png", cardWidth, cardHeight);
+        cardBackImage = ImageUtil.resizeImage("", cardWidth, cardHeight);
         JPanel cardPanel = new JPanel(new GridLayout(4, board.getCards().size() / 4));
         cardButtons = new JButton[board.getCards().size()];
 
