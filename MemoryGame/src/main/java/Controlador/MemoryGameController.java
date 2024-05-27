@@ -25,14 +25,14 @@ public class MemoryGameController {
         public void actionPerformed(ActionEvent e) {
             int pairs = 8; // Número de pares
             board = new Board(pairs, Arrays.asList(
-            		"C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\ARFKM.png", 
-                    "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\FuckYeah.png", 
-                    "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\Lol.png", 
-                    "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\megusta.png", 
-                    "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\Pedobear.png", 
-                    "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\TrollFace.png", 
-                    "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\why.png", 
-                    "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\YaoMing.png"
+            		"..\Imagenes\ARFKM.png", 
+                    "..\Imagenes\FuckYeah.png", 
+                    "..\Imagenes\Lol.png", 
+                    "..\Imagenes\megusta.png", 
+                    "..\Imagenes\Pedobear.png", 
+                    "..\Imagenes\TrollFace.png", 
+                    "..\Imagenes\why.png", 
+                    "..\Imagenes\YaoMing.png"
                 
             ));
             view.showGamePanel(board);
@@ -65,7 +65,7 @@ public class MemoryGameController {
                         secondSelected = -1;
 
                         if (board.allMatched()) {
-                            view.showVictoryPanel("C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Imagenes\\Victoria.png", "C:\\Users\\Santos\\Desktop\\RepositoriTechTalent\\MemoryGrupal\\src\\main\\java\\Sonido\\AAA.wav");
+                            view.showVictoryPanel("");
                         }
                     }
                 });
