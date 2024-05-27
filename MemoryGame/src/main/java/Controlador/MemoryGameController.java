@@ -25,14 +25,14 @@ public class MemoryGameController {
         public void actionPerformed(ActionEvent e) {
             int pairs = 8; // Número de pares
             board = new Board(pairs, Arrays.asList(
-            		"..\Imagenes\ARFKM.png", 
-                    "..\Imagenes\FuckYeah.png", 
-                    "..\Imagenes\Lol.png", 
-                    "..\Imagenes\megusta.png", 
-                    "..\Imagenes\Pedobear.png", 
-                    "..\Imagenes\TrollFace.png", 
-                    "..\Imagenes\why.png", 
-                    "..\Imagenes\YaoMing.png"
+            		"C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\ARFKM.png", 
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\FuckYeah.png", 
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\Lol.png", 
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\megusta.png", 
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\Pedobear.png", 
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\TrollFace.png", 
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\why.png", 
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\main\\java\\Imagenes\\YaoMing.png"
                 
             ));
             view.showGamePanel(board);
