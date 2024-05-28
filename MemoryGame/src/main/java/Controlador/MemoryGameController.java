@@ -17,6 +17,7 @@ public class MemoryGameController {
 	private MemoryGameView view;
 	private int firstSelected = -1;
 	private int secondSelected = -1;
+	private int attempts=0;
 
 	public MemoryGameController(MemoryGameView view) {
 		this.view = view;
@@ -54,9 +55,10 @@ public class MemoryGameController {
 			} else if (secondSelected == -1) {
 				secondSelected = index;
 				view.updateButton(index, board.getCardAt(index).getImagePath());
+				attempts++;
+				view.setStatus("Intentos: " + attempts);
 				
 				if (!board.checkMatch(firstSelected, secondSelected)) {
-                    view.setStatus("No match, try again.");
                     Timer timer = new Timer(1000, new ActionListener() {
 
 						@Override
@@ -74,14 +76,13 @@ public class MemoryGameController {
     				timer.start();
 
                 } else {
-                    view.setStatus("Match found!");
                     firstSelected = -1;
                     secondSelected = -1;
                 }
 
                 if (board.allMatched()) {
                 //    view.showVictoryPanel("");
-                	 JOptionPane.showMessageDialog(null, "GG bro");
+                	 JOptionPane.showMessageDialog(null, "GG bro (" + attempts + " intentos)");
                 }
 				
 			}

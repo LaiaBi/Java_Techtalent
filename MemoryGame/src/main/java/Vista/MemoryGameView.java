@@ -31,6 +31,7 @@ public class MemoryGameView extends JFrame {
 
     public void showGamePanel(Board board) {
         cardBackImage = ImageUtil.resizeImage("", cardWidth, cardHeight);
+        JPanel mainPanel = new JPanel(new BorderLayout());
         JPanel cardPanel = new JPanel(new GridLayout(4, board.getCards().size() / 4));
         cardButtons = new JButton[board.getCards().size()];
 
@@ -39,11 +40,16 @@ public class MemoryGameView extends JFrame {
             cardButtons[i].setActionCommand(String.valueOf(i));
             cardPanel.add(cardButtons[i]);
         }
-
-        statusLabel = new JLabel("Welcome to Memory Game");
-        add(statusLabel, BorderLayout.SOUTH);
-        add(cardPanel, BorderLayout.CENTER);
-        setContentPane(cardPanel);
+        JMenuBar menu =new JMenuBar();
+        JMenu about =new JMenu ("About");
+        JMenuItem item = new JMenuItem("Creado por Manel,Santos y Laia| version 1.0");
+        about.add(item);
+        menu.add (about);
+        statusLabel = new JLabel("Intentos: 0", SwingConstants.CENTER);
+        setJMenuBar(menu);
+        mainPanel.add(cardPanel, BorderLayout.CENTER);
+        mainPanel.add(statusLabel, BorderLayout.NORTH);
+        setContentPane(mainPanel);
         revalidate();
     }
 
@@ -68,4 +74,5 @@ public class MemoryGameView extends JFrame {
     public void setStatus(String text) {
         statusLabel.setText(text);
     }
+
 }
