@@ -28,14 +28,14 @@ public class MemoryGameController {
 		public void actionPerformed(ActionEvent e) {
 			int pairs = 8; // Número de pares
 			board = new Board(pairs, Arrays.asList(
-					"/Imagenes/ARFKM.png",
-					"/Imagenes/FuckYeah.png",
-					"/Imagenes/Lol.png",
-					"/Imagenes/megusta.png",
-					"/Imagenes/Pedobear.png",
-					"/Imagenes/TrollFace.png",
-					"/Imagenes/why.png",
-					"/Imagenes/YaoMing.png"
+					"C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\ARFKM.png",
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\FuckYeah.png",
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\Lol.png",
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\megusta.png",
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\Pedobear.png",
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\TrollFace.png",
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\why.png",
+                    "C:\\Users\\biosc\\OneDrive\\Escritorio\\Java_Techtalent\\MemoryGame\\src\\resources\\Imagenes\\YaoMing.png"
 
 			));
 			view.showGamePanel(board);
@@ -83,31 +83,7 @@ public class MemoryGameController {
                 //    view.showVictoryPanel("");
                 	 JOptionPane.showMessageDialog(null, "GG bro");
                 }
-				/*
-				Timer timer = new Timer(2000, new ActionListener() {
-					@Override
-					public void actionPerformed(ActionEvent evt) {
-						if (!board.checkMatch(firstSelected, secondSelected)) {
-							view.setStatus("No match, try again.");
-							view.resetButton(firstSelected);
-							view.resetButton(secondSelected);
-						} else {
-							view.setStatus("Match found!");
-						}
-						firstSelected = -1;
-						secondSelected = -1;
-
-						if (board.allMatched()) {
-							// view.showVictoryPanel("");
-							System.out.println("Bien Jugado");
-						}
-					}
-				});
-				*/
-//				timer.setRepeats(false);
-//				timer.start();
-//				firstSelected = -1;
-//				secondSelected = -1;
+				
 			}
 		}
 	}
