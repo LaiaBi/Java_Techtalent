@@ -6,7 +6,7 @@ public class GeometriaMain {
 
 	public static void main(String[] args) {
 		
-		   @Test
+		  @Test
 		   Geometry gm=new Geometry(2);
 		   double areaCirc= gm.areaCirculo(2);
 		   gm.setArea(areaCirc);    
