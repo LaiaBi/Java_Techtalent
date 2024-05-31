@@ -1,6 +1,6 @@
 package C4.T21;
 
-public class Calculadora02 {
+public class Calculadora {
 	public int add(int a, int b) {
         return a + b;
     }
