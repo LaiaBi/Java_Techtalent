@@ -1,28 +1,51 @@
 package Test;
 
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Before;
 import org.junit.Test;
 
-import C4.T21.Geometry;
-
 public class GeometryTest {
+	
+	private GeometryTest g;
+	
+	@Before
+	public void setUp() throws Exception {
+		g = new GeometryTest();
+	}
 
-	public static void main(String[] args) {
-		@Test
-		   Geometry gm=new Geometry(2);
-		   double areaCirc= gm.areaCirculo(2);
-		   gm.setArea(areaCirc);    
-		   System.out.println(gm);
-		 @Test
-		   Geometry gm1=new Geometry(3);
-		   double areaTri= gm1.areatriangulo(3, 4);
-		   gm1.setArea(areaTri);    
-		   System.out.println(gm1);
-		@Test
-		   Geometry gm2=new Geometry(8);
-		   double areaTrap= gm2.areatrapecio(8, 4, 5);
-		   gm1.setArea(areaTri);    
-		   System.out.println(gm1);
+	@Test
+	public void testCuadrado() {
+		int resultado = g.areaTrinagulo(6);
+		int expected = 16;
+		assertEquals(expected, resultado);
+	}
+	
+	private int areaTrinagulo(int i) {
+		return 0;
+	}
 
+	@Test
+	public void testFigura() {
+		String resultado = g.figura(8);
+		String expected = "Rombo";
+		assertEquals(expected, resultado);
+	}
+	
+	private String figura(int i) {
+		return null;
+	}
+
+	@Test
+	public void testRectangulo() {
+		int resultado = g.arearectangulo(11, 2);
+		int expected = 50;
+		assertEquals(expected, resultado);
+	}
+
+	private int arearectangulo(int i, int j) {
+		return 0;
 	}
 
 }
