@@ -1,0 +1,25 @@
+body {
+    background-color: rgba(216, 181, 82, 0.405);
+  }
+
+  h1 {
+    font-family: Tahoma;
+    font-size: large;
+    color: #c63f0a;
+    background-color: rgba(239, 165, 28, 0.429);
+  }
+
+  h2 {
+    font-family: Tahoma;
+    color: #4f7b15;
+  }
+
+  h3 {
+    font-family: Tahoma;
+    color: #0d5d41;
+  }
+
+  span {
+    color: rgba(39, 118, 23, 0.969);
+    font-weight: bold;
+  }
