@@ -1,0 +1,47 @@
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 900px;
+    margin: auto;
+}
+
+h1
+{
+    text-align: center;
+}
+
+nav {
+    float: left;
+    position: relative;
+    width: 15%;
+    top: 1%;
+}
+
+main
+{
+    border: 1px solid #e3d488;
+    padding: 1%;
+    width: 80%;
+}
+
+.content
+{
+    display: inline-block;
+}
+
+.t2
+{
+    color: #af9c0a;
+    border-bottom: 1px solid #55661d;
+}
+
+
+.verde
+{
+    color: #487f2c;
+}
+
+.naranja
+{
+    color: #9c6017;
+}

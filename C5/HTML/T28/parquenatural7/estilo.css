@@ -1,0 +1,28 @@
+body
+{
+    font-family: verdana;
+    width: 900px;
+    margin: left;
+}
+
+h1
+{
+    text-align: center;
+}
+
+.t2
+{
+    color: #249e7c;
+    border-bottom: 1px solid #2258cb;
+}
+
+
+.verde
+{
+    color: #9ddf32;
+}
+
+.naranja
+{
+    color: #9e502c;
+}
