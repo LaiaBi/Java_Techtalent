@@ -1,0 +1,101 @@
+body
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 900px;
+    margin: auto;
+}
+
+header img
+{
+    display: block;
+    margin: auto;
+}
+
+
+h1
+{
+    text-align: center;
+    margin-top: 0;
+}
+
+nav {
+    float: left;
+    position: relative;
+    width: 15%;
+    margin-right: 2%;
+}
+
+nav > ul
+{
+    list-style-type: none;
+}
+
+nav a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+nav li 
+{
+    background-image: linear-gradient(#dff497, #438148);
+    text-align: center;
+    padding: 5%;
+    margin-bottom: 5%;
+    border: 2px solid #e5e776c0;
+}
+
+nav li:hover
+{
+    background-image: linear-gradient(#b0d242, #0e480c);
+}
+
+.paginaActual
+{
+    background-image: linear-gradient(#f5db73, #dda463);
+}
+
+.paginaActual:hover
+{
+    background-image: linear-gradient(#f3df91, #c27a29);
+}
+
+main
+{
+    border: 1px solid #a9e860;
+    padding: 1%;
+    width: 80%;
+    background-image: linear-gradient(#F0F0F0,#FFFFFF, #F0F0F0);
+}
+
+.content
+{
+    display: inline-block;
+}
+
+.t2
+{
+    color: #324514;
+    border-bottom: 1px solid #ced65c;
+}
+
+footer > p
+{
+    color: #4c752e;
+    text-align: center;
+}
+
+footer a
+{
+    color: #6a4a1b;
+}
+
+.verde
+{
+    color: #668c29;
+}
+
+.naranja
+{
+    color: #a3600f;
+}
