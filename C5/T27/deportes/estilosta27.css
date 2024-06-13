@@ -1,0 +1,33 @@
+table,
+th,
+td {
+  border: 1px solid;
+}
+th {
+  background-color: rgba(156, 85, 223, 0.634);
+}
+
+tr:nth-child(even) {
+  background-color: #7ed7ebb5;
+}
+
+tr:nth-child(odd) {
+  background-color: #8489c9bc;
+}
+
+#color1 {
+  background-color: #7ed7ebb5;
+}
+
+#color2 {
+  background-color: #8489c9bc;
+}
+
+#textocentrado {
+text-align: center;
+}
+
+colgroup col:first-child {
+  width: 60%; 
+  
+}
