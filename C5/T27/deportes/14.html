@@ -1,37 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej.14</title>
+    <style>
+        body {
+            background-image: url('paisaje-aurora-boreal-sobre-mar.jpg');
+            background-size: cover; /* Ajusta la imagen para que cubra toda la página */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-attachment: fixed; /* Hace que la imagen permanezca fija cuando se desplaza la página */
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            padding: 20px; /* Aumenta el tamaño del relleno del encabezado */
+            background-size: cover; /* Ajusta la imagen para que cubra todo el área del encabezado */
+            color: rgb(255, 255, 255); /* Color del texto, puede ajustarlo según tu imagen de fondo */
+            font-family: Verdana;
+            background-color: rgba(107, 124, 118, 0.259); /* Fondo semitransparente */
+        }
+        .custom-font {
+            font-family: Verdana; /* Fuente específica para las celdas "Correr" y "Volar" */
+            color:aliceblue
+        }
+    </style>
 </head>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-    }
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: center;
-    }
-    th {
-       padding: 20px; /* Aumenta el tamaño del relleno del encabezado */
-    }
-</style>
 <body>
     <table border="1">
         <thead>
             <tr>
-                <th>Encabezado 1</th>
-            
+                <th colspan="2">Vida</th>
             </tr>
         </thead>
-        
         <tbody>
             <tr>
-                <td>Celda 1</td>
-                <td>Celda 2</td>
+                <td class="custom-font">Correr</td>
+                <td class="custom-font">Volar</td>
             </tr>
         </tbody>
     </table>
