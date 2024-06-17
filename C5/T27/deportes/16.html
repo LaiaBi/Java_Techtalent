@@ -4,8 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PerrosVSHombre</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            border: 1px solid;
+            padding: 10px;
+            text-align: center;
+            
+        }
+        .celda2 {
+            text-align: center;
+            background-color: rgba(134, 229, 199, 0.742);
+            font-family: Lucida sans;
+            color: rgb(13, 13, 69);
+        }
+        .celda1 {
+            background-color: rgb(119, 163, 52);
+            font-family: Lucida sans;
+            color: rgb(255, 255, 255);
+        }
+        .celda6 {
+            text-align: center;
+            background-color: rgba(168, 112, 216, 0.741);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(36, 2, 2);
+        }
+        .colorred {
+            color: rgb(191, 11, 134);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <th class="celda1" colspan="4">Diferencias entre perro y hombre</th>
+        </tr>
+        <tr>
+            <th class="celda2" rowspan="2">Diferencias</th>
+            <th class="colorred">Perro</th>
+            <th>Hombre</th>
+        </tr>
+        <tr>
+            <th class="colorred">CELDA 5</th>
+            <th class="celda6" rowspan="2">CELDA 6</th>
+        </tr>
+        <tr>
+            <th>CELDA 7</th>
+            <th class="colorred">CELDA 8</th>
+        </tr>
+    </table>
 </body>
 </html>
