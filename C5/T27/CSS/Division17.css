@@ -1,0 +1,130 @@
+body
+{
+    background-image: url(../img/fondo_floral.jpg);
+}
+
+#container
+{
+    display: block;
+    width: 100%;
+}
+
+#mantel, #cuadro, #degradado
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1%;
+}
+
+#mantel > div, #cuadro > div, #degradado > div
+{
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 1%;
+    border: 1px solid;
+    box-sizing: border-box;
+}
+
+div > p
+{
+    text-align: center;
+}
+
+.div-padre
+{
+    display: flex;
+}
+
+.div-hijo-marco
+{
+    margin: auto;
+    width: 75%;
+    height: 75%;
+}
+
+.div-hijo-horizontal
+{
+    width: 100%;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    background-position-y: 50%;
+}
+
+.div-hijo-vertical
+{
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
+    background-position-x: 50%;
+}
+
+.foto-mantel
+{
+    /* Ruta corregida con barras normales */
+    background-image: url(../img/mantel.png);
+    background-repeat: no-repeat;
+}
+
+.foto-cuadro
+{
+    background-image: url(../img/cuadro.png);
+    background-repeat: no-repeat;
+}
+.full
+{
+    background-size: cover;
+}
+
+.marco
+{
+    background-position: 50%;
+    background-size: 75%;
+}
+
+.fondo-blanco
+{
+    background-color: white;
+    z-index: -1;
+}
+
+.zoom
+{
+    background-size: 800%;
+}
+
+.zoom-marco
+{
+    background-size: 800%;
+
+    padding: 10px;
+}
+
+
+.horizontal
+{
+    background-size: cover;
+    background-size: 100%;
+    background-position-y: 0, -50px;
+}
+
+#div1
+{
+    background-image: linear-gradient(to right, #D2FB5C, #5A6A45);
+}
+
+#div2
+{
+    background-image: linear-gradient(to top, #d6764d, #7A2705, #b45c38,#df9576, #E8B5A0);
+}
+
+#div3
+{
+    background-image: linear-gradient(to top, #367A26, #E8EED1);
+}
+
+#div4
+{
+    background-image: linear-gradient(to top, #317a21, transparent);
+}
