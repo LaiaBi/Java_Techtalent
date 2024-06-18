@@ -1,15 +1,19 @@
-td, th, table
-{
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+th,
+td {
     border: 1px solid;
+    padding: 10px;
+    text-align: center;
 }
 
-.resaltar
-{
+.resaltar {
     font-family: Verdana;
     font-weight: bold;
 }
 
-.centrar
-{
+.centrar {
     text-align: center;
 }
