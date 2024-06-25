@@ -1,0 +1,30 @@
+#calculadora {
+    width: 263px;
+    height: 336px;
+}
+
+#display {
+    height: 84px;
+}
+
+#cuerpo {
+    height: 252px;
+}
+
+.numeros{
+    background-color: #61af83;
+    height: 63px;
+}
+
+.numeros:hover {
+    background-color: #5b3868;
+}
+
+.operadores {
+    background-color: #3b8f86;
+    height: 42px;
+}
+
+.operadores:hover {
+    background-color: #6d7474;
+}
