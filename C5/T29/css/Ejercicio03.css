@@ -1,10 +1,11 @@
 .bg-azul
 {
-    background-color: #7ac0ef;
+    background-color: #72c2b3;color:gray
 }
 .bg-secondary
-{font-family: georgia;
+{font-family: georgia;color:gray
+    background-color: #d4f0cb;
 }
 .nav-item 
-{font-family: georgia;
+{font-family: georgia; color:d;  background-color: #bcf1f1;
 }
