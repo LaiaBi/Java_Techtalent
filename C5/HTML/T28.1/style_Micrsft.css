@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 30px;
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    margin-left: 50px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: black; /* Color del texto de los enlaces */
+
+}
+.logo,
+.flex img {
+    width: 200px;
+    height: 100px; /* Ajusta la altura de la imagen según sea necesario */
+    margin-right: 10px; /* Espacio entre la imagen y los enlaces */
+}
