@@ -4,26 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CON GRID -->>
-   <style>
-        .flex-container {
-    display: flex;
-    height: 600px;
-    flex-wrap: wrap;
-    align-content: space-around;
-    background-image: url('fondo_floral.jpg');
-    background-size: 200px; /* Agrega 'px' para definir el tamaño en píxeles */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center;
-}
-
-    </style>
     <title>Microsoft Bing</title>
     <link rel="stylesheet" href="style_Micrsft.css" />
 </head>
 <body>
+    <header>
+    <div class="logo">
+    <img src="img/Microsoft-Bing-Logo.png" class="logo" />
+    </div>
     <nav>
     <div class="left-links">
-        <img src="img/Microsoft-Bing-Logo.png" class="logo" />
         <a href="#">Imagenes</a>
         <a href="#">Videos</a>
         <a href="#">...</a>
@@ -33,18 +23,61 @@
         <a href="#">català</a>
         <a href="#">english</a>
         <a href="#">Iniciar sesión</a>
-        <img src="imagenes/icon.svg" />
+        <a href="#"><img src="imagenes/zorro.jpg" alt="Perfil"/></a>
         <a href="#">Rewards</a>
-        <img src="imagenes/zorro.jpg" alt="Profile Picture" class="profile-pic" />
+        <a href="#"><img src="img/trophy.svg" alt="Trofeo" /></a>
+        <img src="img/menu.svg" alt="Profile Picture" class="profile-pic" />
     </div>
+    </nav>
+    </header>
+    <main>
     <div class="grupocentral">
-        <!-- buscador y logos -->
+        <form action="#">
+            <section class="search-box">
+              <input type="text" class="search-input" placeholder="Buscar..." />
+              <img src="img/micro.svg" class="micro-icon" alt="Micrófono" />
+              <img src="img/camara.svg" class="camara-icon" alt="Cámara" />
+              <img
+                src="img/key.svg"
+                class="key-icon"
+                alt="Teclado"
+              />
+              <img
+                src="img/lupa.svg"
+                class="search-icon"
+                alt="Buscar"
+              />
+            </section>
+          </form>
     </div>
-    <div class="grupo3">
-        <!-- Contenido de la flex-container -->
-    </div>
-    <div class="grupo4">
-        <!-- Contenido de la flex-container -->
-    </div>
-</body>
-</html>
+
+ <section class="container-photos">
+        <div class="item">
+          <img src="img/a.jpg" alt="A" />
+        </div>
+        <div class="item">
+          <img src="img/b.jpg" alt="B" />
+        </div>
+        <div class="item">
+          <img src="img/c.jpg" alt="C" />
+        </div>
+        <div class="item">
+          <img src="img/d.webp" alt="D" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <div class="footer-left-links">
+          <a href="#">Privacidad y cookies</a>
+          <a href="#"> Información legal</a>
+          <a href="#"> Anunciar</a>
+          <a href="#"> Acerca de nuestros anuncios</a>
+          <a href="#"> Ayuda</a>
+          <a href="#"> Comentarios</a>
+          <a href="#"> Protección de datos europea</a>
+        </div>
+        <h4>© 2024 Microsoft</h4>
+      </footer>
+    </body>
+  </html>
