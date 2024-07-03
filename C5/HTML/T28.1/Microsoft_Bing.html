@@ -8,76 +8,130 @@
     <link rel="stylesheet" href="style_Micrsft.css" />
 </head>
 <body>
-    <header>
-    <div class="logo">
-    <img src="img/Microsoft-Bing-Logo.png" class="logo" />
-    </div>
-    <nav>
-    <div class="left-links">
-        <a href="#">Imagenes</a>
-        <a href="#">Videos</a>
-        <a href="#">...</a>
-    </div>
-    </nav>
-    <div class="right-links">
-        <a href="#">català</a>
-        <a href="#">english</a>
-        <a href="#">Iniciar sesión</a>
-        <a href="#"><img src="imagenes/zorro.jpg" alt="Perfil"/></a>
-        <a href="#">Rewards</a>
-        <a href="#"><img src="img/trophy.svg" alt="Trofeo" /></a>
-        <img src="img/menu.svg" alt="Profile Picture" class="profile-pic" />
-    </div>
-    </nav>
-    </header>
-    <main>
-    <div class="grupocentral">
-        <form action="#">
-            <section class="search-box">
-              <input type="text" class="search-input" placeholder="Buscar..." />
-              <img src="img/micro.svg" class="micro-icon" alt="Micrófono" />
-              <img src="img/camara.svg" class="camara-icon" alt="Cámara" />
-              <img
-                src="img/key.svg"
-                class="key-icon"
-                alt="Teclado"
-              />
-              <img
-                src="img/lupa.svg"
-                class="search-icon"
-                alt="Buscar"
-              />
-            </section>
-          </form>
-    </div>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/cascada.jpg'); /* Ruta relativa a la carpeta images */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Para que la imagen de fondo no se desplace con el contenido */
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
 
- <section class="container-photos">
-        <div class="item">
-          <img src="img/a.jpg" alt="A" />
-        </div>
-        <div class="item">
-          <img src="img/b.jpg" alt="B" />
-        </div>
-        <div class="item">
-          <img src="img/c.jpg" alt="C" />
-        </div>
-        <div class="item">
-          <img src="img/d.webp" alt="D" />
-        </div>
-      </section>
-    </main>
+.logo img {
+    max-width: 100px;
+}
 
-    <footer>
-        <div class="footer-left-links">
-          <a href="#">Privacidad y cookies</a>
-          <a href="#"> Información legal</a>
-          <a href="#"> Anunciar</a>
-          <a href="#"> Acerca de nuestros anuncios</a>
-          <a href="#"> Ayuda</a>
-          <a href="#"> Comentarios</a>
-          <a href="#"> Protección de datos europea</a>
-        </div>
-        <h4>© 2024 Microsoft</h4>
-      </footer>
-    </body>
-  </html>
+.language a, .session a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #0078d4;
+}
+
+.main-content {
+    padding: 50px;
+    margin-top: 80px; /* Aumentar el espacio en blanco entre la barra de búsqueda y la tabla */
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    text-align: center; /* Alinear el contenido al centro */
+}
+
+.search-bar input {
+    width: 50%; /* Reducir el ancho del input */
+    max-width: 300px; /* Establecer un ancho máximo */
+    padding: 8px; /* Reducir el padding para hacerla más compacta */
+    font-size: 14px; /* Reducir el tamaño de la fuente si es necesario */
+}
+.news-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.news-item {
+padding: 10px;
+text-align: center;
+border: none; /* Elimina los bordes de las celdas */
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    margin: 0;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0078d4;
+}
+</style>
+</head>
+<body>
+<header class="header">
+<div class="logo">
+    <img src="img/Microsoft-Bing-Logo.png" alt="Logo Microsoft Bing" style="width: 100%; height: auto;">
+</div>
+<nav class="language">
+    <a href="#">català</a>
+    <a href="#">English</a>
+</nav>
+<div class="session">
+    <a href="#">Iniciar sesión</a>
+    <a href="#">Rewards</a>
+</div>
+</header>
+<main class="main-content">
+<div class="search-bar">
+    <input type="text" placeholder="Search...">
+</div>
+<table class="news-table">
+    <tr>
+        <td class="news-item">
+            <img src="img/a.jpg" alt="Imagen e1">
+            <p>Lugares magicos en el planeta tierra</p>
+        </td>
+        <td class="news-item">
+            <img src="img/b.jpg" alt="Imagen e2">
+            <p>Peru y sus secretos</p>
+        </td>
+        <td class="news-item">
+            <img src="img/c.jpg" alt="Imagen e3">
+            <p>Pincanton revolucionario. Nueva abertura de....</p>
+        </td>
+        <td class="news-item">
+            <img src="img/d.webp" alt="Imagen e4">
+            <p>Misteriosos bosques sacados de libros</p>
+        </td>
+    </tr>
+</table>
+</main>
+<footer class="footer">
+<a href="#">Privacidad y cookies</a>
+<a href="#">Información legal</a>
+<a href="#">Anunciar</a>
+<a href="#">Acerca de nuestros anuncios</a>
+<a href="#">Ayuda</a>
+<a href="#">Comentarios</a>
+<a href="#">Protección de datos europea</a>
+</footer>
+</body>
+</html>
