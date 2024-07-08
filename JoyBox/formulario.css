@@ -4,7 +4,10 @@ body
     font-family: sans-serif;
     
 }
-
+table
+{
+    color:#6c6c6c
+}
 button
 {
     border: 1px solid rgb(255, 255, 255);
