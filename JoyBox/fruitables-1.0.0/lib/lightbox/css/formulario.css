@@ -1,0 +1,22 @@
+body
+{
+    background-color:#4b4b4b;
+    background-size: cover;
+    
+}
+
+button
+{
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.bg-gray
+{
+    background-color: #D8D8D8;
+}
+
+.text-gray
+{
+    color: #2a2a2a;
+}
+.text
