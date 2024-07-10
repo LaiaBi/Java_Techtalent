@@ -187,82 +187,123 @@
     <div class="container container-custom">
         <div class="row">
             <div class="col-md-8">
-                <div class="bundle-header">
-                    <h1>STRATE-GOG Bundle</h1>
-                    <p>Flex your noggin, test your tactical acumen, and sharpen your decision-making skills with this bundle, packed with some of the best strategy games in recent years.</p>
-                </div>
-                
-
-                <div class="filter-buttons">
-                    <button class="btn btn-secondary active" onclick="showBundle('complete')">Box completo</button>
-                    <button class="btn btn-secondary" onclick="showBundle('three')">Box de 3 productos</button>
-                    <button class="btn btn-secondary" onclick="showBundle('basic')">Box básico</button>
-                </div><style>
-                    .center-title {
-                        text-align: right;
-                    }
-                </style>
-
-                <div class="row" id="games-list">
-                    <div class="col-md-6 game-item" data-price="10">
-                        <div class="card game-card">
-                            <img src="/mnt/data/image.png" class="card-img-top" alt="Railgrade">
-                            <div class="card-body game-card-body">
-                                <h5 class="card-title">Railgrade</h5>
-                                <p class="card-text">3.5/5 on GOG</p>
-                                <p class="card-text">Price: 10 €</p>
-                            </div>
-                        </div>
+                <div class="bundle-content">
+                    <div class="image-container">
+                        <img src="ImgGame/Never Alone.webp" alt="Image description" class="bundle-image">
                     </div>
-                    <div class="col-md-6 game-item" data-price="20">
-                        <div class="card game-card">
-                            <img src="/mnt/data/image.png" class="card-img-top" alt="Expeditions: Rome">
-                            <div class="card-body game-card-body">
-                                <h5 class="card-title">Expeditions: Rome</h5>
-                                <p class="card-text">3.8/5 on GOG</p>
-                                <p class="card-text">Price: 20 €</p>
-                            </div>
+                    <div class="text-container">
+                        <div class="bundle-header">
+                            <h1>STRATE-GOG Bundle</h1>
+                            <p>Flex your noggin, test your tactical acumen, and sharpen your decision-making skills with this bundle, packed with some of the best strategy games in recent years.</p>
                         </div>
-                    </div>
-                    <div class="col-md-6 game-item" data-price="30">
-                        <div class="card game-card">
-                            <img src="/mnt/data/image.png" class="card-img-top" alt="Showgunners">
-                            <div class="card-body game-card-body">
-                                <h5 class="card-title">Showgunners</h5>
-                                <p class="card-text">4.4/5 on GOG</p>
-                                <p class="card-text">Price: 30 €</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 game-item" data-price="15">
-                        <div class="card game-card">
-                            <img src="/mnt/data/image.png" class="card-img-top" alt="Field of Glory II: Medieval">
-                            <div class="card-body game-card-body">
-                                <h5 class="card-title">Field of Glory II: Medieval</h5>
-                                <p class="card-text">Price: 15 €</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 game-item" data-price="25">
-                        <div class="card game-card">
-                            <img src="/mnt/data/image.png" class="card-img-top" alt="Hard West II">
-                            <div class="card-body game-card-body">
-                                <h5 class="card-title">Hard West II</h5>
-                                <p class="card-text">Price: 25 €</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 game-item" data-price="35">
-                        <div class="card game-card">
-                            <img src="/mnt/data/image.png" class="card-img-top" alt="Spellforce III: Reforced">
-                            <div class="card-body game-card-body">
-                                <h5 class="card-title">Spellforce III: Reforced</h5>
-                                <p class="card-text">Price: 35 €</p>
-                            </div>
+                        <div class="filter-buttons">
+                            <button class="btn btn-secondary active" onclick="showBundle('complete')">Box completo</button>
+                            <button class="btn btn-secondary" onclick="showBundle('three')">Box de 3 productos</button>
+                            <button class="btn btn-secondary" onclick="showBundle('basic')">Box básico</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <style>
+        .bundle-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image-container {
+            flex: 0 0 auto; /* La imagen no se expandirá ni se contraerá */
+        }
+        .bundle-image {
+            max-width: 70%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Alinea todo el texto y los botones a la derecha */
+            margin-left: 20px; /* Añade espacio entre la imagen y el texto */
+        }
+        .bundle-header {
+            text-align: right; /* Alinea el texto a la derecha */
+        }
+        .filter-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Alinea los botones a la derecha */
+        }
+        .filter-buttons .btn {
+            margin-bottom: 10px; /* Espaciado entre los botones */
+        }
+    </style>
+                <div class="row" id="games-list">
+                    <div class="col-md-6 game-item" data-price="10">
+                        <div class="row">
+                            <div class="container container-custom">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="row">
+                                            <div class="col-md-6 game-item" data-price="10">
+                                                <div class="card game-card">
+                                                    <img src="ImgGame/Detroid Become Human.webp" class="card-img-top" alt="Railgrade">
+                                                    <div class="card-body game-card-body">
+                                                        <h5 class="card-title">Railgrade</h5>
+                                                        <p class="card-text">3.5/5 on GOG</p>
+                                                        <p class="card-text">Price: 10 €</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 game-item" data-price="20">
+                                                <div class="card game-card">
+                                                    <img src="ImgGame/celeste.webp" class="card-img-top" alt="Expeditions: Rome">
+                                                    <div class="card-body game-card-body">
+                                                        <h5 class="card-title">Expeditions: Rome</h5>
+                                                        <p class="card-text">3.8/5 on GOG</p>
+                                                        <p class="card-text">Price: 20 €</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 game-item" data-price="30">
+                                                <div class="card game-card">
+                                                    <img src="ImgGame/Bury Me, My Love.webp" class="card-img-top" alt="Showgunners">
+                                                    <div class="card-body game-card-body">
+                                                        <h5 class="card-title">Showgunners</h5>
+                                                        <p class="card-text">4.4/5 on GOG</p>
+                                                        <p class="card-text">Price: 30 €</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 game-item" data-price="15">
+                                                <div class="card game-card">
+                                                    <img src="ImgGame/Abzü.webp" class="card-img-top" alt="Field of Glory II: Medieval">
+                                                    <div class="card-body game-card-body">
+                                                        <h5 class="card-title">Field of Glory II: Medieval</h5>
+                                                        <p class="card-text">Price: 15 €</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 game-item" data-price="25">
+                                                <div class="card game-card">
+                                                    <img src="ImgGame/A shot Hike.webp" class="card-img-top" alt="Hard West II">
+                                                    <div class="card-body game-card-body">
+                                                        <h5 class="card-title">Hard West II</h5>
+                                                        <p class="card-text">Price: 25 €</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 game-item" data-price="35">
+                                                <div class="card game-card">
+                                                    <img src="ImgGame/BioShock.webp" class="card-img-top" alt="Spellforce III: Reforced">
+                                                    <div class="card-body game-card-body">
+                                                        <h5 class="card-title">Spellforce III: Reforced</h5>
+                                                        <p class="card-text">Price: 35 €</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        
 
             <div class="col-md-4">
                 <div class="pricing-options">
