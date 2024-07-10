@@ -304,72 +304,77 @@
     
                         
 
-            <div class="col-md-4">
-                <div class="pricing-options">
-                    <button class="btn btn-primary filter-price" data-price="9.35">9,35 €</button>
-                    <button class="btn btn-primary filter-price" data-price="14.03">14,03 €</button>
-                    <button class="btn btn-primary filter-price" data-price="16.84">16,84 €</button>
-                    <button class="btn btn-primary filter-price" data-price="25">25 €</button>
-                    <button class="btn btn-primary filter-price" data-price="30">30 €</button>
-                    <button class="btn btn-primary filter-price" data-price="35">35 €</button>
-                </div>
-                <style>
-                    .pricing-options .btn {
-                        background-color: #6a6a6a; /* Color de fondo gris */
-                        border-color: #B0B0B0; /* Color del borde gris */
-                        color: white; /* Color del texto */
-                    }
-                    .pricing-options .btn:hover {
-                        background-color: #4b4b4b; /* Color de fondo gris más oscuro al pasar el mouse */
-                        border-color: #A0A0A0; /* Color del borde gris más oscuro al pasar el mouse */
-                    }
-                    .pricing-options .btn:focus {
-        border-color: lightgray; /* Color del borde gris claro al seleccionar */
-        box-shadow: 0 0 5px lightgray; /* Sombra alrededor del botón para mayor efecto visual */
-    }
-                </style>
-
-<div class="purchase-button">
-    <button class="btn btn-success custom-button">Realizar pedido</button>
-</div>
-
-<div class="countdown">
-    <h2 id="countdown-timer"></h2>
-</div>
-
-<style>
-    .purchase-button .custom-button {
-        background-color: #EC0909; /* Color de fondo rojo */
-        border-color: #EC0909; /* Color del borde rojo */
-        color: white; /* Color del texto */
-    }
-    .purchase-button .custom-button:hover {
-        background-color: darkred; /* Color de fondo rojo oscuro al pasar el mouse */
-        border-color: darkred; /* Color del borde rojo oscuro al pasar el mouse */
-    }
-    .purchase-button .custom-button:focus {
-        border-color: #1A1A1A; /* Color del borde gris oscuro al seleccionar */
-        box-shadow: 0 0 5px #1A1A1A; /* Sombra alrededor del botón para mayor efecto visual */
-    }
-</style>
-
-
-                <div class="donation-info">
-                    <h3>DESTINAMOS UN PORCENTAJE DE LA COMPRA A LAS SIGUIENTES CAUSAS:</h3>
-                    <ul>
-                        <li>RESCATE Y ADOPCIÓN DE ANIMALES</li>
-                        <li>REFORESTACIÓN Y LIMPIEZA DE OCÉANOS</li>
-                        <li>APOYO A REFUGIADOS</li>
-                        <li>LUCHA CONTRA EL CÁNCER DE MAMA</li>
-                    </ul>
-                </div>
-
-                <div class="support-info">
-                    <p>¿Necesitas ayuda? Visita nuestra <a href="#">Página de Soporte</a> o contáctanos directamente. ¡Además, tu compra ayuda a apoyar a Xperience Studios!</p>
-                </div>
-            </div>
+    <div class="col-md-4">
+        <div class="pricing-options">
+            <button class="btn btn-primary filter-price" data-price="9.35">9,35 €</button>
+            <button class="btn btn-primary filter-price" data-price="14.03">14,03 €</button>
+            <button class="btn btn-primary filter-price" data-price="16.84">16,84 €</button>
+            <button class="btn btn-primary filter-price" data-price="25">25 €</button>
+            <button class="btn btn-primary filter-price" data-price="30">30 €</button>
+            <button class="btn btn-primary filter-price" data-price="35">35 €</button>
+        </div>
+    
+        <div class="purchase-button">
+            <button class="btn btn-success custom-button">Realizar pedido</button>
+        </div>
+    
+        <div class="countdown">
+            <h2 id="countdown-timer"></h2>
+        </div>
+    
+        <style>
+            .purchase-button .custom-button {
+                background-color: #EC0909; /* Color de fondo rojo */
+                border-color: #EC0909; /* Color del borde rojo */
+                color: white; /* Color del texto */
+            }
+            .purchase-button .custom-button:hover {
+                background-color: darkred; /* Color de fondo rojo oscuro al pasar el mouse */
+                border-color: darkred; /* Color del borde rojo oscuro al pasar el mouse */
+            }
+            .purchase-button .custom-button:focus {
+                border-color: #1A1A1A; /* Color del borde gris oscuro al seleccionar */
+                box-shadow: 0 0 5px #1A1A1A; /* Sombra alrededor del botón para mayor efecto visual */
+            }
+            .pricing-options .btn {
+                background-color: #6a6a6a; /* Color de fondo gris */
+                border-color: #B0B0B0; /* Color del borde gris */
+                color: white; /* Color del texto */
+                margin-bottom: 10px; /* Espacio entre los botones */
+                width: 100%; /* Ancho completo para ocupar el espacio disponible */
+            }
+            .pricing-options .btn:hover {
+                background-color: #4b4b4b; /* Color de fondo gris más oscuro al pasar el mouse */
+                border-color: #A0A0A0; /* Color del borde gris más oscuro al pasar el mouse */
+            }
+            .pricing-options .btn:focus {
+                border-color: lightgray; /* Color del borde gris claro al seleccionar */
+                box-shadow: 0 0 5px lightgray; /* Sombra alrededor del botón para mayor efecto visual */
+            }
+            .donation-info {
+                text-align: right; /* Alineación del texto a la derecha */
+            }
+            .support-info {
+                text-align: center; /* Alineación del texto a la derecha */
+                margin-top: 20px; /* Espacio superior */
+            }
+        </style>
+    
+        <div class="donation-info">
+            <h3>DESTINAMOS UN PORCENTAJE DE LA COMPRA A LAS SIGUIENTES CAUSAS:</h3>
+            <ul>
+                <li>RESCATE Y ADOPCIÓN DE ANIMALES</li>
+                <li>REFORESTACIÓN Y LIMPIEZA DE OCÉANOS</li>
+                <li>APOYO A REFUGIADOS</li>
+                <li>LUCHA CONTRA EL CÁNCER DE MAMA</li>
+            </ul>
+        </div>
+    
+        <div class="support-info">
+            <p>¿Necesitas ayuda? Visita nuestra <a href="#">Página de Soporte</a> o contáctanos directamente. ¡Además, tu compra ayuda a apoyar a Xperience Studios!</p>
         </div>
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
