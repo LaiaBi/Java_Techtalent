@@ -258,9 +258,9 @@
                     <div class="row">
                         <div class="col-md-6 game-item" data-price="10">
                             <div class="card game-card">
-                                <img src="ImgGame/Detroid Become Human.webp" class="card-img-top" alt="Railgrade">
+                                <img src="ImgGame/StardewValley.webp" class="card-img-top" alt="StardewValley">
                                 <div class="card-body game-card-body">
-                                    <h5 class="card-title">Railgrade</h5>
+                                    <h5 class="card-title">Stardew Valley</h5>
                                     <p class="card-text">3.5/5 on GOG</p>
                                     <p class="card-text">Price: 10 €</p>
                                 </div>
@@ -268,9 +268,9 @@
                         </div>
                         <div class="col-md-6 game-item" data-price="20">
                             <div class="card game-card">
-                                <img src="ImgGame/celeste.webp" class="card-img-top" alt="Expeditions: Rome">
+                                <img src="ImgGame/firewatch.webp" class="card-img-top" alt="Expeditions:firewatch">
                                 <div class="card-body game-card-body">
-                                    <h5 class="card-title">Expeditions: Rome</h5>
+                                    <h5 class="card-title">FireWatch</h5>
                                     <p class="card-text">3.8/5 on GOG</p>
                                     <p class="card-text">Price: 20 €</p>
                                 </div>
@@ -278,9 +278,9 @@
                         </div>
                         <div class="col-md-6 game-item" data-price="30">
                             <div class="card game-card">
-                                <img src="ImgGame/Bury Me, My Love.webp" class="card-img-top" alt="Showgunners">
+                                <img src="ImgGame/farmingSimulator.webp" class="card-img-top" alt="farmingSimulator">
                                 <div class="card-body game-card-body">
-                                    <h5 class="card-title">Showgunners</h5>
+                                    <h5 class="card-title">Farming Simulator</h5>
                                     <p class="card-text">4.4/5 on GOG</p>
                                     <p class="card-text">Price: 30 €</p>
                                 </div>
@@ -288,34 +288,50 @@
                         </div>
                         <div class="col-md-6 game-item" data-price="15">
                             <div class="card game-card">
-                                <img src="ImgGame/Abzü.webp" class="card-img-top" alt="Field of Glory II: Medieval">
+                                <img src="ImgGame/Unravel.webp" class="card-img-top" alt="Unravel">
                                 <div class="card-body game-card-body">
-                                    <h5 class="card-title">Field of Glory II: Medieval</h5>
+                                    <h5 class="card-title">Unravel</h5>
                                     <p class="card-text">Price: 15 €</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 game-item" data-price="25">
                             <div class="card game-card">
-                                <img src="ImgGame/A shot Hike.webp" class="card-img-top" alt="Hard West II">
+                                <img src="ImgGame/The_Forest_game.webp" class="card-img-top" alt="The_Forest_game">
                                 <div class="card-body game-card-body">
-                                    <h5 class="card-title">Hard West II</h5>
+                                    <h5 class="card-title">The Forest</h5>
                                     <p class="card-text">Price: 25 €</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-6 game-item" data-price="35">
                             <div class="card game-card">
-                                <img src="ImgGame/BioShock.webp" class="card-img-top" alt="Spellforce III: Reforced">
+                                <img src="ImgGame/Maneater.webp" class="card-img-top" alt="Maneater">
                                 <div class="card-body game-card-body">
-                                    <h5 class="card-title">Spellforce III: Reforced</h5>
+                                    <h5 class="card-title">Maneater</h5>
                                     <p class="card-text">Price: 35 €</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+            <style>
+            .bundle-content {
+                display: flex;
+                justify-content: right;
+            }
+            .bundle-image {
+            max-width: 70%; /* Asegura que la imagen no exceda el tamaño del contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Alinea todo el texto y los botones a la izquierda */
+            margin-left: -100px; /* Añade espacio entre la imagen y el texto */
+        }</style>
             <div class="col-md-4">
                 <div class="pricing-options">
                     <button class="btn btn-secondary" onclick="showBundle('1')">1 €</button>
@@ -432,13 +448,13 @@
         }
 
         function toggleDescription(title) {
-            const description = document.getElementById(desc-${title});
-            if (description.style.display === 'none' || !description.style.display) {
-                description.style.display = 'block';
-            } else {
-                description.style.display = 'none';
-            }
-        }
+    const description = document.getElementById(`desc-${title}`);
+    if (description.style.display === 'none' || !description.style.display) {
+        description.style.display = 'block';
+    } else {
+        description.style.display = 'none';
+    }
+}
 
         const countdownElement = document.getElementById('countdown-timer');
         const countdownDate = new Date().getTime() + 5 * 24 * 60 * 60 * 1000;
