@@ -243,18 +243,19 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="container container-custom">
-                    <div class="bundle-header">
+                    <div class="bundle-header" style="text-align: center;">
                         <img src="ImgGame/Another Crab's Treasure.webp" alt="Bundle Header Image" class="img-fluid mb-3">
                         <div>
                             <h1>Eco Box</h1>
                             <p>Saca tu lado más aventurero y de supervivencia, con el Box más ECO de todos.</p>
                         </div>
                     </div>
-                    <div class="filter-buttons">
-                        <button class="btn btn-secondary" onclick="showBundle('complete')">Box completo</button>
-                        <button class="btn btn-secondary" onclick="showBundle('three')">Box de 3 productos</button>
-                        <button class="btn btn-secondary" onclick="showBundle('basic')">Box básico</button>
+                    <div class="filter-buttons" style="display: flex; justify-content: center; margin-top: 1rem;">
+                        <button class="btn btn-secondary" onclick="showBundle('complete')" style="margin: 3 rem;">Box completo</button>
+                        <button class="btn btn-secondary" onclick="showBundle('three')" style="margin: 5 rem;">Box de 3 productos</button>
+                        <button class="btn btn-secondary" onclick="showBundle('basic')" style="margin: 3 rem;">Box básico</button>
                     </div>
+                    
                     <div class="row">
                         <div class="col-md-6 game-item" data-price="10">
                             <div class="card game-card">
@@ -317,21 +318,7 @@
                 </div>
 
             </div>
-            <style>
-            .bundle-content {
-                display: flex;
-                justify-content: right;
-            }
-            .bundle-image {
-            max-width: 70%; /* Asegura que la imagen no exceda el tamaño del contenedor */
-            height: auto; /* Mantiene la proporción de la imagen */
-        }
-        .text-container {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end; /* Alinea todo el texto y los botones a la izquierda */
-            margin-left: -100px; /* Añade espacio entre la imagen y el texto */
-        }</style>
+            
             <div class="col-md-4">
                 <div class="pricing-options">
                     <button class="btn btn-secondary" onclick="showBundle('1')">1 €</button>
@@ -363,10 +350,10 @@
     <script>
         const games = [
             {
-                title: 'Railgrade',
+                title: 'Stardew Valley',
                 price: 10,
-                description: 'Descripción detallada de Railgrade. Un juego de gestión de trenes...',
-                img: 'ImgGame/Detroid Become Human.webp'
+                description: 'Descripción detallada de Stardew Valley. Un juego de gestión de trenes...',
+                img: 'ImgGame/StardewValley.webp'
             },
             {
                 title: 'Expeditions: Rome',
